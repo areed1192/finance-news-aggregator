@@ -1,4 +1,4 @@
-# Template Repo
+# Finance News Aggregator
 
 ## Table of Contents
 
@@ -8,6 +8,12 @@
 - [Support These Projects](#support-these-projects)
 
 ## Overview
+
+Investors use news articles to gain an idea of market sentiment and hopefully
+be able to predict the direction of markets based on the sentiment of these
+articles and how they are published. The `finnews` library is designed to help
+the collection of news articles related to business topics and market news easy
+and efficient.
 
 ## Setup
 
@@ -27,10 +33,24 @@ you can use the library wherever you want.
 
 ## Usage
 
-Here is a simple example of using the `trade_console` library to grab the index
-files for specific quarter.
+Here is a simple example of using the `finnews` library to to grab the top stories
+on CNBC.
 
 ```python
+from pprint import pprint
+from finnews.client import News
+
+# Create a new instance of the News Client.
+news_client = News()
+
+# Grab the CNBC News Client.
+cnbc_news_client = news_client.cnbc
+
+# Grab the top news.
+cbnc_top_news = cnbc_news_client.news_feed(topic='top_news')
+
+# Print it.
+pprint(cbnc_top_news)
 ```
 
 ## Support These Projects
