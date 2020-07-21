@@ -45,8 +45,11 @@ cnbc_tv_asia_news = cnbc_news_client.tv_programs_asia(
     topic=cnbc_tv_programs_asia.SQUAWK_BOX_ASIA
 )
 
+# Grab all the news feeds.
+cnbc_all_news_feeds = cnbc_news_client.all_feeds()
+
 # Save the data.
 news_client.save_to_file(
-    content=cnbc_tv_asia_news,
-    file_name='cnbc_tv_asia_news'
+    content=cnbc_all_news_feeds,
+    file_name='cnbc_all_news_feeds'
 )

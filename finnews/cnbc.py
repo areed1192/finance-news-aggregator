@@ -1,3 +1,4 @@
+import time
 import requests
 import xml.etree.ElementTree as ET
 
@@ -60,6 +61,48 @@ class CNBC():
             return full_url
         else:
             raise KeyError("The value you're searching for does not exist.")
+
+    def all_feeds(self) -> Dict:
+        """Used to query all the topics from the CNBC RSS feed.
+
+        Returns:
+        ----
+        List[Dict]: A list of news articles organzied in dictionaries.
+
+        Usage:
+        ----
+            >>> from finnews.client import News
+
+            >>> # Create a new instance of the News Client.
+            >>> news_client = News()
+
+            >>> # Grab the CNBC News Client.
+            >>> cnbc_news_client = news_client.cnbc
+
+            >>> # Grab the top news.
+            >>> cbnc_top_news = cnbc_news_client.all_feeds()
+        """
+
+        all_news = {}
+
+        # Loop through all the topics.
+        for topic_key in self.topic_categories:
+            
+            print('PULLING TOPIC: {topic_id}'.format(topic_id=topic_key))
+
+            # Grab the data.
+            try:
+                data = self.news_parser._make_request(
+                    url=self._check_key(topic_id=topic_key)
+                )
+
+                all_news[topic_key] = data
+            except:
+                continue
+
+            time.sleep(1)
+
+        return all_news
 
     def news_feed(self, topic: Union[str, Enum]) -> List[Dict]:
         """Used to query topics from the News Feed RSS feed.
