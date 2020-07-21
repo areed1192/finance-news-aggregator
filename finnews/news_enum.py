@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class cnbc_news(Enum):
+class cnbc_top_news(Enum):
 
     TOP_NEWS = 100003114
     WORLD_NEWS = 100727362
