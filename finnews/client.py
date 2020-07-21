@@ -97,4 +97,4 @@ class News():
 
         # Dump the content.
         with open(file_name, 'w+') as news_data:
-            json.dump(obj=content, fp=news_data, indent=4)
+            json.dump(obj=content, fp=news_data, indent=2)
