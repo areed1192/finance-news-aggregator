@@ -5,6 +5,7 @@ from typing import Dict
 from typing import Union
 
 from finnews.cnbc import CNBC
+from finnews.nasdaq import NASDAQ
 
 
 class News():
@@ -14,23 +15,28 @@ class News():
     the different news providers.
     """
 
-    def __init__(self):
-        """
+    def __init__(self) -> None:
+        """Initalizes the main `News` client.
+
         Usage:
         ----
             >>> from finnews.client import News
 
             >>> # Create a new instance of the News Client.
             >>> news_client = News()
-
-            >>> # Grab the CNBC News Client.
-            >>> cnbc_news_client = news_client.cnbc  
         """
 
         self._cnbc_client = None
+        self._nasdaq_client = None
 
-    def __repr__(self):
-        pass
+    def __repr__(self) -> str:
+        """Represents the string representation of the client object.
+
+        Returns:
+        ----
+        (str): The string representation.
+        """
+        return "<NewsClient Connected: True'>"
 
     @property
     def cnbc(self) -> CNBC:
@@ -56,11 +62,29 @@ class News():
 
         return self._cnbc_client
 
-    def cnn_finance(self):
-        pass
+    @property
+    def nasdaq(self) -> NASDAQ:
+        """Returns a new instance of the `NASDAQ` news client.
 
-    def yahoo_finance(self):
-        pass
+        Returns:
+        ----
+        NASDAQ: The `NASDAQ` news client that can be used to
+            query different RSS feeds by topics.
+
+        Usage:
+        ----
+            >>> from finnews.client import News
+
+            >>> # Create a new instance of the News Client.
+            >>> news_client = News()
+
+            >>> # Grab the NASDAQ News Client.
+            >>> nasdaq_news_client = news_client.nasdaq       
+        """
+
+        self._nasdaq_client = NASDAQ()
+
+        return self._nasdaq_client
 
     def save_to_file(self, content: List[Dict], file_name: str) -> None:
         """Saves the news content to a JSONC file.
@@ -93,7 +117,7 @@ class News():
         """
 
         # Define the file name.
-        file_name = r'samples\responses\{name}.jsonc'.format(name=file_name)
+        file_name = 'samples/responses/{name}.jsonc'.format(name=file_name)
 
         # Dump the content.
         with open(file_name, 'w+') as news_data:

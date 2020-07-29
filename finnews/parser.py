@@ -5,6 +5,8 @@ from typing import List
 from typing import Dict
 from typing import Union
 
+from fake_useragent import UserAgent
+
 
 class NewsParser():
 
@@ -33,11 +35,17 @@ class NewsParser():
 
         self.client = client
         self.paths = {
-            'cnbc': './channel/item'
+            'cnbc': './channel/item',
+            'nasdaq': './channel/item'
         }
 
         self.namespaces = {
-            'cnbc': '{http://search.cnbc.com/rss/2.0/modules/siteContentMetadata}'
+            'cnbc': ['{http://search.cnbc.com/rss/2.0/modules/siteContentMetadata}'],
+            'nasdaq': [
+                '{http://purl.org/dc/elements/1.1/}',
+                '{http://nasdaq.com/reference/feeds/1.0}',
+                '{http://purl.org/dc/elements/1.1/}'
+            ]
         }
 
     def _parse_response(self, response_content: str) -> List[Dict]:
@@ -69,11 +77,14 @@ class NewsParser():
             # Loop through each element.
             for news_item_element in news_item.iter():
 
-                # Replace the namespace.
-                replace_path = self.namespaces[self.client]
+                # Grab the news tag.
+                news_tag: str = news_item_element.tag
 
-                # Clean the tag.
-                news_tag = news_item_element.tag.replace(replace_path, "")
+                # Replace the namespace.
+                for path in self.namespaces[self.client]:
+
+                    # Clean the tag.
+                    news_tag = news_tag.replace(path, "")
 
                 # Grab the text.
                 news_value = news_item_element.text.strip()
@@ -85,32 +96,27 @@ class NewsParser():
 
         return entries
 
-    def _make_request(self, url: str) -> List[Dict]:
+    def _make_request(self, url: str, params: dict = None) -> List[Dict]:
         """Used to make a request for each of the news clients.
 
         Arguments:
         ----
         url (str): The URL to request.
 
+        params (dict): The paramters to pass through to the request.
+
         Returns:
         ----
         List[Dict]: A list of news items objects.
         """
 
-        # Define a new session.
-        new_session = requests.Session()
-        new_session.verify = True
+        # Fake the headers.
+        headers = {
+            'user-agent': UserAgent().edge
+        }
 
-        # Prepare the request.
-        new_request = requests.Request(
-            method='GET',
-            url=url
-        ).prepare()
-
-        # Send the request.
-        response: requests.Response = new_session.send(
-            request=new_request
-        )
+        # Grab the response.
+        response = requests.get(url=url, headers=headers, params=params)
 
         # Parse the response.
         data = self._parse_response(response_content=response.content)

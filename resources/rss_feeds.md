@@ -19,6 +19,7 @@ Full URL: <https://quote.cnbc.com/quote-html-webservice/quote.htm?&symbols=SRNE%
 
 Base URL: <https://www.cnbc.com/search/?query=Education>
 
+NASDAQ RSS Feed: <https://www.nasdaq.com/nasdaq-RSS-Feeds>
 NASDAQ RSS Feed: <https://www.nasdaq.com/feed/nasdaq-original/rss.xml>
 
 CNBC RSS Feed: <https://www.cnbc.com/rss-feeds/>
