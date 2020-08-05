@@ -39,7 +39,8 @@ class NewsParser():
             'nasdaq': './channel/item',
             'market_watch': './channel/item',
             'sp_global': '.channel/item',
-            'seeking_alpha': '.channel/item'
+            'seeking_alpha': '.channel/item',
+            'cnn_finance': '.channel/item'
         }
 
         self.namespaces = {
@@ -58,6 +59,10 @@ class NewsParser():
             'seeking_alpha':[
                 '{http://search.yahoo.com/mrss/}',
                 '{https://seekingalpha.com/api/1.0}'
+            ],
+            'cnn_finance':[
+                '{http://rssnamespace.org/feedburner/ext/1.0}',
+                '{http://search.yahoo.com/mrss/}'
             ]
         }
 

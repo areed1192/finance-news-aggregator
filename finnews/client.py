@@ -9,6 +9,7 @@ from finnews.nasdaq import NASDAQ
 from finnews.market_watch import MarketWatch
 from finnews.sp_global import SPGlobal
 from finnews.seeking_alpha import SeekingAlpha
+from finnews.cnn_finance import CNNFinance
 
 class News():
 
@@ -33,6 +34,7 @@ class News():
         self._market_watch_client = None
         self._sp_global_client = None
         self._seeking_alpha_client = None
+        self._cnn_finance_client = None
 
     def __repr__(self) -> str:
         """Represents the string representation of the client object.
@@ -162,6 +164,30 @@ class News():
         self._seeking_alpha_client = SeekingAlpha()
 
         return self._seeking_alpha_client
+
+    @property
+    def cnn_finance(self) -> CNNFinance:
+        """Returns a new instance of the `CNNFinance` news client.
+
+        Returns:
+        ----
+        CNNFinance: The `CNNFinance` news client that can be used to
+            query different RSS feeds by topics.
+
+        Usage:
+        ----
+            >>> from finnews.client import News
+
+            >>> # Create a new instance of the News Client.
+            >>> news_client = News()
+
+            >>> # Grab the CNN Finance News Client.
+            >>> cnn_finance_client = news_client.cnn_finance       
+        """
+
+        self._cnn_finance_client = CNNFinance()
+
+        return self._cnn_finance_client
 
     def save_to_file(self, content: List[Dict], file_name: str) -> None:
         """Saves the news content to a JSONC file.

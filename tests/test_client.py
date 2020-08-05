@@ -7,6 +7,7 @@ from finnews.nasdaq import NASDAQ
 from finnews.market_watch import MarketWatch
 from finnews.sp_global import SPGlobal
 from finnews.seeking_alpha import SeekingAlpha
+from finnews.cnn_finance import CNNFinance
 
 class TestNewsClient(TestCase):
 
@@ -72,6 +73,15 @@ class TestNewsClient(TestCase):
         self.assertIsInstance(self.seeking_alpha_client, SeekingAlpha)
         self.assertIsNotNone(self.news_client._seeking_alpha_client)
 
+    def test_creates_cnn_finance_instance(self):
+        """Create an instance and make sure it's a `CNNFinance` client."""
+
+        # Grab the client.
+        self.cnn_finance_client = self.news_client.cnn_finance
+
+        # Make sure it's a NASDAQ client.
+        self.assertIsInstance(self.cnn_finance_client, CNNFinance)
+        self.assertIsNotNone(self.news_client._cnn_finance_client)
 
     def tearDown(self) -> None:
         """Teardown the `NewsClient`."""
