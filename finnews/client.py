@@ -6,6 +6,7 @@ from typing import Union
 
 from finnews.cnbc import CNBC
 from finnews.nasdaq import NASDAQ
+from finnews.market_watch import MarketWatch
 
 
 class News():
@@ -28,6 +29,7 @@ class News():
 
         self._cnbc_client = None
         self._nasdaq_client = None
+        self._market_watch_client = None
 
     def __repr__(self) -> str:
         """Represents the string representation of the client object.
@@ -85,6 +87,30 @@ class News():
         self._nasdaq_client = NASDAQ()
 
         return self._nasdaq_client
+
+    @property
+    def market_Watch(self) -> MarketWatch:
+        """Returns a new instance of the `MarketWatch` news client.
+
+        Returns:
+        ----
+        MarketWatch: The `MarketWatch` news client that can be used to
+            query different RSS feeds by topics.
+
+        Usage:
+        ----
+            >>> from finnews.client import News
+
+            >>> # Create a new instance of the News Client.
+            >>> news_client = News()
+
+            >>> # Grab the MarketWatch News Client.
+            >>> market_Watch_client = news_client.market_Watch       
+        """
+
+        self._market_watch_client = MarketWatch()
+
+        return self._market_watch_client
 
     def save_to_file(self, content: List[Dict], file_name: str) -> None:
         """Saves the news content to a JSONC file.

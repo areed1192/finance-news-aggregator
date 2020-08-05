@@ -36,7 +36,8 @@ class NewsParser():
         self.client = client
         self.paths = {
             'cnbc': './channel/item',
-            'nasdaq': './channel/item'
+            'nasdaq': './channel/item',
+            'market_watch': './channel/item'
         }
 
         self.namespaces = {
@@ -45,6 +46,9 @@ class NewsParser():
                 '{http://purl.org/dc/elements/1.1/}',
                 '{http://nasdaq.com/reference/feeds/1.0}',
                 '{http://purl.org/dc/elements/1.1/}'
+            ],
+            'market_watch':[
+                '{http://rssnamespace.org/feedburner/ext/1.0}'
             ]
         }
 
@@ -87,7 +91,10 @@ class NewsParser():
                     news_tag = news_tag.replace(path, "")
 
                 # Grab the text.
-                news_value = news_item_element.text.strip()
+                if news_item_element.text:
+                    news_value = news_item_element.text.strip()
+                else:
+                    news_value = ""
 
                 # Store it.
                 item_dict[news_tag] = news_value
