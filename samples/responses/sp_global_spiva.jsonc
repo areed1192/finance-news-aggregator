@@ -1,0 +1,812 @@
+[
+  {
+    "item": "",
+    "title": "Canada Persistence Scorecard: Year-End 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/persistence-scorecard-canada-year-end-2019.pdf",
+    "description": "<p>Our widely followed SPIVA&reg; Canada Scorecard repeatedly shows that most Canadian active managers underperform their benchmarks most of the time. However, if an active manager beats a benchmark, how do we know whether the result is a product of genuine skill or merely of good luck? Genuine skill is likely to persist, while luck is random and can soon dissipate.</p>",
+    "pubDate": "Wed, 15 Jul 2020 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "b1f4973a-3b4a-4bf0-9fe0-06f4f5d9f93a",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "U.S. Persistence Scorecard Year-End 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/persistence-scorecard-year-end-2019.pdf",
+    "description": "",
+    "pubDate": "Mon, 29 Jun 2020 09:58:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "e5518ede-c577-4e76-9977-d12ac9d77ac7",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "Australia Persistence Scorecard: Year-End 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/research-persistence-of-australian-active-funds-year-end-2019.pdf",
+    "description": "",
+    "pubDate": "Mon, 22 Jun 2020 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "094f2a76-dbea-442a-8f79-acf89ebae2d9",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Canada Scorecard Year-End 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-canada-scorecard-year-end-2019.pdf",
+    "description": "",
+    "pubDate": "Thu, 21 May 2020 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "5c73e708-c403-4881-8ca9-0bd71acbaa41",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "Latin America Persistence Scorecard: May 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/persistence-scorecard-latin-america-may-2020.pdf",
+    "description": "",
+    "pubDate": "Tue, 19 May 2020 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "7e1b1ef8-50a2-49e1-8c7b-55bf142ed5f3",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "Risk-Adjusted SPIVA\u00ae Scorecard Year-End 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/research/research-risk-adjusted-spiva-scorecard-year-end-2019.pdf",
+    "description": "",
+    "pubDate": "Mon, 18 May 2020 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "dc62d3e4-35d1-4cad-b8ae-e7de5d8ce38d",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae India Year-End 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-india-year-end-2019.pdf",
+    "description": "",
+    "pubDate": "Tue, 07 Apr 2020 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "f922b73b-c956-43a8-8248-24ce7201e298",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Japan Year-End 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-japan-year-end-2019.pdf",
+    "description": "",
+    "pubDate": "Mon, 06 Apr 2020 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "7afc054e-d5e6-432b-9806-229bb40a5786",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae U.S. Year-End 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-us-year-end-2019.pdf",
+    "description": "",
+    "pubDate": "Thu, 02 Apr 2020 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "4ab86b72-1465-4866-88e1-e6a5546433b0",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae South Africa Year-End 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-south-africa-year-end-2019.pdf",
+    "description": "",
+    "pubDate": "Tue, 31 Mar 2020 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "b576c49c-49b2-45b0-9818-4a65a77c4f66",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Latin America Scorecard Year-End 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-latin-america-year-end-2019.pdf",
+    "description": "",
+    "pubDate": "Thu, 19 Mar 2020 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "7212d2c2-91f6-4b89-81c2-73b8ebfe5cc6",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Europe Year-End 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-europe-year-end-2019.pdf",
+    "description": "",
+    "pubDate": "Tue, 17 Mar 2020 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "8c02fecd-dcec-4717-875e-b27e7bcaa8b5",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Australia Year-End 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-australia-year-end-2019.pdf",
+    "description": "",
+    "pubDate": "Mon, 02 Mar 2020 00:00:00 EST",
+    "source": "S&P Dow Jones Indices",
+    "guid": "6886e678-5b56-44ad-8022-d22a58e4c38b",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "Australia Persistence Scorecard: December 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/research-persistence-of-australian-active-funds-mid-year-2019.pdf",
+    "description": "",
+    "pubDate": "Thu, 12 Dec 2019 16:51:00 EST",
+    "source": "S&P Dow Jones Indices",
+    "guid": "547f16f2-9afa-493e-9756-d16563005995",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Canada Mid-Year 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-canada-scorecard-mid-year-2019.pdf",
+    "description": "",
+    "pubDate": "Wed, 11 Dec 2019 00:00:00 EST",
+    "source": "S&P Dow Jones Indices",
+    "guid": "d4db07ff-7511-48c3-8cb9-6e91fe373c0e",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "Latin America Persistence Scorecard: December 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/persistence-scorecard-latin-america-december-2019.pdf",
+    "description": "",
+    "pubDate": "Tue, 10 Dec 2019 00:00:00 EST",
+    "source": "S&P Dow Jones Indices",
+    "guid": "15f3d2de-1d84-4486-b529-b87200f37c8c",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "U.S. Persistence Scorecard: December 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/persistence-scorecard-december-2019.pdf",
+    "description": "",
+    "pubDate": "Wed, 04 Dec 2019 00:00:00 EST",
+    "source": "S&P Dow Jones Indices",
+    "guid": "6f93ded8-15b8-4d17-84c0-15cc8859a5ac",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Latin America Scorecard Mid-Year 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-latin-america-mid-year-2019.pdf",
+    "description": "",
+    "pubDate": "Wed, 27 Nov 2019 00:00:00 EST",
+    "source": "S&P Dow Jones Indices",
+    "guid": "d402f534-7489-4021-bf59-073f374a7e22",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae U.S. Mid-Year 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-us-mid-year-2019.pdf",
+    "description": "",
+    "pubDate": "Wed, 13 Nov 2019 00:00:00 EST",
+    "source": "S&P Dow Jones Indices",
+    "guid": "81bb4181-d7aa-4e80-b3bb-a4fd452b4f7f",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae India Mid-Year 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-india-mid-year-2019.pdf",
+    "description": "",
+    "pubDate": "Tue, 22 Oct 2019 02:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "b4be2d4e-2fd8-462b-8451-58155811df9f",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Japan Mid-Year 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-japan-mid-year-2019.pdf",
+    "description": "",
+    "pubDate": "Tue, 15 Oct 2019 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "78ef97e4-4c35-4559-8adc-f8eed9611259",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae South Africa Mid-Year 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-south-africa-mid-year-2019.pdf",
+    "description": "",
+    "pubDate": "Tue, 15 Oct 2019 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "2815d51b-854c-41de-ad52-b2fbb1c0585d",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Europe Mid-Year 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-europe-mid-year-2019.pdf",
+    "description": "",
+    "pubDate": "Tue, 08 Oct 2019 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "fce86ab1-a8df-4432-a14f-1a0922c1c926",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Institutional Scorecard Year-End 2018",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/research-spiva-institutional-scorecard-how-much-do-fees-affect-the-active-versus-passive-debate-year-end-2018.pdf",
+    "description": "<p>This report adds institutional accounts to the mutual funds analyzed in the U.S. SPIVA scorecards.</p>",
+    "pubDate": "Wed, 18 Sep 2019 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "3a34a190-3f52-450b-9438-fdaad5047d7f",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Australia Mid-Year 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-australia-mid-year-2019.pdf",
+    "description": "",
+    "pubDate": "Mon, 02 Sep 2019 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "4a0ca164-8445-4bb3-bc9b-e97ca0b947fb",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "Persistence Scorecard: March 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/persistence-scorecard-march-2019.pdf",
+    "description": "",
+    "pubDate": "Mon, 15 Jul 2019 09:31:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "5fa0ddbd-d67b-4fe5-a9ab-5a50303b2ea1",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "Persistence of Australian Active Funds Year-End 2018",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/research-persistence-of-australian-active-funds-year-end-2018.pdf",
+    "description": "<p>We measure the performance persistence of active funds that outperformed their peers and benchmarks over consecutive three- and five-year periods, and we analyze their transition matrices over subsequent periods.</p>",
+    "pubDate": "Tue, 11 Jun 2019 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "a2f0d42f-f893-4700-9adc-63db3ac5ecb4",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "Risk-Adjusted SPIVA\u00ae Scorecard Year-End 2018",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/research-risk-adjusted-spiva-year-end-2018.pdf",
+    "description": "<p>The Risk-Adjusted SPIVA Scorecard reports on the performance of actively managed U.S. mutual funds against their respective benchmark indices through a risk-adjusted lens over 5-, 10-, and 15-year investment horizons.</p>",
+    "pubDate": "Wed, 05 Jun 2019 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "fec1ee18-2c4e-44b1-962d-a82e00415403",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA Around the World",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-infographic.pdf",
+    "description": "",
+    "pubDate": "Mon, 06 May 2019 17:07:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "27ba279b-1293-4aa7-8fff-664c5706fc78",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Canada Year-End 2018",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-canada-scorecard-year-end-2018.pdf",
+    "description": "",
+    "pubDate": "Mon, 29 Apr 2019 08:52:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "73f9dcb4-0c4c-404d-a357-cc9c0065867b",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "Persistence Scorecard: Latin America April 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/persistence-scorecard-latin-america-april-2019.pdf",
+    "description": "",
+    "pubDate": "Wed, 24 Apr 2019 08:54:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "fd3f64a7-c076-434f-9fbf-5e953b104330",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae South Africa Year-End 2018",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-south-africa-year-end-2018.pdf",
+    "description": "",
+    "pubDate": "Tue, 23 Apr 2019 04:09:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "3c62adf3-167c-4cbe-bca1-f870fd809c05",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Europe Year-End 2018",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-europe-year-end-2018.pdf",
+    "description": "",
+    "pubDate": "Tue, 16 Apr 2019 04:27:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "252c2328-6b8a-4b62-9ba0-8f62bc228dfd",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae India Year-End 2018",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-india-year-end-2018.pdf",
+    "description": "",
+    "pubDate": "Tue, 02 Apr 2019 01:24:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "e0802546-2341-44ca-9897-dc962884d73f",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Japan Year-End 2018",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-japan-year-end-2018.pdf",
+    "description": "<p>The SPIVA Japan Scorecard reports on the performance of actively managed Japanese mutual funds against their respective benchmark indices over 1-, 3-, 5-, and 10-year investment horizons. In this scorecard, we evaluated returns of more than 815 Japanese large- and mid/small-cap equity funds, along with more than 678 international equity funds investing in global, international, and emerging markets, as well as U.S. equities.</p>",
+    "pubDate": "Wed, 27 Mar 2019 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "10645a59-be91-4971-b4fc-3287807cd1b5",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Latin America Scorecard Year-End 2018",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-latin-america-year-end-2018.pdf",
+    "description": "",
+    "pubDate": "Wed, 27 Mar 2019 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "65cacdb2-754e-4ea8-af70-62fcf01135f5",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae U.S. Year-End 2018",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-us-year-end-2018.pdf",
+    "description": "",
+    "pubDate": "Mon, 11 Mar 2019 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "ce4c7ab7-487d-4bf6-9c2a-d71ce22ada11",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Australia Year-End 2018",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-australia-year-end-2018.pdf",
+    "description": "",
+    "pubDate": "Thu, 28 Feb 2019 00:00:00 EST",
+    "source": "S&P Dow Jones Indices",
+    "guid": "755b6c72-23c5-4fb1-ad87-8642a709de5c",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA Institutional Scorecard 2017",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/research-spiva-institutional-scorecard-how-much-do-fees-affect-the-active-versus-passive-debate-year-end-2017.pdf",
+    "description": "<p>This report examines the impact of fees on the performance of mutual funds and institutional managed accounts across equity and fixed income categories, using gross- and net-of-fees returns.</p>",
+    "pubDate": "Tue, 08 Jan 2019 00:00:00 EST",
+    "source": "S&P Dow Jones Indices",
+    "guid": "3b8d42ec-f240-4caf-91b3-1b4a1144a241",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "Persistence Scorecard: September 2018",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/persistence-scorecard-september-2018.pdf",
+    "description": "",
+    "pubDate": "Tue, 11 Dec 2018 09:30:00 EST",
+    "source": "S&P Dow Jones Indices",
+    "guid": "a5885de8-60cd-462c-907e-caec2e4b4172",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Canada Mid-Year 2018",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-canada-scorecard-mid-year-2018.pdf",
+    "description": "",
+    "pubDate": "Mon, 05 Nov 2018 00:00:00 EST",
+    "source": "S&P Dow Jones Indices",
+    "guid": "bc227b2b-400d-4ed0-805f-6659c4c55990",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "Persistence Scorecard: Latin America October 2018",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/persistence-scorecard-latin-america-october-2018.pdf",
+    "description": "<p>In this report, we measure the performance persistence of Latin American active funds that outperformed their peers and benchmarks over consecutive three- and five-year periods, as well as their transition matrices over subsequent time periods.</p>",
+    "pubDate": "Wed, 31 Oct 2018 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "b1002fd2-004c-4a12-ab0b-ef5595b28ed4",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Japan Mid-Year 2018",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-japan-mid-year-2018.pdf",
+    "description": "",
+    "pubDate": "Sun, 28 Oct 2018 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "0d58da61-1d15-4f4b-9d27-a9e4e21892fb",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae India Mid-Year 2018",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-india-mid-year-2018.pdf",
+    "description": "",
+    "pubDate": "Mon, 22 Oct 2018 02:32:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "5e251578-8365-430d-9c16-8bbac9e425ae",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae U.S. Mid-Year 2018",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-us-mid-year-2018.pdf",
+    "description": "",
+    "pubDate": "Wed, 17 Oct 2018 09:24:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "99c1f474-9995-4f0a-9cd4-0a6bb1272989",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae South Africa Mid-Year 2018",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-south-africa-mid-year-2018.pdf",
+    "description": "",
+    "pubDate": "Mon, 15 Oct 2018 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "593fc9e5-b94f-47de-987c-a195d143f5bc",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Europe Mid-Year 2018",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-europe-mid-year-2018.pdf",
+    "description": "",
+    "pubDate": "Mon, 08 Oct 2018 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "ba2013ac-dd77-43f7-a261-587598c47b32",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Latin America Scorecard Mid-Year 2018",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-latin-america-mid-year-2018.pdf",
+    "description": "",
+    "pubDate": "Thu, 04 Oct 2018 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "be0bebd0-ec52-4c87-b942-e693409d0aae",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "Persistence of Australian Active Funds: September 2018",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/research-persistence-of-australian-active-funds-september-2018.pdf",
+    "description": "",
+    "pubDate": "Mon, 10 Sep 2018 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "f5216c56-8fa1-4609-9cbb-a4f46645356b",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Australia Mid-Year 2018",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-australia-mid-year-2018.pdf",
+    "description": "",
+    "pubDate": "Mon, 10 Sep 2018 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "132c0643-2c89-424b-a518-ffabe47fb127",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "U.S. Persistence Scorecard: March 2018",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/persistence-scorecard-march-2018.pdf",
+    "description": "",
+    "pubDate": "Mon, 30 Jul 2018 10:26:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "50d54e3a-9ccd-4805-ae84-7b1e974f8041",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "Risk-Adjusted SPIVA\u00ae Scorecard Year-End 2017",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/research-risk-adjusted-spiva-scorecard.pdf",
+    "description": "<p>The Risk-Adjusted SPIVA Scorecard reports on the performance of actively managed U.S. mutual funds against their respective benchmark indices through a risk-adjusted lens over 5-, 10-, and 15-year investment horizons.</p>",
+    "pubDate": "Fri, 06 Jul 2018 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "7bf7fc40-82a1-40d6-acb7-03be7d3a814b",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "Persistence Scorecard: Latin America May 2018",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/research-persistence-scorecard-latin-america-may-2018.pdf",
+    "description": "",
+    "pubDate": "Wed, 16 May 2018 10:06:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "75a09f45-eb5d-4a5c-8a9f-f32b73d85a8d",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Canada Year-End 2017",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-canada-year-end-2017.pdf",
+    "description": "",
+    "pubDate": "Thu, 05 Apr 2018 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "475290c4-b908-460f-bad9-3a9ee422bb8e",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae South Africa Year-End 2017",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-south-africa-year-end-2017.pdf",
+    "description": "",
+    "pubDate": "Wed, 28 Mar 2018 01:53:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "a8c1e2d4-c6e2-47a3-a42c-635ff744a37f",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae India Year-End 2017",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-india-year-end-2017.pdf",
+    "description": "",
+    "pubDate": "Mon, 26 Mar 2018 01:04:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "5673655c-4f00-4eae-aa7d-4158baaeb049",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Japan Year-End 2017",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-japan-year-end-2017.pdf",
+    "description": "",
+    "pubDate": "Thu, 22 Mar 2018 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "870fa873-a365-48d8-910f-9027ca896c0c",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Europe Year-End 2017",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-europe-year-end-2017.pdf",
+    "description": "",
+    "pubDate": "Mon, 19 Mar 2018 01:56:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "6bc32d5f-b83c-48f1-ba65-849bde6517dd",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae U.S. Year-End 2017",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-us-year-end-2017.pdf",
+    "description": "",
+    "pubDate": "Thu, 15 Mar 2018 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "46ed5b9f-222f-4a73-9d88-53202dac8ed3",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Latin America Scorecard Year-End 2017",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-latin-america-year-end-2017.pdf",
+    "description": "",
+    "pubDate": "Tue, 13 Mar 2018 08:47:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "680aa2a2-0bfb-490a-a83e-3110b665467a",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "Persistence of Australian Active Funds: March 2018",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/research-persistence-of-australian-active-funds-march-2018.pdf",
+    "description": "",
+    "pubDate": "Mon, 12 Mar 2018 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "3123e2d0-a32f-4638-abb0-f1bb56e6098b",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Australia Year-End 2017",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-australia-year-end-2017.pdf",
+    "description": "",
+    "pubDate": "Mon, 12 Mar 2018 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "66021d25-7c7c-41a8-bf3d-ffbed3032a5b",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae South Africa Mid-Year 2017",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-south-africa-mid-year-2017.pdf",
+    "description": "",
+    "pubDate": "Tue, 10 Oct 2017 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "5a828bef-e01c-43cd-b0a3-d0a7fd62e888",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Japan Mid-Year 2017",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-japan-mid-year-2017.pdf",
+    "description": "",
+    "pubDate": "Tue, 03 Oct 2017 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "24937503-1df9-4b4e-bf32-67ee13338ae0",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Australia Mid-Year 2017",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-australia-mid-year-2017.pdf",
+    "description": "",
+    "pubDate": "Tue, 26 Sep 2017 18:14:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "b12d169a-b866-4465-980d-a11810333d51",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Institutional Scorecard 2016",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/research-spiva-institutional-scorecard-how-much-do-fees-affect-the-active-versus-passive-debate-year-end-2016.pdf",
+    "description": "",
+    "pubDate": "Tue, 08 Aug 2017 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "1da8ca95-2a9d-49f8-be77-c2dc5d6d283d",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Japan Year-End 2016",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-japan-year-end-2016.pdf",
+    "description": "",
+    "pubDate": "Wed, 22 Mar 2017 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "67f72430-bb8e-4fdb-a94e-2315ab915993",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "Persistence of Australian Active Funds: February 2017",
+    "link": "https://www.spglobal.com/spdji/en//documents/research/research-persistence-of-australian-active-funds.pdf",
+    "description": "<p>While comparing active funds against a benchmark index is a typical practice used to evaluate their performance, persistence is an additional test that reveals fund managers&rsquo; skills in different market environments.</p>",
+    "pubDate": "Tue, 28 Feb 2017 00:00:00 EST",
+    "source": "S&P Dow Jones Indices",
+    "guid": "cfa815db-adb8-4b57-9f82-bcfb4a73b13c",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Australia Year-End 2016",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-australia-year-end-2016.pdf",
+    "description": "",
+    "pubDate": "Mon, 20 Feb 2017 00:00:00 EST",
+    "source": "S&P Dow Jones Indices",
+    "guid": "da4a49ea-772b-4ab7-a324-861e566c10ca",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Japan Mid-Year 2016",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-japan-mid-year-2016.pdf",
+    "description": "",
+    "pubDate": "Wed, 19 Oct 2016 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "737d8591-c49d-42f2-a100-41d1b586199b",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Australia Mid-Year 2016",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-australia-mid-year-2016.pdf",
+    "description": "",
+    "pubDate": "Wed, 05 Oct 2016 09:27:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "7ee0c183-1ede-4197-88c9-dfef3ca4042b",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Institutional Scorecard 2015",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-institutional-scorecard-how-much-do-fees-affect-the-active-versus-passive-debate.pdf",
+    "description": "",
+    "pubDate": "Thu, 21 Jul 2016 10:08:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "40a97ed7-0968-4a94-a6a5-6bc01027e63c",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA: A Cross-Country Comparison",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/research-spiva-a-cross-country-comparison.pdf",
+    "description": "<p>The contention surrounding the merit of active management over that of passive management has been going on for years, especially against the backdrop of the staggering rise of exchange-traded and passive funds.</p>",
+    "pubDate": "Tue, 15 Sep 2015 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "94fef005-9845-4b04-9cbd-df2c8dc38c36",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae India Scorecard Year-End 2014",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-india-scorecard-yearend-2014.pdf",
+    "description": "",
+    "pubDate": "Tue, 28 Apr 2015 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "93ee1fbc-860e-45c0-8a30-f90ab459d4f1",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae  Australia Mid-Year 2014",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-australia-mid-2014.pdf",
+    "description": "",
+    "pubDate": "Mon, 06 Oct 2014 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "89ad3627-37b6-4fcb-ab4e-37ade91a5e3c",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae Canada Mid-Year 2012",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-canada-mid-year-2012-2.pdf",
+    "description": "",
+    "pubDate": "Fri, 26 Apr 2013 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "3b74fa5d-2d53-4b81-939a-55303d51cf5b",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "U.S. Persistence Scorecard: December 2012",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/persistence-scorecard-december-2012.pdf",
+    "description": "",
+    "pubDate": "Fri, 21 Dec 2012 00:00:00 EST",
+    "source": "S&P Dow Jones Indices",
+    "guid": "24f283eb-e14d-4ede-a9b0-a6348e01805a",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "U.S. Persistence Scorecard June 2012",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/sp-persistence-scorecard-june-2012.pdf",
+    "description": "",
+    "pubDate": "Wed, 06 Jun 2012 12:01:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "b45b9216-603d-407c-b89b-b1162d5b8e76",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "SPIVA\u00ae U.S. Year-End 2011",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/spiva-us-yearend2011.pdf",
+    "description": "",
+    "pubDate": "Mon, 12 Mar 2012 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "c10b13a6-8fa1-4aa9-a0e5-f7414b127277",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "U.S. Persistence Scorecard: November 2011",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/persistencescorecard_nov2011_final.pdf",
+    "description": "",
+    "pubDate": "Tue, 29 Nov 2011 00:00:00 EST",
+    "source": "S&P Dow Jones Indices",
+    "guid": "4f150298-134b-4adc-a1da-ee264951b8c3",
+    "category": "SPIVA"
+  },
+  {
+    "item": "",
+    "title": "U.S. Persistence Scorecard: June 2011",
+    "link": "https://www.spglobal.com/spdji/en//documents/spiva/persistencescorecard_june2011.pdf",
+    "description": "",
+    "pubDate": "Tue, 31 May 2011 00:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "a72001af-fa0c-40b3-957f-ba5155f7e5df",
+    "category": "SPIVA"
+  }
+]

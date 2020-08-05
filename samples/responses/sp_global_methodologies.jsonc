@@ -1,0 +1,1002 @@
+[
+  {
+    "item": "",
+    "title": "S&P/Experian Consumer Credit Default Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-experian.pdf",
+    "description": "S&P/Experian Consumer Credit Default Indices Methodology",
+    "pubDate": "Tue, 04 Aug 2020 14:15:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "90b92ed7-2251-4002-8ddf-f06305ed0840",
+    "category": "Consumer Credit Default"
+  },
+  {
+    "item": "",
+    "title": "Custom Slice & Dice Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-custom-slice-and-dice-indices.pdf",
+    "description": "Custom Slice & Dice Indices Methodology",
+    "pubDate": "Tue, 04 Aug 2020 02:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "44e6420d-014e-426e-996a-f63766b1da32",
+    "category": "Consumer Credit Default"
+  },
+  {
+    "item": "",
+    "title": "S&P Eurozone 30 ESG-Momentum Equal Weight Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-eurozone-30-esg-momentum-equal-weight-indices.pdf",
+    "description": "S&P Eurozone 30 ESG-Momentum Equal Weight Indices Methodology",
+    "pubDate": "Mon, 03 Aug 2020 05:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "873194be-e5a5-4236-bc4d-2eb42bf0441e",
+    "category": "ESG"
+  },
+  {
+    "item": "",
+    "title": "S&P ESG Exclusion Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-esg-exclusion-indices.pdf",
+    "description": "S&P ESG Exclusion Indices Methodology",
+    "pubDate": "Thu, 30 Jul 2020 13:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "159e3499-1b11-4ede-b7e8-f23f3302e024",
+    "category": "ESG"
+  },
+  {
+    "item": "",
+    "title": "S&P Frontier Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-frontier.pdf",
+    "description": "S&P Frontier Indices Methodology",
+    "pubDate": "Thu, 30 Jul 2020 12:45:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "6bac1164-38b5-4f73-837e-0b5e11e752c6",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P Risk Control 2.0 Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-risk-control-2-indices.pdf",
+    "description": "S&P Risk Control 2.0 Indices Methodology",
+    "pubDate": "Thu, 30 Jul 2020 11:45:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "b501f4d8-aec9-49a2-a349-187049cc17b3",
+    "category": "Strategy"
+  },
+  {
+    "item": "",
+    "title": "S&P Kensho New Economies Sector Rotator Index Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-kensho-new-economies-sector-rotator-index.pdf",
+    "description": "S&P Kensho New Economies Sector Rotator Index Methodology",
+    "pubDate": "Thu, 30 Jul 2020 05:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "7a5f3067-4781-40b3-899b-663b36dd2638",
+    "category": "New Economy Sectors"
+  },
+  {
+    "item": "",
+    "title": "S&P Merger Arbitrage Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-merger-arbitrage-indices.pdf",
+    "description": "S&P Merger Arbitrage Indices Methodology",
+    "pubDate": "Mon, 27 Jul 2020 22:45:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "2c2fedab-93b1-4ae5-81ac-29925be5931c",
+    "category": "Strategy"
+  },
+  {
+    "item": "",
+    "title": "Dow Jones U.S. Select Sector Specialty Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-dj-us-select-sector-specialty.pdf",
+    "description": "Dow Jones U.S. Select Sector Specialty Indices Methodology",
+    "pubDate": "Mon, 27 Jul 2020 13:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "92d7628e-bb74-4479-966f-86e5a9c43f0d",
+    "category": "U.S. Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P/TSX ESG Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-tsx-esg-indices.pdf",
+    "description": "S&P/TSX ESG Indices Methodology",
+    "pubDate": "Mon, 27 Jul 2020 05:37:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "09a3f368-85fc-4b71-800d-899930c3b07b",
+    "category": "U.S. Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P/TSX Carbon Price Risk Adjusted Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-tsx-carbon-price-risk-adjusted-indices.pdf",
+    "description": "S&P/TSX Carbon Price Risk Adjusted Indices Methodology",
+    "pubDate": "Mon, 27 Jul 2020 05:28:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "510a626a-c14e-40a0-822d-636d8c371e6b",
+    "category": "U.S. Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P Momentum Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-momentum-indices.pdf",
+    "description": "S&P Momentum Indices Methodology",
+    "pubDate": "Mon, 27 Jul 2020 03:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "43f7f6a8-342d-482d-8be6-b409698f7108",
+    "category": "Strategy"
+  },
+  {
+    "item": "",
+    "title": "S&P GSCI Multiple Contract Index Methodology Supplement",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-gsci-multiple-contract-index-supplement.pdf",
+    "description": "S&P GSCI Multiple Contract Index Methodology Supplement",
+    "pubDate": "Sun, 26 Jul 2020 14:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "862c44a0-62b6-4790-aadd-102c2088779b",
+    "category": "Commodities"
+  },
+  {
+    "item": "",
+    "title": "Ossiam Emerging Markets Minimum Variance Index Series Methodology",
+    "link": "https://www.spglobal.com/spdji/en//Ossiam-Emerging-Markets-Minimum-Variance-Indices-Methodology.pdf",
+    "description": "Ossiam Emerging Markets Minimum Variance Index Series Methodology",
+    "pubDate": "Fri, 24 Jul 2020 12:02:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "eb19d7d6-6fd5-4aea-925c-6e82d24a2c84",
+    "category": "Custom Indices"
+  },
+  {
+    "item": "",
+    "title": "S&P/ASX Australian Bond Index Series Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-asx-australian-bond-index-series.pdf",
+    "description": "S&P/ASX Australian Bond Index Series Methodology",
+    "pubDate": "Fri, 24 Jul 2020 11:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "f95bb8e4-969a-4a7c-ae28-30780b7b223e",
+    "category": "Fixed Income"
+  },
+  {
+    "item": "",
+    "title": "S&P Global Sovereign Inflation-Linked Bond Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-global-sovereign-inflation-linked-bond-indices.pdf",
+    "description": "S&P Global Sovereign Inflation-Linked Bond Indices Methodology",
+    "pubDate": "Thu, 23 Jul 2020 15:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "ddd71394-e086-4a64-a95a-40a668a01adf",
+    "category": "Fixed Income"
+  },
+  {
+    "item": "",
+    "title": "S&P Paris-Aligned & Climate Transition (PACT) Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-paris-aligned-climate-transition-pact-indices.pdf",
+    "description": "S&P Paris-Aligned & Climate Transition (PACT) Indices Methodology",
+    "pubDate": "Wed, 22 Jul 2020 15:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "27dd7996-28b0-45ed-96b3-c279c102f472",
+    "category": "ESG"
+  },
+  {
+    "item": "",
+    "title": "S&P 500 Bond Index Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-500-bond-index.pdf",
+    "description": "S&P 500 Bond Index Methodology",
+    "pubDate": "Wed, 22 Jul 2020 01:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "72aa0c0f-7a04-4c57-b705-5b3b695fefa0",
+    "category": "Fixed Income"
+  },
+  {
+    "item": "",
+    "title": "S&P Global Bond Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-global-bond-indices.pdf",
+    "description": "S&P Global Bond Indices Methodology",
+    "pubDate": "Wed, 22 Jul 2020 00:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "3405068d-81bc-48b6-8526-d0e28fdcad9b",
+    "category": "Fixed Income"
+  },
+  {
+    "item": "",
+    "title": "S&P GSCI Capped Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-gsci-capped-indices.pdf",
+    "description": "S&P GSCI Capped Indices Methodology",
+    "pubDate": "Mon, 20 Jul 2020 02:15:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "148c2eaa-88ec-4129-b9fa-a0ef68e0deff",
+    "category": "Commodities"
+  },
+  {
+    "item": "",
+    "title": "S&P/BMV Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-bmv-indices.pdf",
+    "description": "S&P/BMV Indices Methodology",
+    "pubDate": "Fri, 17 Jul 2020 15:15:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "7eb53a79-9b18-4a1f-893b-f2f700e6e61d",
+    "category": "ESG"
+  },
+  {
+    "item": "",
+    "title": "S&P ESG Tilted Index Series Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-esg-tilted-index-series.pdf",
+    "description": "S&P ESG Tilted Index Series Methodology",
+    "pubDate": "Mon, 13 Jul 2020 01:46:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "4d1819cd-d3a4-478a-8da3-a91a6c9031af",
+    "category": "ESG"
+  },
+  {
+    "item": "",
+    "title": "S&P ESG Index Series Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-esg-index-series.pdf",
+    "description": "S&P ESG Index Series Methodology",
+    "pubDate": "Mon, 13 Jul 2020 01:15:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "a8304871-06a9-4f61-999e-bbd8c6384270",
+    "category": "ESG"
+  },
+  {
+    "item": "",
+    "title": "S&P Environmental & Socially Responsible Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-es-responsible-indices.pdf",
+    "description": "S&P Environmental & Socially Responsible Indices Methodology",
+    "pubDate": "Fri, 10 Jul 2020 12:45:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "2f415574-50cb-455f-98e1-12e615260331",
+    "category": "ESG"
+  },
+  {
+    "item": "",
+    "title": "S&P Consumer Finance Index Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-consumer-finance.pdf",
+    "description": "S&P Consumer Finance Index Methodology",
+    "pubDate": "Fri, 10 Jul 2020 12:45:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "428c2f89-629f-4d7f-8172-7bca9d1233a7",
+    "category": "U.S. Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P China Sovereign Bond 1-10 Year Spread Adjusted Index Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-china-sovereign-bond-1-10-year-spread-adjusted-index.pdf",
+    "description": "S&P China Sovereign Bond 1-10 Year Spread Adjusted Index Methodology",
+    "pubDate": "Thu, 09 Jul 2020 15:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "eba9fd04-e1a9-447e-8731-2952057dcdc8",
+    "category": "Fixed Income"
+  },
+  {
+    "item": "",
+    "title": "S&P Revenue-Weighted Index Series Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-revenue-weighted-index-series.pdf",
+    "description": "S&P Revenue-Weighted Index Series Methodology",
+    "pubDate": "Thu, 09 Jul 2020 13:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "792cf0c8-549f-4608-b127-be0c1f660802",
+    "category": "Fixed Income"
+  },
+  {
+    "item": "",
+    "title": "S&P 500 Minimum Volatility Index Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-500-minimum-volatility-index.pdf",
+    "description": "The S&P 500 Minimum Volatility Index is designed to measure the performance of a managed volatility equity strategy that seeks to achieve lower total risk than the underlying parent index, the S&P 500, while maintaining other similar characteristics.",
+    "pubDate": "Thu, 09 Jul 2020 09:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "a00f5513-3afa-4170-9dc4-f9e7dd1636ea",
+    "category": "Strategy"
+  },
+  {
+    "item": "",
+    "title": "S&P BSE Dividend Stability Index Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-bse-dividend-stability-index.pdf",
+    "description": "S&P BSE Dividend Stability Index Methodology",
+    "pubDate": "Wed, 08 Jul 2020 11:45:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "95acfc49-6795-44fe-ab41-e76051b46907",
+    "category": "Asia Equities"
+  },
+  {
+    "item": "",
+    "title": "Dow Jones Dividend Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-dj-dividend-indices.pdf",
+    "description": "Dow Jones Dividend Indices Methodology",
+    "pubDate": "Wed, 08 Jul 2020 09:45:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "b73cf006-4817-4d2d-9fb4-1d13c9858c89",
+    "category": "Strategy"
+  },
+  {
+    "item": "",
+    "title": "S&P Sustainability Screened Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-sustainability-screened-indices.pdf",
+    "description": "S&P Sustainability Screened Indices Methodology",
+    "pubDate": "Tue, 07 Jul 2020 07:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "83328b6e-f528-44e3-a18d-e5b2361ba11a",
+    "category": "Strategy"
+  },
+  {
+    "item": "",
+    "title": "Index Mathematics Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-index-math.pdf",
+    "description": "Index Mathematics Methodology",
+    "pubDate": "Thu, 02 Jul 2020 15:45:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "93645f51-b3e5-4ed7-a588-65729791287e",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P BSE Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-bse-indices.pdf",
+    "description": "S&P BSE Indices Methodology",
+    "pubDate": "Wed, 01 Jul 2020 11:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "1f1f7c9d-3d2c-4b01-80e7-82edc2ca6dd4",
+    "category": "Asia Equities"
+  },
+  {
+    "item": "",
+    "title": "S&P Japan Bond Index Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-japan-bond-index.pdf",
+    "description": "S&P Japan Bond Index Methodology",
+    "pubDate": "Tue, 30 Jun 2020 15:45:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "a302208d-4e90-4c14-95e3-90c682b5769a",
+    "category": "Fixed Income"
+  },
+  {
+    "item": "",
+    "title": "S&P Pan Asia Bond Index Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-pan-asia-bond-index.pdf",
+    "description": "S&P Pan Asia Bond Index Methodology",
+    "pubDate": "Tue, 30 Jun 2020 15:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "42082a05-38e6-4759-a5cd-c9c9644a0efd",
+    "category": "Fixed Income"
+  },
+  {
+    "item": "",
+    "title": "S&P/BMV Mexico Target Risk Index Series Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-bmv-mexico-target-risk-index-series.pdf",
+    "description": "S&P/BMV Mexico Target Risk Index Series Methodology",
+    "pubDate": "Tue, 30 Jun 2020 04:20:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "476d5a81-73ac-4995-b15f-263e275b323b",
+    "category": "Strategy"
+  },
+  {
+    "item": "",
+    "title": "S&P Global Dividend Aristocrats Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-global-divarist.pdf",
+    "description": "S&P Global Dividend Aristocrats Methodology",
+    "pubDate": "Tue, 30 Jun 2020 02:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "639fdd0c-2aa7-40e3-9abf-8835d465f1ca",
+    "category": "Strategy"
+  },
+  {
+    "item": "",
+    "title": "S&P/NZX New Zealand Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-nzx-index.pdf",
+    "description": "S&P/NZX New Zealand Indices Methodology",
+    "pubDate": "Mon, 29 Jun 2020 18:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "98a00564-94c1-4e9c-af47-2ba3f8b4c570",
+    "category": "Developed Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P 500 GARP Index Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-500-garp-index.pdf",
+    "description": "S&P 500 GARP Index Methodology",
+    "pubDate": "Mon, 29 Jun 2020 14:45:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "4f976242-faf9-49aa-8c19-5ccc3c6551ba",
+    "category": "Developed Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P Quality, Value & Momentum Multi-factor Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-quality-value-momentum-multi-factor-indices.pdf",
+    "description": "S&P Quality, Value & Momentum Multi-factor Indices Methodology",
+    "pubDate": "Mon, 29 Jun 2020 04:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "3397a2ba-145d-459c-a311-9cfb2545a66b",
+    "category": "Strategy"
+  },
+  {
+    "item": "",
+    "title": "S&P Enhanced Value Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-enhanced-value-indices.pdf",
+    "description": "S&P Enhanced Value Indices Methodology",
+    "pubDate": "Mon, 29 Jun 2020 03:45:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "3d744003-3c6c-4cea-b2b4-ca48611ae939",
+    "category": "Strategy"
+  },
+  {
+    "item": "",
+    "title": "S&P Low Volatility Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-low-volatility-indices.pdf",
+    "description": "S&P Low Volatility Indices Methodology",
+    "pubDate": "Mon, 29 Jun 2020 03:45:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "81aee9a6-151f-4638-9878-b7a485370580",
+    "category": "Strategy"
+  },
+  {
+    "item": "",
+    "title": "S&P Quality Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-quality-indices.pdf",
+    "description": "S&P Quality Indices Methodology",
+    "pubDate": "Mon, 29 Jun 2020 03:45:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "db39c41c-6c6d-4bec-9ed5-288d04dd5bf4",
+    "category": "Strategy"
+  },
+  {
+    "item": "",
+    "title": "S&P Multi-Factor Composite Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-multi-factor-composite-indices.pdf",
+    "description": "S&P Multi-Factor Composite Indices Methodology",
+    "pubDate": "Mon, 29 Jun 2020 03:19:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "8716b3fb-c5da-4378-9dd1-1dfebfe6b747",
+    "category": "Strategy"
+  },
+  {
+    "item": "",
+    "title": "S&P/BVL Peru Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-bvl-peru-indices.pdf",
+    "description": "S&P/BVL Peru Indices Methodology",
+    "pubDate": "Wed, 24 Jun 2020 11:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "c9ca3629-4c37-4c66-8acd-e3ce92627248",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P China Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-china-indices.pdf",
+    "description": "S&P China Indices Methodology",
+    "pubDate": "Mon, 22 Jun 2020 12:15:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "08478b4b-40ef-4803-85ea-fb848c226f8c",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P All Africa Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-all-africa-indices.pdf",
+    "description": "S&P All Africa Indices Methodology",
+    "pubDate": "Fri, 19 Jun 2020 09:15:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "bf98a8fb-2475-46de-9913-0447b27c601a",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P Global 1200 Fossil Fuel Free Index Series Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-global-1200-fossil-fuel-free-index-series.pdf",
+    "description": "S&P Global 1200 Fossil Fuel Free Index Series Methodology",
+    "pubDate": "Wed, 17 Jun 2020 05:43:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "643aa6f5-2f88-4017-a40f-3fb123bed19b",
+    "category": "ESG"
+  },
+  {
+    "item": "",
+    "title": "S&P China High Quality Corporate Bond 3-7 Year Index Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-china-high-quality-corporate-bond-3-7-year-index.pdf",
+    "description": "S&P China High Quality Corporate Bond 3-7 Year Index Methodology",
+    "pubDate": "Mon, 15 Jun 2020 16:45:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "9a333b99-99a7-4dae-a1a2-7fe3c1e5bf3c",
+    "category": "Fixed Income"
+  },
+  {
+    "item": "",
+    "title": "S&P ESG Select Equal Weight Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-esg-select-equal-weight-indices.pdf",
+    "description": "S&P ESG Select Equal Weight Indices Methodology",
+    "pubDate": "Mon, 15 Jun 2020 01:15:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "84a08695-1b1e-4dce-86b0-299c32f2841b",
+    "category": "ESG"
+  },
+  {
+    "item": "",
+    "title": "S&P Global Agribusiness Composite Index Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-global-agribusiness-composite-index.pdf",
+    "description": "S&P Global Agribusiness Composite Index Methodology",
+    "pubDate": "Fri, 12 Jun 2020 16:15:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "3eb6ad3f-918a-480c-8ec6-d57684fd2655",
+    "category": "ESG"
+  },
+  {
+    "item": "",
+    "title": "S&P/B3 Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-b3-indices.pdf",
+    "description": "S&P/B3 Indices Methodology",
+    "pubDate": "Fri, 12 Jun 2020 12:45:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "7bb6462b-babf-4b6a-a2a4-d7128d6a177a",
+    "category": "ESG"
+  },
+  {
+    "item": "",
+    "title": "Dow Jones U.S. Thematic Neutral Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-dj-us-thematic-neutral.pdf",
+    "description": "Dow Jones U.S. Thematic Neutral Indices Methodology",
+    "pubDate": "Fri, 12 Jun 2020 11:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "ead5ef80-b5dd-4fb2-be58-09509f9c9798",
+    "category": "Strategy"
+  },
+  {
+    "item": "",
+    "title": "S&P U.S. Treasury Principal STRIPS Bond Index Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-us-treasury-principal-strips-index.pdf",
+    "description": "S&P U.S. Treasury Principal STRIPS Bond Index Methodology",
+    "pubDate": "Thu, 11 Jun 2020 01:15:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "5fa7fb2f-eb77-4d1c-b567-4dbcfec86ee3",
+    "category": "Fixed Income"
+  },
+  {
+    "item": "",
+    "title": "S&P U.S. Floating Rate Treasury Index Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-us-floating-rate-treasury-index.pdf",
+    "description": "S&P U.S. Floating Rate Treasury Index Methodology",
+    "pubDate": "Thu, 11 Jun 2020 01:15:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "8696acf8-6f3e-40b6-bf9f-d077c246fa02",
+    "category": "Fixed Income"
+  },
+  {
+    "item": "",
+    "title": "Dow Jones Sukuk Total Return Index (ex-Reinvestment) Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-dj-sukuk-total-return-index-exreinvestment.pdf",
+    "description": "Dow Jones Sukuk Total Return Index ex Reinvestment Methodology",
+    "pubDate": "Thu, 11 Jun 2020 01:15:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "922a6989-a46a-4134-85c1-b50953782c42",
+    "category": "Fixed Income"
+  },
+  {
+    "item": "",
+    "title": "S&P UK / Euro High Yield Dividend Aristocrats Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-uk-euro-hyda.pdf",
+    "description": "S&P UK / Euro High Yield Dividend Aristocrats Methodology",
+    "pubDate": "Wed, 10 Jun 2020 17:01:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "d046ac6a-896f-452f-8a94-8e25429334dd",
+    "category": "Strategy"
+  },
+  {
+    "item": "",
+    "title": "S&P U.S. Style Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-us-style.pdf",
+    "description": "S&P U.S. Style Indices Methodology",
+    "pubDate": "Wed, 10 Jun 2020 11:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "5dbc3c33-aa5f-46b2-b443-1f6d0c8577b8",
+    "category": "U.S. Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P SMIT 40 Index Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-smit40-indices.pdf",
+    "description": "S&P SMIT 40 Index Methodology",
+    "pubDate": "Tue, 09 Jun 2020 02:45:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "1d302e03-53c3-4ad0-b1d1-d5ba1d28209d",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "Dow Jones Select Real Estate Securities Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-dj-select-real-estate-securities.pdf",
+    "description": "Dow Jones Select Real Estate Securities Indices Methodology",
+    "pubDate": "Mon, 08 Jun 2020 04:45:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "f5599494-e9b1-4d3e-8ebd-0e409c9b9ac0",
+    "category": "Property & REIT"
+  },
+  {
+    "item": "",
+    "title": "Dow Jones Composite All REIT Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-dj-composite-all-reit.pdf",
+    "description": "Dow Jones Composite All REIT Indices Methodology",
+    "pubDate": "Mon, 08 Jun 2020 04:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "68736d10-0a1c-4bd6-a47a-a2f7d7f7ad3b",
+    "category": "U.S. Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P G10 Currency Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-g10-currency-indices.pdf",
+    "description": "S&P G10 Currency Indices\nMethodology",
+    "pubDate": "Fri, 05 Jun 2020 17:15:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "d3f9b29e-7336-427c-a04e-2acecd0775a8",
+    "category": "Fixed Income"
+  },
+  {
+    "item": "",
+    "title": "S&P/TSX 60 Carbon Efficient Index Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-tsx-60-carbon-efficient-index.pdf",
+    "description": "S&P/TSX 60 Carbon Efficient Index Methodology",
+    "pubDate": "Fri, 05 Jun 2020 15:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "f2774e3b-65b5-425f-8465-bfc34b8c99a9",
+    "category": "ESG"
+  },
+  {
+    "item": "",
+    "title": "S&P/BYMA Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-byma-indices.pdf",
+    "description": "S&P/BYMA Indices Methodology",
+    "pubDate": "Fri, 05 Jun 2020 13:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "82aa514c-3be8-470a-99c0-d191a71ce639",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P DJI ESG Score Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-dji-esg-score.pdf",
+    "description": "S&P DJI ESG Score Methodology",
+    "pubDate": "Fri, 05 Jun 2020 10:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "2f84d370-d62f-4993-88a2-f76b2d14a372",
+    "category": "ESG"
+  },
+  {
+    "item": "",
+    "title": "S&P Risk Premia FX Value Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-risk-premia-fx-value-indices.pdf",
+    "description": "S&P Risk Premia FX Value Indices Methodology",
+    "pubDate": "Thu, 04 Jun 2020 15:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "9920a477-cfa7-48e2-b7dd-9a5ce055ff53",
+    "category": "ESG"
+  },
+  {
+    "item": "",
+    "title": "S&P/TSX 60 Fossil Fuel Free Index Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-tsx-60-fossil-fuel-free-index.pdf",
+    "description": "S&P/TSX 60 Fossil Fuel Free Index Methodology",
+    "pubDate": "Thu, 04 Jun 2020 14:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "fe829a4a-ec9f-492a-a71c-e3d8be79e0a8",
+    "category": "ESG"
+  },
+  {
+    "item": "",
+    "title": "S&P Carbon Price Risk Adjusted Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-carbon-price-risk-adjusted-indices.pdf",
+    "description": "S&P Carbon Price Risk Adjusted Indices Methodology",
+    "pubDate": "Thu, 04 Jun 2020 12:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "a4ad7431-ef49-4a53-9785-f5e1c73afd18",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P BSE Thematic Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-bse-thematic-indices.pdf",
+    "description": "S&P BSE Thematic Indices Methodology",
+    "pubDate": "Thu, 04 Jun 2020 12:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "7d57c4c0-d758-43d0-939e-98634a660a92",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P/BMV Fixed Income Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-bmv-fixed-income-indices.pdf",
+    "description": "S&P/BMV Fixed Income Indices Methodology",
+    "pubDate": "Tue, 02 Jun 2020 18:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "904d6fa2-678f-467a-822e-0e6c0dfa94d1",
+    "category": "Fixed Income"
+  },
+  {
+    "item": "",
+    "title": "S&P BSE AllCap Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-bse-allcap.pdf",
+    "description": "S&P BSE AllCap Methodology",
+    "pubDate": "Tue, 02 Jun 2020 18:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "5ee61c17-c386-44ad-bc87-89087b26238a",
+    "category": "Developed Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P/TSX Canadian Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-tsx-canadian-indices.pdf",
+    "description": "S&P/TSX Canadian Indices Methodology",
+    "pubDate": "Tue, 02 Jun 2020 17:15:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "38076745-d64a-46ce-a3fb-491556cfdcd5",
+    "category": "Developed Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P/TSX North American Preferred Stock Index Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-tsx-na-preferred-stock.pdf",
+    "description": "S&P/TSX North American Preferred Stock Index Methodology",
+    "pubDate": "Mon, 01 Jun 2020 15:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "476b1f0c-087b-438b-90f8-803dbe67f866",
+    "category": "Preferred and Convertible"
+  },
+  {
+    "item": "",
+    "title": "S&P/TSX Preferred Share Index Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-tsx-preferred-share-index.pdf",
+    "description": "S&P/TSX Preferred Share Index Methodology",
+    "pubDate": "Mon, 01 Jun 2020 12:45:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "233c3a24-7288-48b6-8a7a-b7f178561917",
+    "category": "Preferred and Convertible"
+  },
+  {
+    "item": "",
+    "title": "S&P Catholic Values Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-catholic-values-indices.pdf",
+    "description": "S&P Catholic Values Indices Methodology",
+    "pubDate": "Mon, 01 Jun 2020 04:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "797fb0e9-8b7a-41b6-9a86-12b56746123f",
+    "category": "Consumers"
+  },
+  {
+    "item": "",
+    "title": "S&P U.S. Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-us-indices.pdf",
+    "description": "S&P U.S. Indices Methodology",
+    "pubDate": "Wed, 27 May 2020 17:15:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "89076144-92b1-42d2-9483-d5f04de4c3c5",
+    "category": "U.S. Equity"
+  },
+  {
+    "item": "",
+    "title": "Dow Jones China Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-dj-china.pdf",
+    "description": "Dow Jones China Indices Methodology",
+    "pubDate": "Tue, 26 May 2020 17:45:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "4287a1dc-120f-4460-a7d0-ab242bc2eabb",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "Dow Jones Titans Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-dj-titans-indices.pdf",
+    "description": "Dow Jones Titans Indices Methodology",
+    "pubDate": "Tue, 26 May 2020 17:15:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "85707872-4dc1-470f-9fa8-ecd89d8e13b8",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P Composite 1500 Executive Activity & Analyst Estimate Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-executive-activity-analyst-estimate-indices.pdf",
+    "description": "S&P Composite 1500 Executive Activity & Analyst Estimate Indices Methodology",
+    "pubDate": "Tue, 26 May 2020 05:14:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "15ead283-4f80-444a-8763-6074cf19d3ac",
+    "category": "U.S. Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P Equity Futures and Currency Futures Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-equity-futures-and-currency-futures-indices.pdf",
+    "description": "S&P Equity Futures and Currency Futures Indices Methodology",
+    "pubDate": "Thu, 21 May 2020 14:15:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "488f3db3-db25-4d95-ad02-39e9be597225",
+    "category": "Strategy"
+  },
+  {
+    "item": "",
+    "title": "S&P Global REIT QVM Multi-Factor Index Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-global-reit-qvm-multi-factor-index.pdf",
+    "description": "S&P Global REIT QVM Multi-Factor Index Methodology",
+    "pubDate": "Thu, 21 May 2020 06:18:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "ee79a90c-dae0-4ff1-8f7b-1d64059e68f4",
+    "category": "Strategy"
+  },
+  {
+    "item": "",
+    "title": "S&P China Composite Bond Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-china-composite-bond-indices.pdf",
+    "description": "S&P China Composite Bond Indices Methodology",
+    "pubDate": "Wed, 20 May 2020 23:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "4c640626-032a-4131-80a5-8940e743972f",
+    "category": "Fixed Income"
+  },
+  {
+    "item": "",
+    "title": "S&P/NZX New Zealand Fixed Interest Index Series Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-nzx-fixed-interest.pdf",
+    "description": "S&P/NZX New Zealand Fixed Interest Index Series Methodology",
+    "pubDate": "Wed, 20 May 2020 15:15:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "30ac042c-f303-4006-ab6c-97d0446c3847",
+    "category": "Fixed Income"
+  },
+  {
+    "item": "",
+    "title": "S&P Balanced Global Bond and Equity-Futures Index Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-balanced-global-bond-and-equity-futures-index.pdf",
+    "description": "S&P Balanced Global Bond and Equity-Futures Index Methodology",
+    "pubDate": "Wed, 20 May 2020 12:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "646bd5eb-4057-404a-97a1-6c73c55ca82a",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P Property Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-property-indices.pdf",
+    "description": "S&P Property Indices Methodology",
+    "pubDate": "Wed, 20 May 2020 11:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "e099a630-57b4-4881-aa2b-62ae6d8300b6",
+    "category": "Property & REIT"
+  },
+  {
+    "item": "",
+    "title": "S&P GSCI Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-gsci.pdf",
+    "description": "S&P GSCI Methodology",
+    "pubDate": "Mon, 18 May 2020 12:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "7006475b-8420-4194-a33e-d3f06032eead",
+    "category": "Commodities"
+  },
+  {
+    "item": "",
+    "title": "S&P Risk Parity Index Family Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-risk-parity-indices.pdf",
+    "description": "S&P Risk Parity Index Family Methodology",
+    "pubDate": "Mon, 18 May 2020 04:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "c51c29cb-d772-43ee-b5cb-131d9cd6e8dc",
+    "category": "Asset Class"
+  },
+  {
+    "item": "",
+    "title": "S&P 500 Quality High Dividend Index Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-500-quality-high-dividend-index.pdf",
+    "description": "S&P 500 Quality High Dividend Index Methodology",
+    "pubDate": "Thu, 14 May 2020 03:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "623aa2f3-6ba7-407b-a700-f3794bbb3eca",
+    "category": "Strategy"
+  },
+  {
+    "item": "",
+    "title": "S&P 500 Dividend Aristocrats Covered Call (7.2% Premium) Index Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-500-div-arist-covered-call-premium-index.pdf",
+    "description": "S&P 500 Dividend Aristocrats Covered Call (7.2% Premium) Index Methodology",
+    "pubDate": "Wed, 13 May 2020 16:45:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "dc59c116-f948-4bca-9d0f-4778da0b7132",
+    "category": "Strategy"
+  },
+  {
+    "item": "",
+    "title": "S&P Thematic Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-thematic-indices.pdf",
+    "description": "S&P Thematic Indices Methodology",
+    "pubDate": "Wed, 13 May 2020 16:05:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "7b688edd-ce12-4de1-adf8-20eddce8f2f5",
+    "category": "Consumers"
+  },
+  {
+    "item": "",
+    "title": "Dow Jones Israel Select Sector Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-dj-israel-select-sector.pdf",
+    "description": "Dow Jones Israel Select Sector Indices Methodology",
+    "pubDate": "Wed, 13 May 2020 03:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "b53b127c-21d9-4182-b31f-4edeb8de9250",
+    "category": "Developed Equity"
+  },
+  {
+    "item": "",
+    "title": "Dow Jones Australia LPT Index Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-dj-australia-lpt.pdf",
+    "description": "Dow Jones Australia LPT Index Methodology",
+    "pubDate": "Tue, 12 May 2020 16:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "8cfdbb96-65dd-422c-b922-2e3c72476344",
+    "category": "Property & REIT"
+  },
+  {
+    "item": "",
+    "title": "S&P 500 Dynamic VEQTOR Index Series Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-500-dynamic-veqtor.pdf",
+    "description": "S&P 500 Dynamic VEQTOR Index Series Methodology",
+    "pubDate": "Tue, 12 May 2020 13:43:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "55c78050-322c-4730-a3a8-b26f0d50fd40",
+    "category": "Strategy"
+  },
+  {
+    "item": "",
+    "title": "S&P China A Style Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-china-a-style-indices.pdf",
+    "description": "S&P China A Style Indices Methodology",
+    "pubDate": "Tue, 12 May 2020 13:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "e0840c20-8f1e-4edf-8488-3dc05007e4ae",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P GSCI Sector Equities Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-gsci-sector-equities-index.pdf",
+    "description": "S&P GSCI Sector Equities Methodology",
+    "pubDate": "Tue, 12 May 2020 07:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "efe4015c-2b8d-41ad-890c-e88f1e2e091d",
+    "category": "Commodities"
+  },
+  {
+    "item": "",
+    "title": "S&P Managed Risk Index Series Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-managed-risk-index-series.pdf",
+    "description": "S&P Managed Risk Index Series Methodology",
+    "pubDate": "Mon, 11 May 2020 15:15:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "2e4a7254-22e0-46f7-b18d-fb3966a4c171",
+    "category": "Strategy"
+  },
+  {
+    "item": "",
+    "title": "S&P GSCI Single Commodity Capped Component Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-gsci-single-commodity-capped-component-indices.pdf",
+    "description": "S&P GSCI Single Commodity Capped Component Indices\nMethodology",
+    "pubDate": "Mon, 11 May 2020 15:02:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "f0ac458d-04e6-42f3-9d19-b7860b264119",
+    "category": "Commodities"
+  },
+  {
+    "item": "",
+    "title": "S&P Select Industry Indices Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-select-industry-indices.pdf",
+    "description": "S&P Select Industry Indices Methodology",
+    "pubDate": "Mon, 11 May 2020 15:00:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "ca10d42e-1c38-42b6-b80d-5ecb1f9f0dcc",
+    "category": "U.S. Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P/NZX 50 High Dividend Index Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-nzx-50-high-dividend-index.pdf",
+    "description": "S&P/NZX 50 High Dividend Index Methodology",
+    "pubDate": "Mon, 11 May 2020 14:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "64c18cc9-7549-4cd6-8def-b3536b0e3ac2",
+    "category": "Strategy"
+  },
+  {
+    "item": "",
+    "title": "S&P/TSX Capped REIT Income Index Methodology",
+    "link": "https://www.spglobal.com/spdji/en//documents/methodologies/methodology-sp-tsx-capped-reit-income-index.pdf",
+    "description": "The S&P/TSX Capped REIT Income Index is designed to measure the performance of REIT companies in the S&P/TSX Composite Index while overweighting and underweighting companies based on their risk-adjusted dividend yield.",
+    "pubDate": "Mon, 11 May 2020 14:21:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "6b14720e-76e8-4a09-95ac-6568db10a4da",
+    "category": "Fixed Income"
+  }
+]

@@ -37,7 +37,8 @@ class NewsParser():
         self.paths = {
             'cnbc': './channel/item',
             'nasdaq': './channel/item',
-            'market_watch': './channel/item'
+            'market_watch': './channel/item',
+            'sp_global': '.channel/item'
         }
 
         self.namespaces = {
@@ -49,6 +50,9 @@ class NewsParser():
             ],
             'market_watch':[
                 '{http://rssnamespace.org/feedburner/ext/1.0}'
+            ],
+            'sp_global':[
+                ''
             ]
         }
 

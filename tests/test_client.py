@@ -5,6 +5,7 @@ from finnews.client import News
 from finnews.cnbc import CNBC
 from finnews.nasdaq import NASDAQ
 from finnews.market_watch import MarketWatch
+from finnews.sp_global import SPGlobal
 
 
 class TestNewsClient(TestCase):
@@ -50,6 +51,16 @@ class TestNewsClient(TestCase):
         # Make sure it's a NASDAQ client.
         self.assertIsInstance(self.market_watch_client, MarketWatch)
         self.assertIsNotNone(self.news_client._market_watch_client)
+
+    def test_creates_sp_global_instance(self):
+        """Create an instance and make sure it's a `SPGlobal` client."""
+
+        # Grab the client.
+        self.sp_global_client = self.news_client.sp_global
+
+        # Make sure it's a NASDAQ client.
+        self.assertIsInstance(self.sp_global_client, SPGlobal)
+        self.assertIsNotNone(self.news_client._sp_global_client)
 
     def tearDown(self) -> None:
         """Teardown the `NewsClient`."""

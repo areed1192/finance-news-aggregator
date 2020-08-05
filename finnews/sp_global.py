@@ -11,16 +11,16 @@ from finnews.parser import NewsParser
 import finnews.news_enum as enums_news
 
 
-class MarketWatch():
+class SPGlobal():
 
     def __init__(self):
-        """Initializes the `MarketWatch` client."""
+        """Initializes the `SPGlobal` client."""
 
         # Define the URL used to query feeds.
-        self.url = 'http://feeds.marketwatch.com/marketwatch/{topic}/'
+        self.url = 'https://www.spglobal.com/spdji/en/rss/rss-details/'
 
         # Define the parser client.
-        self.news_parser = NewsParser(client='market_watch')
+        self.news_parser = NewsParser(client='sp_global')
 
     def __repr__(self) -> str:
         """Represents the string representation of the client object.
@@ -29,7 +29,7 @@ class MarketWatch():
         ----
         (str): The string representation.
         """
-        return "<MarketWatchClient Connected: True'>"
+        return "<SPGlobalClient Connected: True'>"
 
     def _check_key(self, topic_id: str) -> str:
         """Checks the topic ID to see if it's valid.
@@ -101,8 +101,8 @@ class MarketWatch():
 
         # return all_news
 
-    def top_stories(self) -> List[Dict]:
-        """Used to query topics from the Top Stories Feed RSS feed.
+    def methodologies(self) -> List[Dict]:
+        """Used to query topics from the Methodologies Feed RSS feed.
 
         Returns:
         ----
@@ -115,22 +115,27 @@ class MarketWatch():
             >>> # Create a new instance of the News Client.
             >>> news_client = News()
 
-            >>> # Grab the MarketWatch News Client.
-            >>> market_watch_client = news_client.market_watch
+            >>> # Grab the SPGlobal News Client.
+            >>> sp_global_client = news_client.sp_global
 
-            >>> # Grab the top news.
-            >>> market_watch_top_stories = market_watch_client.top_stories()
+            >>> # Grab the Methdologies Feed.
+            >>> sp_global_methodologies = sp_global_client.methodologies()
         """
+
+        params = {
+            'rssFeedName':'methodologies'
+        }
 
         # Grab the data.
         data = self.news_parser._make_request(
-            url=self.url.format(topic='topstories')
+            url=self.url,
+            params=params
         )
 
         return data
 
-    def real_time_headlines(self) -> List[Dict]:
-        """Used to query topics from the Real Time Headlines Feed RSS feed.
+    def all_indicies(self) -> List[Dict]:
+        """Used to query topics from the All Indicies Feed RSS feed.
 
         Returns:
         ----
@@ -143,22 +148,27 @@ class MarketWatch():
             >>> # Create a new instance of the News Client.
             >>> news_client = News()
 
-            >>> # Grab the MarketWatch News Client.
-            >>> market_watch_client = news_client.market_watch
+            >>> # Grab the SPGlobal News Client.
+            >>> sp_global_client = news_client.sp_global
 
-            >>> # Grab the Real Time Headlines news.
-            >>> market_watch_real_time_headlines = market_watch_client.real_time_headlines()
+            >>> # Grab the All Indicies Feed.
+            >>> sp_global_all_indicies = sp_global_client.all_indicies()
         """
+
+        params = {
+            'rssFeedName':'all-indicies'
+        }
 
         # Grab the data.
         data = self.news_parser._make_request(
-            url=self.url.format(topic='realtimeheadlines')
+            url=self.url,
+            params=params
         )
 
         return data
 
-    def market_pulse(self) -> List[Dict]:
-        """Used to query topics from the Market Pulse Feed RSS feed.
+    def research(self) -> List[Dict]:
+        """Used to query topics from the Research Feed RSS feed.
 
         Returns:
         ----
@@ -171,22 +181,27 @@ class MarketWatch():
             >>> # Create a new instance of the News Client.
             >>> news_client = News()
 
-            >>> # Grab the MarketWatch News Client.
-            >>> market_watch_client = news_client.market_watch
+            >>> # Grab the SPGlobal News Client.
+            >>> sp_global_client = news_client.sp_global
 
-            >>> # Grab the Market Pulse news.
-            >>> market_watch_market_pulse = market_watch_client.market_pulse()
+            >>> # Grab the Research Feed.
+            >>> sp_global_research = sp_global_client.research()
         """
+
+        params = {
+            'rssFeedName':'research'
+        }
 
         # Grab the data.
         data = self.news_parser._make_request(
-            url=self.url.format(topic='marketpulse')
+            url=self.url,
+            params=params
         )
 
         return data
 
-    def bulletins(self) -> List[Dict]:
-        """Used to query topics from the Bulletins Feed RSS feed.
+    def market_commentary(self) -> List[Dict]:
+        """Used to query topics from the Market Commentary Feed RSS feed.
 
         Returns:
         ----
@@ -199,22 +214,27 @@ class MarketWatch():
             >>> # Create a new instance of the News Client.
             >>> news_client = News()
 
-            >>> # Grab the MarketWatch News Client.
-            >>> market_watch_client = news_client.market_watch
+            >>> # Grab the SPGlobal News Client.
+            >>> sp_global_client = news_client.sp_global
 
-            >>> # Grab the Bulletins news.
-            >>> market_watch_bulletins = market_watch_client.bulletins()
+            >>> # Grab the Market Commentary Feed.
+            >>> sp_global_market_commentary = sp_global_client.market_commentary()
         """
+
+        params = {
+            'rssFeedName':'market-commentary'
+        }
 
         # Grab the data.
         data = self.news_parser._make_request(
-            url=self.url.format(topic='bulletins')
+            url=self.url,
+            params=params
         )
 
         return data
 
-    def personal_finance(self) -> List[Dict]:
-        """Used to query topics from the Personal Finance Feed RSS feed.
+    def education(self) -> List[Dict]:
+        """Used to query topics from the Education Feed RSS feed.
 
         Returns:
         ----
@@ -227,22 +247,27 @@ class MarketWatch():
             >>> # Create a new instance of the News Client.
             >>> news_client = News()
 
-            >>> # Grab the MarketWatch News Client.
-            >>> market_watch_client = news_client.market_watch
+            >>> # Grab the SPGlobal News Client.
+            >>> sp_global_client = news_client.sp_global
 
-            >>> # Grab the Personal Finance news.
-            >>> market_watch_personal_finance = market_watch_client.personal_finance()
+            >>> # Grab the Education Feed.
+            >>> sp_global_education = sp_global_client.education()
         """
+
+        params = {
+            'rssFeedName':'education'
+        }
 
         # Grab the data.
         data = self.news_parser._make_request(
-            url=self.url.format(topic='pf')
+            url=self.url,
+            params=params
         )
 
         return data
 
-    def stocks_to_watch(self) -> List[Dict]:
-        """Used to query topics from the Stocks To Watch Feed RSS feed.
+    def spiva(self) -> List[Dict]:
+        """Used to query topics from the SPIVA Feed RSS feed.
 
         Returns:
         ----
@@ -255,22 +280,27 @@ class MarketWatch():
             >>> # Create a new instance of the News Client.
             >>> news_client = News()
 
-            >>> # Grab the MarketWatch News Client.
-            >>> market_watch_client = news_client.market_watch
+            >>> # Grab the SPGlobal News Client.
+            >>> sp_global_client = news_client.sp_global
 
-            >>> # Grab the Stocks to Watch Feed.
-            >>> market_watch_stocks_to_watch = market_watch_client.stocks_to_watch()
+            >>> # Grab the SPIVA Feed.
+            >>> sp_global_spive = sp_global_client.spiva()
         """
+
+        params = {
+            'rssFeedName':'spiva'
+        }
 
         # Grab the data.
         data = self.news_parser._make_request(
-            url=self.url.format(topic='StockstoWatch')
+            url=self.url,
+            params=params
         )
 
         return data
 
-    def internet_stories(self) -> List[Dict]:
-        """Used to query topics from the Internet Stories Feed RSS feed.
+    def index_tv(self) -> List[Dict]:
+        """Used to query topics from the Index TV RSS feed.
 
         Returns:
         ----
@@ -283,22 +313,27 @@ class MarketWatch():
             >>> # Create a new instance of the News Client.
             >>> news_client = News()
 
-            >>> # Grab the MarketWatch News Client.
-            >>> market_watch_client = news_client.market_watch
+            >>> # Grab the SPGlobal News Client.
+            >>> sp_global_client = news_client.sp_global
 
-            >>> # Grab the Internet Stories Feed.
-            >>> market_watch_internet_stories = market_watch_client.internet_stories()
+            >>> # Grab the Index TV Feed.
+            >>> sp_global_index_tv = sp_global_client.index_tv()
         """
+
+        params = {
+            'rssFeedName':'index-tv'
+        }
 
         # Grab the data.
         data = self.news_parser._make_request(
-            url=self.url.format(topic='Internet')
+            url=self.url,
+            params=params
         )
 
         return data
 
-    def mutual_funds(self) -> List[Dict]:
-        """Used to query topics from the Mutual Funds Feed RSS feed.
+    def corporate_news(self) -> List[Dict]:
+        """Used to query topics from the Corporate News RSS feed.
 
         Returns:
         ----
@@ -311,22 +346,27 @@ class MarketWatch():
             >>> # Create a new instance of the News Client.
             >>> news_client = News()
 
-            >>> # Grab the MarketWatch News Client.
-            >>> market_watch_client = news_client.market_watch
+            >>> # Grab the SPGlobal News Client.
+            >>> sp_global_client = news_client.sp_global
 
-            >>> # Grab the Mutual Funds Feed.
-            >>> market_watch_mutual_funds = market_watch_client.mutual_funds()
+            >>> # Grab the Corporate News Feed.
+            >>> sp_global_corporate_news = sp_global_client.corporate_news()
         """
+
+        params = {
+            'rssFeedName':'corporate-news'
+        }
 
         # Grab the data.
         data = self.news_parser._make_request(
-            url=self.url.format(topic='mutualfunds')
+            url=self.url,
+            params=params
         )
 
         return data
 
-    def software_stories(self) -> List[Dict]:
-        """Used to query topics from the Software Stories Feed RSS feed.
+    def index_launches(self) -> List[Dict]:
+        """Used to query topics from the Index Launches RSS feed.
 
         Returns:
         ----
@@ -339,22 +379,27 @@ class MarketWatch():
             >>> # Create a new instance of the News Client.
             >>> news_client = News()
 
-            >>> # Grab the MarketWatch News Client.
-            >>> market_watch_client = news_client.market_watch
+            >>> # Grab the SPGlobal News Client.
+            >>> sp_global_client = news_client.sp_global
 
-            >>> # Grab the Software Stories Feed.
-            >>> market_watch_software_stories = market_watch_client.software_stories()
+            >>> # Grab the Index Launches Feed.
+            >>> sp_global_index_launches = sp_global_client.index_launches()
         """
+
+        params = {
+            'rssFeedName':'index-launches'
+        }
 
         # Grab the data.
         data = self.news_parser._make_request(
-            url=self.url.format(topic='software')
+            url=self.url,
+            params=params
         )
 
         return data
 
-    def banking_and_finance(self) -> List[Dict]:
-        """Used to query topics from the Banking & Finance Feed RSS feed.
+    def index_announcments(self) -> List[Dict]:
+        """Used to query topics from the Index Announcements RSS feed.
 
         Returns:
         ----
@@ -367,22 +412,27 @@ class MarketWatch():
             >>> # Create a new instance of the News Client.
             >>> news_client = News()
 
-            >>> # Grab the MarketWatch News Client.
-            >>> market_watch_client = news_client.market_watch
+            >>> # Grab the SPGlobal News Client.
+            >>> sp_global_client = news_client.sp_global
 
-            >>> # Grab the Banking & Finance Feed.
-            >>> market_watch_banking = market_watch_client.banking_and_finance()
+            >>> # Grab the Index Announcments Feed.
+            >>> sp_global_index_announcements = sp_global_client.index_announcments()
         """
+
+        params = {
+            'rssFeedName':'index-announcments'
+        }
 
         # Grab the data.
         data = self.news_parser._make_request(
-            url=self.url.format(topic='financial')
+            url=self.url,
+            params=params
         )
 
         return data
 
-    def commentary(self) -> List[Dict]:
-        """Used to query topics from the Commentary Feed RSS feed.
+    def new_counsultations(self) -> List[Dict]:
+        """Used to query topics from the New Consultations RSS feed.
 
         Returns:
         ----
@@ -395,72 +445,21 @@ class MarketWatch():
             >>> # Create a new instance of the News Client.
             >>> news_client = News()
 
-            >>> # Grab the MarketWatch News Client.
-            >>> market_watch_client = news_client.market_watch
+            >>> # Grab the SPGlobal News Client.
+            >>> sp_global_client = news_client.sp_global
 
-            >>> # Grab the Commentary Feed.
-            >>> market_watch_commentary = market_watch_client.commentary()
+            >>> # Grab the New Consultations Feed.
+            >>> sp_global_new_counsultations = sp_global_client.new_counsultations()
         """
+
+        params = {
+            'rssFeedName':'new-counsultations'
+        }
 
         # Grab the data.
         data = self.news_parser._make_request(
-            url=self.url.format(topic='commentary')
-        )
-
-        return data
-
-    def newsletter_and_research(self) -> List[Dict]:
-        """Used to query topics from the Newsletter & Research Feed RSS feed.
-
-        Returns:
-        ----
-        List[Dict]: A list of news articles organzied in dictionaries.
-
-        Usage:
-        ----
-            >>> from finnews.client import News
-
-            >>> # Create a new instance of the News Client.
-            >>> news_client = News()
-
-            >>> # Grab the MarketWatch News Client.
-            >>> market_watch_client = news_client.market_watch
-
-            >>> # Grab the Newsletter & Research Feed.
-            >>> market_watch_newsletter_and_research = market_watch_client.newsletter_and_research()
-        """
-
-        # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.url.format(topic='newslettersandresearch')
-        )
-
-        return data
-
-    def auto_reviews(self) -> List[Dict]:
-        """Used to query topics from the Auto Reviews Feed RSS feed.
-
-        Returns:
-        ----
-        List[Dict]: A list of news articles organzied in dictionaries.
-
-        Usage:
-        ----
-            >>> from finnews.client import News
-
-            >>> # Create a new instance of the News Client.
-            >>> news_client = News()
-
-            >>> # Grab the MarketWatch News Client.
-            >>> market_watch_client = news_client.market_watch
-
-            >>> # Grab the Auto Reviews Feed.
-            >>> market_watch_auto_reviews = market_watch_client.auto_reviews()
-        """
-
-        # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.url.format(topic='autoreviews')
+            url=self.url,
+            params=params
         )
 
         return data

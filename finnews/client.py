@@ -7,6 +7,7 @@ from typing import Union
 from finnews.cnbc import CNBC
 from finnews.nasdaq import NASDAQ
 from finnews.market_watch import MarketWatch
+from finnews.sp_global import SPGlobal
 
 
 class News():
@@ -30,6 +31,7 @@ class News():
         self._cnbc_client = None
         self._nasdaq_client = None
         self._market_watch_client = None
+        self._sp_global_client = None
 
     def __repr__(self) -> str:
         """Represents the string representation of the client object.
@@ -111,6 +113,30 @@ class News():
         self._market_watch_client = MarketWatch()
 
         return self._market_watch_client
+
+    @property
+    def sp_global(self) -> SPGlobal:
+        """Returns a new instance of the `SPGlobal` news client.
+
+        Returns:
+        ----
+        SPGlobal: The `SPGlobal` news client that can be used to
+            query different RSS feeds by topics.
+
+        Usage:
+        ----
+            >>> from finnews.client import News
+
+            >>> # Create a new instance of the News Client.
+            >>> news_client = News()
+
+            >>> # Grab the SPGlobal News Client.
+            >>> sp_global_client = news_client.sp_global       
+        """
+
+        self._sp_global_client = SPGlobal()
+
+        return self._sp_global_client
 
     def save_to_file(self, content: List[Dict], file_name: str) -> None:
         """Saves the news content to a JSONC file.

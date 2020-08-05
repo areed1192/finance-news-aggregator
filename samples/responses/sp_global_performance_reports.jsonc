@@ -1,0 +1,551 @@
+[
+  {
+    "item": "",
+    "title": "Daily Global Index Dashboard",
+    "link": "https://www.spglobal.com/spdji/en//documents/commentary/dashboard-daily-global-markets.pdf",
+    "description": "",
+    "pubDate": "Tue, 04 Aug 2020 05:38:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "b5b062b1-42e4-4778-ba54-d9e94700a693"
+  },
+  {
+    "item": "",
+    "title": "S&P Global Equity Indices Monthly Update July 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/sp-global-equity-indices-monthly-update.pdf",
+    "description": "",
+    "pubDate": "Mon, 03 Aug 2020 17:14:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "48deb983-c078-4aef-923e-97f532c66223",
+    "category": "Global"
+  },
+  {
+    "item": "",
+    "title": "S&P Global Equity Indices Monthly Update June 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/sp-global-equity-indices-monthly-update-2020-06.pdf",
+    "description": "",
+    "pubDate": "Mon, 03 Aug 2020 17:12:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "ec6edc2c-b0de-4115-a49b-fe7c9ca563a2",
+    "category": "Global"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: S&P 500\u00ae Factor Indices July 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-sp-500-factor.pdf",
+    "description": "",
+    "pubDate": "Mon, 03 Aug 2020 14:35:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "f41b5762-c2b8-4fe6-a65c-36d9f0084342",
+    "category": "Global"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: S&P 500\u00ae Factor Indices June 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-sp-500-factor-2020-06.pdf",
+    "description": "",
+    "pubDate": "Mon, 03 Aug 2020 14:18:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "372e555f-8fa1-46da-93a8-99c56149be28",
+    "category": "Global"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: Dispersion, Volatility & Correlation July 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-dispersion-volatility-correlation.pdf",
+    "description": "",
+    "pubDate": "Mon, 03 Aug 2020 10:07:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "ccc640fe-bcc5-47b0-aa95-511ef7a6f572",
+    "category": "Global"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: Latin America July 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-latin-america.pdf",
+    "description": "",
+    "pubDate": "Mon, 03 Aug 2020 10:06:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "8f394655-5848-4754-a217-8065f2511700",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: Latin America June 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-latin-america-2020-06.pdf",
+    "description": "",
+    "pubDate": "Mon, 03 Aug 2020 10:05:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "2e61cf28-4285-4983-ae4e-dccee473602d",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: Dispersion, Volatility & Correlation June 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-dispersion-volatility-correlation-2020-06.pdf",
+    "description": "",
+    "pubDate": "Mon, 03 Aug 2020 09:59:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "77eaf671-28d2-4ed2-a8b4-9f4d70a34b79",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: U.S. Sector Dashboard June 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-us-sector-2020-06.pdf",
+    "description": "",
+    "pubDate": "Sat, 01 Aug 2020 14:55:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "58285078-789d-4c71-a27e-359c2920b3aa",
+    "category": "U.S. Equity"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: U.S. S&P Select Industry June 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-us-sp-select-industry-2020-06.pdf",
+    "description": "",
+    "pubDate": "Sat, 01 Aug 2020 14:52:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "4b6ddf6d-8181-49ef-8af6-f93ec96e5d1e",
+    "category": "Americas"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: U.S. Equal Weight Sector June 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-us-equal-weight-sector-2020-06.pdf",
+    "description": "",
+    "pubDate": "Sat, 01 Aug 2020 13:35:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "007c029e-10e7-4a8c-9cb2-01ef8fd4b3df",
+    "category": "Americas"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: Asia July 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-asia.pdf",
+    "description": "",
+    "pubDate": "Sat, 01 Aug 2020 13:31:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "962c1b49-3536-44e7-bc56-9da2d2d16d4d",
+    "category": "Pan Regional"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: Europe July 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-europe.pdf",
+    "description": "",
+    "pubDate": "Sat, 01 Aug 2020 13:27:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "57989ff5-a982-426f-89ed-c08d8afa03a8",
+    "category": "Europe"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: U.S. July 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-us.pdf",
+    "description": "",
+    "pubDate": "Sat, 01 Aug 2020 13:16:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "465b8d95-5e75-4646-81f7-9b11e028e288",
+    "category": "Americas"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: Canada July 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-canada.pdf",
+    "description": "",
+    "pubDate": "Sat, 01 Aug 2020 13:01:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "b879f7fe-c145-4245-bb2b-cfa387d930cc",
+    "category": "Americas"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: Canada June 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-canada-2020-06.pdf",
+    "description": "",
+    "pubDate": "Sat, 01 Aug 2020 12:06:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "a0778958-7d39-4e2a-8907-75768fe6ac90",
+    "category": "Americas"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: U.S. June 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-us-2020-06.pdf",
+    "description": "",
+    "pubDate": "Sat, 01 Aug 2020 12:05:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "b3f53046-570c-46af-9bbb-5364fd7a7d60",
+    "category": "U.S. Equity"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: Europe June 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-europe-2020-06.pdf",
+    "description": "",
+    "pubDate": "Sat, 01 Aug 2020 12:03:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "0bdc393f-49cc-4da2-a0a5-e3a97b583f74",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: Asia June 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-asia-2020-06.pdf",
+    "description": "",
+    "pubDate": "Sat, 01 Aug 2020 11:44:01 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "4a12c39d-e313-4c79-a8b3-29484b32804b",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: India July 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-india.pdf",
+    "description": "",
+    "pubDate": "Fri, 31 Jul 2020 14:18:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "932a7139-005c-427a-a24b-7fd55671ac9c",
+    "category": "India"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: India June 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-india-2020-06.pdf",
+    "description": "",
+    "pubDate": "Fri, 31 Jul 2020 13:51:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "e2245d86-f326-44e7-adf1-35ccbd315524",
+    "category": "India"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: Australia & New Zealand July 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-australia-new-zealand.pdf",
+    "description": "",
+    "pubDate": "Fri, 31 Jul 2020 13:44:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "533432c2-2e9f-4d23-a8f9-7a82c3fd0820",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: Australia & New Zealand June 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-australia-new-zealand-2020-06.pdf",
+    "description": "",
+    "pubDate": "Fri, 31 Jul 2020 12:46:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "72e5f67b-fee0-480c-a061-c166c1bf37c2",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: Risk & Volatility July 22, 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-risk-volatility.pdf",
+    "description": "",
+    "pubDate": "Thu, 23 Jul 2020 10:19:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "75c33d46-6d5f-41a7-8454-0bd4c0a56d29",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: Risk & Volatility June 17, 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-risk-volatility-2020-06.pdf",
+    "description": "",
+    "pubDate": "Thu, 23 Jul 2020 10:19:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "e9be5983-5009-4162-9879-60ba3a768fba",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P STRIDE Dashboard June 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-sp-stride.pdf",
+    "description": "",
+    "pubDate": "Tue, 21 Jul 2020 21:07:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "6e11a91b-4df3-45ba-9d7e-2fcc405b432d",
+    "category": "Americas"
+  },
+  {
+    "item": "",
+    "title": "S&P Kensho New Economies Dashboard Second Quarter 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-sp-kensho-new-economies.pdf",
+    "description": "",
+    "pubDate": "Tue, 21 Jul 2020 21:07:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "5386f138-ef72-402a-a9ba-ee2dd375397b",
+    "category": "Europe"
+  },
+  {
+    "item": "",
+    "title": "S&P Shariah Indices Dow Jones Islamic Market Indices: Q2 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/scorecard-sp-shariah-djim.pdf",
+    "description": "",
+    "pubDate": "Tue, 21 Jul 2020 21:05:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "e5b34d51-bfde-4cd1-b248-2e67960dfde9",
+    "category": "Middle East & Africa"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: S&P Europe 350\u00ae Factor Indices Q4 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/dashboard-sp-europe-350-factor.pdf",
+    "description": "",
+    "pubDate": "Tue, 21 Jul 2020 21:05:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "b71f420a-176e-4449-b915-152807fb1e5d",
+    "category": "Middle East & Africa"
+  },
+  {
+    "item": "",
+    "title": "S&P Latin America Equity Indices Quantitative Analysis Q2 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/sp-quantitative-analysis-latin-america-equity-indices.pdf",
+    "description": "",
+    "pubDate": "Tue, 21 Jul 2020 21:04:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "af472314-994a-44db-ab4b-d368e074348a",
+    "category": "Pacific Alliance"
+  },
+  {
+    "item": "",
+    "title": "Global Real Estate Scorecard: Q2 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/performance-reports/scorecard-global-real-estate.pdf",
+    "description": "",
+    "pubDate": "Tue, 21 Jul 2020 21:04:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "1246f971-0e1c-41fb-9aa8-fe8e6408679f",
+    "category": "Pacific Alliance"
+  },
+  {
+    "item": "",
+    "title": "Global Real Estate Scorecard: Q4 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/research/research-real-estate-q4-2019.pdf",
+    "description": "",
+    "pubDate": "Tue, 14 Jul 2020 07:11:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "4475e615-9507-439f-b468-06ecc1e0445a",
+    "category": "Pacific Alliance"
+  },
+  {
+    "item": "",
+    "title": "Global Real Estate Scorecard: Q1 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/research/research-real-estate-q1-2020.pdf",
+    "description": "",
+    "pubDate": "Tue, 14 Jul 2020 07:09:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "0b0247fd-8c2e-4f75-bfc4-fddf93d4fff0",
+    "category": "Pacific Alliance"
+  },
+  {
+    "item": "",
+    "title": "S&P Shariah Indices Dow Jones Islamic Market Indices: Q1 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/research/research-shariah-report-q1-2020.pdf",
+    "description": "",
+    "pubDate": "Fri, 10 Jul 2020 13:29:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "cea5aa3e-7b07-407a-8962-fe199a1fcd7b",
+    "category": "Middle East & Africa"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: U.S. May 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/commentary/dashboard-us-2020-05.pdf",
+    "description": "",
+    "pubDate": "Thu, 09 Jul 2020 13:42:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "c8da9edb-c0f0-43de-9ee8-afeda2f858fe",
+    "category": "U.S. Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P STRIDE Dashboard March 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/commentary/dashboard-stride-2020-03.pdf",
+    "description": "",
+    "pubDate": "Wed, 08 Jul 2020 09:24:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "dae090d6-68ca-4cca-930c-dee9020a7d12",
+    "category": "Americas"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: Risk & Volatility May 20, 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/commentary/dashboard-risk-volatility-2020-05.pdf",
+    "description": "",
+    "pubDate": "Sat, 27 Jun 2020 15:35:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "00aff5ff-963e-45e6-859a-2cc807a49771",
+    "category": "Americas"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: S&P 500\u00ae Factor Indices May 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/commentary/dashboard-sp-500-factor-2020-05.pdf",
+    "description": "",
+    "pubDate": "Sat, 27 Jun 2020 15:34:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "b7413e85-c87e-4a31-ae6a-3df56e5f3165",
+    "category": "Americas"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: U.S. S&P Select Industry May 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/commentary/dashboard-sp-select-industry-2020-05.pdf",
+    "description": "",
+    "pubDate": "Sat, 27 Jun 2020 15:33:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "46422738-2ce5-466f-9608-a663ec13f39d",
+    "category": "Americas"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: U.S. S&P Select Industry April 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/commentary/dashboard-sp-select-industry-2020-04.pdf",
+    "description": "",
+    "pubDate": "Sat, 27 Jun 2020 15:33:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "84dc473f-682c-4ffa-b6f3-036292163491",
+    "category": "Americas"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: S&P 500\u00ae Factor Indices April 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/commentary/dashboard-sp-500-factor-2020-04.pdf",
+    "description": "",
+    "pubDate": "Sat, 27 Jun 2020 15:31:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "7c771182-a522-4282-a6a8-a6654bf03efe",
+    "category": "Americas"
+  },
+  {
+    "item": "",
+    "title": "S&P Global Equity Indices Monthly Update May 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/commentary/sp-global-equity-indices-monthly-update-202005.pdf",
+    "description": "",
+    "pubDate": "Sat, 27 Jun 2020 15:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "8d3de759-e43d-46eb-b78c-e21030550940",
+    "category": "Global"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: U.S. Equal Weight Sectors May 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/commentary/dashboard-us-equal-weight-sectors-2020-05.pdf",
+    "description": "",
+    "pubDate": "Sat, 27 Jun 2020 15:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "a46e5040-5cf1-400b-b1e1-ecc9271a0922",
+    "category": "Global"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: Dispersion, Volatility & Correlation May 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/commentary/dashboard-dispersion-2020-05.pdf",
+    "description": "",
+    "pubDate": "Sat, 27 Jun 2020 15:29:01 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "81e46ce0-2403-4899-82fa-cbf6155b8eb7",
+    "category": "Global"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: Australia & New Zealand May 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/commentary/dashboard-australia-new-zealand-2020-05.pdf",
+    "description": "",
+    "pubDate": "Sat, 27 Jun 2020 15:27:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "5f867c77-fbd1-420c-bc81-9012e730e128",
+    "category": "Global"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: Latin America May 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/commentary/dashboard-latam-2020-05.pdf",
+    "description": "",
+    "pubDate": "Sat, 27 Jun 2020 15:26:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "c90a42ad-4fd2-4313-9ba4-978909661099",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: Asia May 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/commentary/dashboard-asia-2020-05.pdf",
+    "description": "",
+    "pubDate": "Sat, 27 Jun 2020 15:24:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "8cf740cc-913a-42b8-aef6-84f21a587b5c",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: Canada May 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/commentary/dashboard-canada-2020-05.pdf",
+    "description": "",
+    "pubDate": "Sat, 27 Jun 2020 15:24:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "b723c239-fd00-4796-88d4-8e4216e74581",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: Europe May 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/commentary/dashboard-europe-2020-05.pdf",
+    "description": "",
+    "pubDate": "Sat, 27 Jun 2020 15:21:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "983def8c-c7c5-40dc-8956-9e289e829466",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: India May 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/commentary/dashboard-india-2020-05.pdf",
+    "description": "",
+    "pubDate": "Sat, 27 Jun 2020 14:30:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "a8353871-04f7-46ca-bcae-9f89cdedd1e6",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "Index Dashboard: U.S. Equal Weight Sectors April 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/commentary/dashboard-us-equal-weight-sectors-2020-04.pdf",
+    "description": "",
+    "pubDate": "Sat, 27 Jun 2020 14:28:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "b650ea69-bb92-4659-9692-468a198333ef",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P Kensho New Economies Dashboard First Quarter 2020",
+    "link": "https://www.spglobal.com/spdji/en//documents/commentary/dashboard-kensho-2020-03.pdf",
+    "description": "",
+    "pubDate": "Sat, 27 Jun 2020 14:07:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "c4236355-3657-4774-b92a-f5300b6ed0e6",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P Kensho New Economies Dashboard Fourth Quarter 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/commentary/dashboard-kensho-2019-12.pdf",
+    "description": "",
+    "pubDate": "Sat, 27 Jun 2020 14:07:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "62d54ee1-7c01-4bc1-9c12-321bbb9472e1",
+    "category": "Equity"
+  },
+  {
+    "item": "",
+    "title": "S&P Kensho New Economies Dashboard Third Quarter 2019",
+    "link": "https://www.spglobal.com/spdji/en//documents/commentary/dashboard-kensho-2019-09.pdf",
+    "description": "",
+    "pubDate": "Sat, 27 Jun 2020 14:07:00 EDT",
+    "source": "S&P Dow Jones Indices",
+    "guid": "ef7a177f-a9d1-4baa-9378-aac7bb897351",
+    "category": "Equity"
+  }
+]
