@@ -38,7 +38,8 @@ class NewsParser():
             'cnbc': './channel/item',
             'nasdaq': './channel/item',
             'market_watch': './channel/item',
-            'sp_global': '.channel/item'
+            'sp_global': '.channel/item',
+            'seeking_alpha': '.channel/item'
         }
 
         self.namespaces = {
@@ -53,6 +54,10 @@ class NewsParser():
             ],
             'sp_global':[
                 ''
+            ],
+            'seeking_alpha':[
+                '{http://search.yahoo.com/mrss/}',
+                '{https://seekingalpha.com/api/1.0}'
             ]
         }
 

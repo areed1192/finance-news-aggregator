@@ -1,14 +1,10 @@
-import time
-import requests
-import xml.etree.ElementTree as ET
-
 from enum import Enum
 from typing import List
 from typing import Dict
 from typing import Union
 
-from finnews.parser import NewsParser
 import finnews.news_enum as enums_news
+from finnews.parser import NewsParser
 
 
 class SPGlobal():
@@ -30,33 +26,6 @@ class SPGlobal():
         (str): The string representation.
         """
         return "<SPGlobalClient Connected: True'>"
-
-    def _check_key(self, topic_id: str) -> str:
-        """Checks the topic ID to see if it's valid.
-
-        Arguments:
-        ----
-        topic_id (str): The topic ID to query and check.
-
-        Raises:
-        ----
-        KeyError: If topic doesn't exist will raise a
-            `KeyError` asking you to provide a valid topic.
-
-        Returns:
-        ----
-        str: The full URL to be used in the request.
-        """
-        pass
-
-        # if topic_id in self.topic_categories:
-
-        #     full_url = self.url.format(
-        #         topic_id=self.topic_categories[topic_id]
-        #     )
-        #     return full_url
-        # else:
-        #     raise KeyError("The value you're searching for does not exist.")
 
     def all_feeds(self) -> Dict:
         """Used to query all the topics from the CNBC RSS feed.
@@ -84,7 +53,7 @@ class SPGlobal():
 
         # # Loop through all the topics.
         # for topic_key in self.topic_categories:
-            
+
         #     print('PULLING TOPIC: {topic_id}'.format(topic_id=topic_key))
 
         #     # Grab the data.
@@ -102,7 +71,7 @@ class SPGlobal():
         # return all_news
 
     def methodologies(self) -> List[Dict]:
-        """Used to query topics from the Methodologies Feed RSS feed.
+        """Used to query topics from the Methodologies RSS feed.
 
         Returns:
         ----
@@ -123,7 +92,7 @@ class SPGlobal():
         """
 
         params = {
-            'rssFeedName':'methodologies'
+            'rssFeedName': 'methodologies'
         }
 
         # Grab the data.
@@ -135,7 +104,7 @@ class SPGlobal():
         return data
 
     def all_indicies(self) -> List[Dict]:
-        """Used to query topics from the All Indicies Feed RSS feed.
+        """Used to query topics from the All Indicies RSS feed.
 
         Returns:
         ----
@@ -156,7 +125,7 @@ class SPGlobal():
         """
 
         params = {
-            'rssFeedName':'all-indicies'
+            'rssFeedName': 'all-indicies'
         }
 
         # Grab the data.
@@ -168,7 +137,7 @@ class SPGlobal():
         return data
 
     def research(self) -> List[Dict]:
-        """Used to query topics from the Research Feed RSS feed.
+        """Used to query topics from the Research RSS feed.
 
         Returns:
         ----
@@ -189,7 +158,7 @@ class SPGlobal():
         """
 
         params = {
-            'rssFeedName':'research'
+            'rssFeedName': 'research'
         }
 
         # Grab the data.
@@ -201,7 +170,7 @@ class SPGlobal():
         return data
 
     def market_commentary(self) -> List[Dict]:
-        """Used to query topics from the Market Commentary Feed RSS feed.
+        """Used to query topics from the Market Commentary RSS feed.
 
         Returns:
         ----
@@ -222,7 +191,7 @@ class SPGlobal():
         """
 
         params = {
-            'rssFeedName':'market-commentary'
+            'rssFeedName': 'market-commentary'
         }
 
         # Grab the data.
@@ -234,7 +203,7 @@ class SPGlobal():
         return data
 
     def education(self) -> List[Dict]:
-        """Used to query topics from the Education Feed RSS feed.
+        """Used to query topics from the Education RSS feed.
 
         Returns:
         ----
@@ -255,7 +224,40 @@ class SPGlobal():
         """
 
         params = {
-            'rssFeedName':'education'
+            'rssFeedName': 'education'
+        }
+
+        # Grab the data.
+        data = self.news_parser._make_request(
+            url=self.url,
+            params=params
+        )
+
+        return data
+
+    def performance_reports(self) -> List[Dict]:
+        """Used to query topics from the Performance Reports RSS feed.
+
+        Returns:
+        ----
+        List[Dict]: A list of news articles organzied in dictionaries.
+
+        Usage:
+        ----
+            >>> from finnews.client import News
+
+            >>> # Create a new instance of the News Client.
+            >>> news_client = News()
+
+            >>> # Grab the SPGlobal News Client.
+            >>> sp_global_client = news_client.sp_global
+
+            >>> # Grab the Performance Reports Feed.
+            >>> sp_global_performance_reports = sp_global_client.performance_reports()
+        """
+
+        params = {
+            'rssFeedName': 'performance-reports'
         }
 
         # Grab the data.
@@ -267,7 +269,7 @@ class SPGlobal():
         return data
 
     def spiva(self) -> List[Dict]:
-        """Used to query topics from the SPIVA Feed RSS feed.
+        """Used to query topics from the SPIVA RSS feed.
 
         Returns:
         ----
@@ -288,7 +290,7 @@ class SPGlobal():
         """
 
         params = {
-            'rssFeedName':'spiva'
+            'rssFeedName': 'spiva'
         }
 
         # Grab the data.
@@ -321,7 +323,7 @@ class SPGlobal():
         """
 
         params = {
-            'rssFeedName':'index-tv'
+            'rssFeedName': 'index-tv'
         }
 
         # Grab the data.
@@ -354,7 +356,7 @@ class SPGlobal():
         """
 
         params = {
-            'rssFeedName':'corporate-news'
+            'rssFeedName': 'corporate-news'
         }
 
         # Grab the data.
@@ -387,7 +389,7 @@ class SPGlobal():
         """
 
         params = {
-            'rssFeedName':'index-launches'
+            'rssFeedName': 'index-launches'
         }
 
         # Grab the data.
@@ -420,7 +422,7 @@ class SPGlobal():
         """
 
         params = {
-            'rssFeedName':'index-announcments'
+            'rssFeedName': 'index-announcments'
         }
 
         # Grab the data.
@@ -453,7 +455,7 @@ class SPGlobal():
         """
 
         params = {
-            'rssFeedName':'new-counsultations'
+            'rssFeedName': 'new-counsultations'
         }
 
         # Grab the data.

@@ -1,16 +1,13 @@
 import time
-import requests
-import xml.etree.ElementTree as ET
 
 from enum import Enum
 from typing import List
 from typing import Dict
 from typing import Union
 
+import finnews.news_enum as enums_news
 from finnews.parser import NewsParser
 from finnews.fields import cnbc_rss_feeds_id
-
-import finnews.news_enum as enums_news
 
 
 class CNBC():
@@ -87,7 +84,7 @@ class CNBC():
 
         # Loop through all the topics.
         for topic_key in self.topic_categories:
-            
+
             print('PULLING TOPIC: {topic_id}'.format(topic_id=topic_key))
 
             # Grab the data.

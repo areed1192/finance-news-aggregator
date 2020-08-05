@@ -1,14 +1,10 @@
-import time
-import requests
-import xml.etree.ElementTree as ET
-
 from enum import Enum
 from typing import List
 from typing import Dict
 from typing import Union
 
-from finnews.parser import NewsParser
 import finnews.news_enum as enums_news
+from finnews.parser import NewsParser
 
 
 class MarketWatch():
@@ -84,7 +80,7 @@ class MarketWatch():
 
         # # Loop through all the topics.
         # for topic_key in self.topic_categories:
-            
+
         #     print('PULLING TOPIC: {topic_id}'.format(topic_id=topic_key))
 
         #     # Grab the data.
