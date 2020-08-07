@@ -41,7 +41,8 @@ class NewsParser():
             'sp_global': '.channel/item',
             'seeking_alpha': '.channel/item',
             'cnn_finance': '.channel/item',
-            'wsj': '.channel/item'
+            'wsj': '.channel/item',
+            'yahoo': '.channel/item'
         }
 
         self.namespaces = {
@@ -68,6 +69,10 @@ class NewsParser():
             'wsj': [
                 '{http://dowjones.net/rss/}',
                 '{http://purl.org/rss/1.0/modules/content/}',
+                '{http://search.yahoo.com/mrss/}'
+            ]
+            ,
+            'yahoo': [
                 '{http://search.yahoo.com/mrss/}'
             ]
         }

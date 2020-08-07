@@ -9,6 +9,8 @@ from finnews.sp_global import SPGlobal
 from finnews.seeking_alpha import SeekingAlpha
 from finnews.cnn_finance import CNNFinance
 from finnews.wsj import WallStreetJournal
+from finnews.yahoo_finance import YahooFinance
+
 
 class TestNewsClient(TestCase):
 
@@ -93,6 +95,16 @@ class TestNewsClient(TestCase):
         # Make sure it's a `WallStreetJournal` client.
         self.assertIsInstance(self.wsj_client, WallStreetJournal)
         self.assertIsNotNone(self.news_client._wsj_client)
+
+    def test_creates_yahoo_finance_instance(self):
+        """Create an instance and make sure it's a `YahooFinance` client."""
+
+        # Grab the client.
+        self.yahoo_finance_client = self.news_client.yahoo_finance
+
+        # Make sure it's a `YahooFinance` client.
+        self.assertIsInstance(self.yahoo_finance_client, YahooFinance)
+        self.assertIsNotNone(self.news_client._yahoo_finance_client)
 
     def tearDown(self) -> None:
         """Teardown the `NewsClient`."""

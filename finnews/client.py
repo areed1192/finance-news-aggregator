@@ -11,6 +11,7 @@ from finnews.sp_global import SPGlobal
 from finnews.seeking_alpha import SeekingAlpha
 from finnews.cnn_finance import CNNFinance
 from finnews.wsj import WallStreetJournal
+from finnews.yahoo_finance import YahooFinance
 
 class News():
 
@@ -37,6 +38,7 @@ class News():
         self._seeking_alpha_client = None
         self._cnn_finance_client = None
         self._wsj_client = None
+        self._yahoo_finance_client = None
 
     def __repr__(self) -> str:
         """Represents the string representation of the client object.
@@ -214,6 +216,30 @@ class News():
         self._wsj_client = WallStreetJournal()
 
         return self._wsj_client
+
+    @property
+    def yahoo_finance(self) -> YahooFinance:
+        """Returns a new instance of the `YahooFinance` news client.
+
+        Returns:
+        ----
+        YahooFinance: The `YahooFinance` news client that can be used to
+            query different RSS feeds by topics.
+
+        Usage:
+        ----
+            >>> from finnews.client import News
+
+            >>> # Create a new instance of the News Client.
+            >>> news_client = News()
+
+            >>> # Grab the Yahoo Finance News Client.
+            >>> yahoo_finance_client = news_client.yahoo_finance       
+        """
+
+        self._yahoo_finance_client = YahooFinance()
+
+        return self._yahoo_finance_client
 
     def save_to_file(self, content: List[Dict], file_name: str) -> None:
         """Saves the news content to a JSONC file.
