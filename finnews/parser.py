@@ -40,7 +40,8 @@ class NewsParser():
             'market_watch': './channel/item',
             'sp_global': '.channel/item',
             'seeking_alpha': '.channel/item',
-            'cnn_finance': '.channel/item'
+            'cnn_finance': '.channel/item',
+            'wsj': '.channel/item'
         }
 
         self.namespaces = {
@@ -50,18 +51,23 @@ class NewsParser():
                 '{http://nasdaq.com/reference/feeds/1.0}',
                 '{http://purl.org/dc/elements/1.1/}'
             ],
-            'market_watch':[
+            'market_watch': [
                 '{http://rssnamespace.org/feedburner/ext/1.0}'
             ],
-            'sp_global':[
+            'sp_global': [
                 ''
             ],
-            'seeking_alpha':[
+            'seeking_alpha': [
                 '{http://search.yahoo.com/mrss/}',
                 '{https://seekingalpha.com/api/1.0}'
             ],
-            'cnn_finance':[
+            'cnn_finance': [
                 '{http://rssnamespace.org/feedburner/ext/1.0}',
+                '{http://search.yahoo.com/mrss/}'
+            ],
+            'wsj': [
+                '{http://dowjones.net/rss/}',
+                '{http://purl.org/rss/1.0/modules/content/}',
                 '{http://search.yahoo.com/mrss/}'
             ]
         }

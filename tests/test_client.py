@@ -8,6 +8,7 @@ from finnews.market_watch import MarketWatch
 from finnews.sp_global import SPGlobal
 from finnews.seeking_alpha import SeekingAlpha
 from finnews.cnn_finance import CNNFinance
+from finnews.wsj import WallStreetJournal
 
 class TestNewsClient(TestCase):
 
@@ -49,7 +50,7 @@ class TestNewsClient(TestCase):
         # Grab the client.
         self.market_watch_client = self.news_client.market_Watch
 
-        # Make sure it's a NASDAQ client.
+        # Make sure it's a `MarketWatch` client.
         self.assertIsInstance(self.market_watch_client, MarketWatch)
         self.assertIsNotNone(self.news_client._market_watch_client)
 
@@ -59,7 +60,7 @@ class TestNewsClient(TestCase):
         # Grab the client.
         self.sp_global_client = self.news_client.sp_global
 
-        # Make sure it's a NASDAQ client.
+        # Make sure it's a `SPGlobal` client.
         self.assertIsInstance(self.sp_global_client, SPGlobal)
         self.assertIsNotNone(self.news_client._sp_global_client)
 
@@ -69,7 +70,7 @@ class TestNewsClient(TestCase):
         # Grab the client.
         self.seeking_alpha_client = self.news_client.seeking_alpha
 
-        # Make sure it's a NASDAQ client.
+        # Make sure it's a `SeekingAlpha` client.
         self.assertIsInstance(self.seeking_alpha_client, SeekingAlpha)
         self.assertIsNotNone(self.news_client._seeking_alpha_client)
 
@@ -79,9 +80,19 @@ class TestNewsClient(TestCase):
         # Grab the client.
         self.cnn_finance_client = self.news_client.cnn_finance
 
-        # Make sure it's a NASDAQ client.
+        # Make sure it's a `CNNFinance` client.
         self.assertIsInstance(self.cnn_finance_client, CNNFinance)
         self.assertIsNotNone(self.news_client._cnn_finance_client)
+
+    def test_creates_wsj_instance(self):
+        """Create an instance and make sure it's a `WallStreetJournal` client."""
+
+        # Grab the client.
+        self.wsj_client = self.news_client.wsj
+
+        # Make sure it's a `WallStreetJournal` client.
+        self.assertIsInstance(self.wsj_client, WallStreetJournal)
+        self.assertIsNotNone(self.news_client._wsj_client)
 
     def tearDown(self) -> None:
         """Teardown the `NewsClient`."""
