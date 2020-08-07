@@ -70,8 +70,7 @@ class NewsParser():
                 '{http://dowjones.net/rss/}',
                 '{http://purl.org/rss/1.0/modules/content/}',
                 '{http://search.yahoo.com/mrss/}'
-            ]
-            ,
+            ],
             'yahoo': [
                 '{http://search.yahoo.com/mrss/}'
             ]

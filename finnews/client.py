@@ -13,6 +13,7 @@ from finnews.cnn_finance import CNNFinance
 from finnews.wsj import WallStreetJournal
 from finnews.yahoo_finance import YahooFinance
 
+
 class News():
 
     """

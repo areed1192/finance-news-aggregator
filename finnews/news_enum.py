@@ -76,6 +76,7 @@ class cnbc_tv_programs_asia(Enum):
     SQUAWK_BOX_ASIA = 15838831
     THE_CALL = 37447855
 
+
 class market_watch(Enum):
 
     TOP_STORIES = 'topstories'
