@@ -1,6 +1,5 @@
 from setuptools import setup
 from setuptools import find_namespace_packages
-from setuptools import find_packages
 
 with open(file="README.md", mode="r") as fh:
     long_description = fh.read()

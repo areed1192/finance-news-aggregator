@@ -276,5 +276,5 @@ class News():
         file_name = 'samples/responses/{name}.jsonc'.format(name=file_name)
 
         # Dump the content.
-        with open(file_name, 'w+') as news_data:
+        with open(file=file_name, mode='w+') as news_data:
             json.dump(obj=content, fp=news_data, indent=2)
