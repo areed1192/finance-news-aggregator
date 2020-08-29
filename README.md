@@ -9,6 +9,8 @@
 
 ## Overview
 
+Current Version: **0.1.1**
+
 Investors use news articles to gain an idea of market sentiment and hopefully
 be able to predict the direction of markets based on the sentiment of these
 articles and how they are published. The `finnews` library is designed to help

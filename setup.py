@@ -8,13 +8,14 @@ setup(
     name='fin-news',
     author='Alex Reed',
     author_email='coding.sigma@gmail.com',
-    version='0.1.0',
+    version='0.1.1',
     description='A finance news aggregator used to collect articles on different market topics.',
     long_description=long_description,
     long_description_content_type="text/markdown",
     url='https://github.com/areed1192/finance-news-aggregator',
     install_requires=[
-        'requests'
+        'requests==2.24.0',
+        'fake_useragent==0.1.11'
     ],
     packages=find_namespace_packages(
         include=['finnews', 'finnews.*']
