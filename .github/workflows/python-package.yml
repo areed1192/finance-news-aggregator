@@ -39,4 +39,4 @@ jobs:
 
       - name: Test with Unittest.
         run: |
-          if [ -f tests/test_client.py ]; python -m unittest tests/test_client.py; fi
+          if [ -f tests/test_client.py ]; then python -m unittest tests/test_client.py; fi
