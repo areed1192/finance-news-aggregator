@@ -1,13 +1,15 @@
-from enum import Enum
 from typing import List
 from typing import Dict
-from typing import Union
-
-import finnews.news_enum as enums_news
 from finnews.parser import NewsParser
 
 
 class NASDAQ():
+
+    """
+    ### Overview:
+    ----
+    Used to access news articles from NASDAQ.
+    """
 
     def __init__(self):
         """Initializes the `NASDAQ` client."""
@@ -22,7 +24,7 @@ class NASDAQ():
     def __repr__(self) -> str:
         """Represents the string representation of the client object.
 
-        Returns:
+        ### Returns:
         ----
         (str): The string representation.
         """
@@ -31,11 +33,11 @@ class NASDAQ():
     def original_content(self) -> Dict:
         """Used to query all the topics from the NASDAQ Original Content RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -59,11 +61,11 @@ class NASDAQ():
     def commodities_feed(self) -> List[Dict]:
         """Used to query topics from the Commodities News RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -93,11 +95,11 @@ class NASDAQ():
     def ipos_feed(self) -> List[Dict]:
         """Used to query topics from the IPOs News RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -127,11 +129,11 @@ class NASDAQ():
     def cryptocurrency_feed(self) -> List[Dict]:
         """Used to query topics from the Cryptocurrency News RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -161,11 +163,11 @@ class NASDAQ():
     def dividends_feed(self) -> List[Dict]:
         """Used to query topics from the Dividends News RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -195,11 +197,11 @@ class NASDAQ():
     def earnings_feed(self) -> List[Dict]:
         """Used to query topics from the Earnings News RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -229,11 +231,11 @@ class NASDAQ():
     def etfs_feed(self) -> List[Dict]:
         """Used to query topics from the ETFs News RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -263,11 +265,11 @@ class NASDAQ():
     def markets_feed(self) -> List[Dict]:
         """Used to query topics from the Markets News RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -297,11 +299,11 @@ class NASDAQ():
     def options_feed(self) -> List[Dict]:
         """Used to query topics from the Options News RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -331,11 +333,11 @@ class NASDAQ():
     def stocks_feed(self) -> List[Dict]:
         """Used to query topics from the Stocks News RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -365,11 +367,11 @@ class NASDAQ():
     def artifical_intelligence_feed(self) -> List[Dict]:
         """Used to query topics from the Artifical Intelligence News RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -380,7 +382,7 @@ class NASDAQ():
             >>> nasdaq_news_client = news_client.nasdaq
 
             >>> # Grab the Artifical Intelligence news.
-            >>> nasdaq_artificial_intelligence_content = nasdaq_news_client.artifical_intelligence_feed()
+            >>> nasdaq_artificial_intelligence = nasdaq_news_client.artifical_intelligence_feed()
         """
 
         # Define the paramters.
@@ -399,11 +401,11 @@ class NASDAQ():
     def blockchain_feed(self) -> List[Dict]:
         """Used to query topics from the Blockchain News RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -433,11 +435,11 @@ class NASDAQ():
     def corporate_governance_feed(self) -> List[Dict]:
         """Used to query topics from the Corporate Governance News RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -467,11 +469,11 @@ class NASDAQ():
     def financial_advisors_feed(self) -> List[Dict]:
         """Used to query topics from the Financial Advisors News RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -501,11 +503,11 @@ class NASDAQ():
     def fin_tech_feed(self) -> List[Dict]:
         """Used to query topics from the Fin Tech News RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -535,11 +537,11 @@ class NASDAQ():
     def innovation_feed(self) -> List[Dict]:
         """Used to query topics from the Innovation News RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -569,11 +571,11 @@ class NASDAQ():
     def nasdaq_news_feed(self) -> List[Dict]:
         """Used to query topics from the Nasdaq News Inc. RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -603,11 +605,11 @@ class NASDAQ():
     def technology_feed(self) -> List[Dict]:
         """Used to query topics from the Nasdaq Technology RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -637,11 +639,11 @@ class NASDAQ():
     def investing_feed(self) -> List[Dict]:
         """Used to query topics from the Nasdaq Investing RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -671,11 +673,11 @@ class NASDAQ():
     def retirement_feed(self) -> List[Dict]:
         """Used to query topics from the Nasdaq Retirement RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -705,11 +707,11 @@ class NASDAQ():
     def saving_money_feed(self) -> List[Dict]:
         """Used to query topics from the Nasdaq Saving Money RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -744,11 +746,11 @@ class NASDAQ():
         ticker_symbol (str): A ticker symbol that you want to
             query.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 

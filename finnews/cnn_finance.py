@@ -1,13 +1,15 @@
-from enum import Enum
 from typing import List
 from typing import Dict
-from typing import Union
-
-import finnews.news_enum as enums_news
 from finnews.parser import NewsParser
 
 
 class CNNFinance():
+
+    """
+    ### Overview:
+    ----
+    Used to access news articles from CNN Finance.
+    """
 
     def __init__(self):
         """Initializes the `CNNFinance` client."""
@@ -22,7 +24,7 @@ class CNNFinance():
     def __repr__(self) -> str:
         """Represents the string representation of the client object.
 
-        Returns:
+        ### Returns:
         ----
         (str): The string representation.
         """
@@ -31,11 +33,11 @@ class CNNFinance():
     def all_stories(self) -> List[Dict]:
         """Used to query topics from the All Stories RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -59,11 +61,11 @@ class CNNFinance():
     def top_stories(self) -> List[Dict]:
         """Used to query topics from the Top Stories RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -87,11 +89,11 @@ class CNNFinance():
     def most_popular(self) -> List[Dict]:
         """Used to query topics from the Most Popular RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -115,11 +117,11 @@ class CNNFinance():
     def companies(self) -> List[Dict]:
         """Used to query topics from the Companies RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -143,11 +145,11 @@ class CNNFinance():
     def international(self) -> List[Dict]:
         """Used to query topics from the Internationals RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -171,11 +173,11 @@ class CNNFinance():
     def economy(self) -> List[Dict]:
         """Used to query topics from the Economy RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -199,11 +201,11 @@ class CNNFinance():
     def video_news(self) -> List[Dict]:
         """Used to query topics from the Video News RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -227,11 +229,11 @@ class CNNFinance():
     def media(self) -> List[Dict]:
         """Used to query topics from the Media RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -255,11 +257,11 @@ class CNNFinance():
     def markets(self) -> List[Dict]:
         """Used to query topics from the Markets RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -283,11 +285,11 @@ class CNNFinance():
     def morning_buzz(self) -> List[Dict]:
         """Used to query topics from the Morning Buzz RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -311,11 +313,11 @@ class CNNFinance():
     def techonology(self) -> List[Dict]:
         """Used to query topics from the Technology RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -339,11 +341,11 @@ class CNNFinance():
     def personal_finance(self) -> List[Dict]:
         """Used to query topics from the Personal Finance RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -367,11 +369,11 @@ class CNNFinance():
     def autos(self) -> List[Dict]:
         """Used to query topics from the Autos RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -395,11 +397,11 @@ class CNNFinance():
     def funds(self) -> List[Dict]:
         """Used to query topics from the Funds RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -423,11 +425,11 @@ class CNNFinance():
     def colleges(self) -> List[Dict]:
         """Used to query topics from the College RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -451,11 +453,11 @@ class CNNFinance():
     def insurance(self) -> List[Dict]:
         """Used to query topics from the Insurance RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -479,11 +481,11 @@ class CNNFinance():
     def taxes(self) -> List[Dict]:
         """Used to query topics from the Taxes RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -507,11 +509,11 @@ class CNNFinance():
     def retirement(self) -> List[Dict]:
         """Used to query topics from the Retirement RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -535,11 +537,11 @@ class CNNFinance():
     def lifestyle(self) -> List[Dict]:
         """Used to query topics from the Lifestyle RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -563,11 +565,11 @@ class CNNFinance():
     def real_estate(self) -> List[Dict]:
         """Used to query topics from the Real Estate RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -591,11 +593,11 @@ class CNNFinance():
     def luxury(self) -> List[Dict]:
         """Used to query topics from the Luxury RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -619,11 +621,11 @@ class CNNFinance():
     def small_business(self) -> List[Dict]:
         """Used to query topics from the Small Business RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 

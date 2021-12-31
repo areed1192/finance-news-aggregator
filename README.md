@@ -9,7 +9,7 @@
 
 ## Overview
 
-Current Version: **0.1.1**
+Current Version: **0.1.2**
 
 Investors use news articles to gain an idea of market sentiment and hopefully
 be able to predict the direction of markets based on the sentiment of these

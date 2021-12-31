@@ -1,4 +1,3 @@
-from pprint import pprint
 
 from finnews.client import News
 from finnews.news_enum import cnbc_top_news

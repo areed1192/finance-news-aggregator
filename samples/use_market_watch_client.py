@@ -5,7 +5,7 @@ from finnews.client import News
 news_client = News()
 
 # Grab the MarketWatch News Client.
-market_watch_client = news_client.market_Watch
+market_watch_client = news_client.market_watch
 
 # Grab the original content news.
 content = market_watch_client.top_stories()

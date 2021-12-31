@@ -2,7 +2,6 @@ import json
 
 from typing import List
 from typing import Dict
-from typing import Union
 
 from finnews.cnbc import CNBC
 from finnews.nasdaq import NASDAQ
@@ -17,14 +16,16 @@ from finnews.yahoo_finance import YahooFinance
 class News():
 
     """
-    Represents the main News Client that is used to access 
+    ### Overview:
+    ----
+    Represents the main News Client that is used to access
     the different news providers.
     """
 
     def __init__(self) -> None:
         """Initalizes the main `News` client.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -44,7 +45,7 @@ class News():
     def __repr__(self) -> str:
         """Represents the string representation of the client object.
 
-        Returns:
+        ### Returns:
         ----
         (str): The string representation.
         """
@@ -54,12 +55,12 @@ class News():
     def cnbc(self) -> CNBC:
         """Returns a new instance of the `CNBC` news client.
 
-        Returns:
+        ### Returns:
         ----
         CNBC: The `CNBC` news client that can be used to
             query different RSS feeds by topics.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -67,7 +68,7 @@ class News():
             >>> news_client = News()
 
             >>> # Grab the CNBC News Client.
-            >>> cnbc_news_client = news_client.cnbc        
+            >>> cnbc_news_client = news_client.cnbc
         """
 
         self._cnbc_client = CNBC()
@@ -78,12 +79,12 @@ class News():
     def nasdaq(self) -> NASDAQ:
         """Returns a new instance of the `NASDAQ` news client.
 
-        Returns:
+        ### Returns:
         ----
         NASDAQ: The `NASDAQ` news client that can be used to
             query different RSS feeds by topics.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -91,7 +92,7 @@ class News():
             >>> news_client = News()
 
             >>> # Grab the NASDAQ News Client.
-            >>> nasdaq_news_client = news_client.nasdaq       
+            >>> nasdaq_news_client = news_client.nasdaq
         """
 
         self._nasdaq_client = NASDAQ()
@@ -99,15 +100,15 @@ class News():
         return self._nasdaq_client
 
     @property
-    def market_Watch(self) -> MarketWatch:
+    def market_watch(self) -> MarketWatch:
         """Returns a new instance of the `MarketWatch` news client.
 
-        Returns:
+        ### Returns:
         ----
         MarketWatch: The `MarketWatch` news client that can be used to
             query different RSS feeds by topics.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -115,7 +116,7 @@ class News():
             >>> news_client = News()
 
             >>> # Grab the MarketWatch News Client.
-            >>> market_Watch_client = news_client.market_Watch       
+            >>> market_Watch_client = news_client.market_Watch
         """
 
         self._market_watch_client = MarketWatch()
@@ -126,12 +127,12 @@ class News():
     def sp_global(self) -> SPGlobal:
         """Returns a new instance of the `SPGlobal` news client.
 
-        Returns:
+        ### Returns:
         ----
         SPGlobal: The `SPGlobal` news client that can be used to
             query different RSS feeds by topics.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -139,7 +140,7 @@ class News():
             >>> news_client = News()
 
             >>> # Grab the SPGlobal News Client.
-            >>> sp_global_client = news_client.sp_global       
+            >>> sp_global_client = news_client.sp_global
         """
 
         self._sp_global_client = SPGlobal()
@@ -150,12 +151,12 @@ class News():
     def seeking_alpha(self) -> SeekingAlpha:
         """Returns a new instance of the `SeekingAlpha` news client.
 
-        Returns:
+        ### Returns:
         ----
         SeekingAlpha: The `SeekingAlpha` news client that can be used to
             query different RSS feeds by topics.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -163,7 +164,7 @@ class News():
             >>> news_client = News()
 
             >>> # Grab the SeekingAlpha News Client.
-            >>> seeking_alpha_client = news_client.seeking_alpha       
+            >>> seeking_alpha_client = news_client.seeking_alpha
         """
 
         self._seeking_alpha_client = SeekingAlpha()
@@ -174,12 +175,12 @@ class News():
     def cnn_finance(self) -> CNNFinance:
         """Returns a new instance of the `CNNFinance` news client.
 
-        Returns:
+        ### Returns:
         ----
         CNNFinance: The `CNNFinance` news client that can be used to
             query different RSS feeds by topics.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -187,7 +188,7 @@ class News():
             >>> news_client = News()
 
             >>> # Grab the CNN Finance News Client.
-            >>> cnn_finance_client = news_client.cnn_finance       
+            >>> cnn_finance_client = news_client.cnn_finance
         """
 
         self._cnn_finance_client = CNNFinance()
@@ -198,12 +199,12 @@ class News():
     def wsj(self) -> WallStreetJournal:
         """Returns a new instance of the `WallStreetJournal` news client.
 
-        Returns:
+        ### Returns:
         ----
         WallStreetJournal: The `WallStreetJournal` news client that can be used to
             query different RSS feeds by topics.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -211,7 +212,7 @@ class News():
             >>> news_client = News()
 
             >>> # Grab the Wall Street Journal News Client.
-            >>> wsj_client = news_client.wsj       
+            >>> wsj_client = news_client.wsj
         """
 
         self._wsj_client = WallStreetJournal()
@@ -222,12 +223,12 @@ class News():
     def yahoo_finance(self) -> YahooFinance:
         """Returns a new instance of the `YahooFinance` news client.
 
-        Returns:
+        ### Returns:
         ----
         YahooFinance: The `YahooFinance` news client that can be used to
             query different RSS feeds by topics.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -235,7 +236,7 @@ class News():
             >>> news_client = News()
 
             >>> # Grab the Yahoo Finance News Client.
-            >>> yahoo_finance_client = news_client.yahoo_finance       
+            >>> yahoo_finance_client = news_client.yahoo_finance
         """
 
         self._yahoo_finance_client = YahooFinance()
@@ -245,14 +246,14 @@ class News():
     def save_to_file(self, content: List[Dict], file_name: str) -> None:
         """Saves the news content to a JSONC file.
 
-        Arguments:
+        ### Arguments:
         ----
         content (List[Dict]): A news collection list.
 
         file_name (str): The name of the file, with no file extension
             included.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -263,7 +264,7 @@ class News():
             >>> cnbc_news_client = news_client.cnbc
 
             >>> # Grab the top news.
-            >>> cbnc_top_news = cnbc_news_client.news_feed(topic='top_news')   
+            >>> cbnc_top_news = cnbc_news_client.news_feed(topic='top_news')
 
             >>> # Save the data.
             >>> news_client.save_to_file(
@@ -273,8 +274,8 @@ class News():
         """
 
         # Define the file name.
-        file_name = 'samples/responses/{name}.jsonc'.format(name=file_name)
+        file_name = f'samples/responses/{file_name}.jsonc'
 
         # Dump the content.
-        with open(file=file_name, mode='w+') as news_data:
+        with open(file=file_name, mode='w+', encoding="utf-8") as news_data:
             json.dump(obj=content, fp=news_data, indent=2)

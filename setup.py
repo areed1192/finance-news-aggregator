@@ -1,20 +1,20 @@
 from setuptools import setup
 from setuptools import find_namespace_packages
 
-with open(file="README.md", mode="r") as fh:
+with open(file="README.md", mode="r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
     name='fin-news',
     author='Alex Reed',
     author_email='coding.sigma@gmail.com',
-    version='0.1.1',
+    version='0.1.2',
     description='A finance news aggregator used to collect articles on different market topics.',
     long_description=long_description,
     long_description_content_type="text/markdown",
     url='https://github.com/areed1192/finance-news-aggregator',
     install_requires=[
-        'requests==2.24.0',
+        'requests>=2.24.0',
         'fake_useragent==0.1.11'
     ],
     packages=find_namespace_packages(

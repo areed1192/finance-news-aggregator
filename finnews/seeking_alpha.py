@@ -1,13 +1,16 @@
-from enum import Enum
 from typing import List
 from typing import Dict
-from typing import Union
 
 from finnews.parser import NewsParser
-import finnews.news_enum as enums_news
 
 
 class SeekingAlpha():
+
+    """
+    ### Overview:
+    ----
+    Used to access news articles from SeekingAlpha.
+    """
 
     def __init__(self):
         """Initializes the `SeekingAlpha` client."""
@@ -28,7 +31,7 @@ class SeekingAlpha():
     def __repr__(self) -> str:
         """Represents the string representation of the client object.
 
-        Returns:
+        ### Returns:
         ----
         (str): The string representation.
         """
@@ -37,15 +40,15 @@ class SeekingAlpha():
     def stocks(self, ticker: str) -> List[Dict]:
         """Used to query topics for a particular Stock's RSS feed.
 
-        Arguments:
+        ### Arguments:
         ----
         ticker (str): The ticker symbol you wish to query.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -69,11 +72,11 @@ class SeekingAlpha():
     def latest_articles(self) -> List[Dict]:
         """Used to query topics from the Latest Articles RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -97,11 +100,11 @@ class SeekingAlpha():
     def ipo_analysis(self) -> List[Dict]:
         """Used to query topics from the IPO Analysis RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -125,11 +128,11 @@ class SeekingAlpha():
     def long_ideas(self) -> List[Dict]:
         """Used to query topics from the Long Ideas RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -153,11 +156,11 @@ class SeekingAlpha():
     def transcripts(self) -> List[Dict]:
         """Used to query topics from the Transcripts RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -181,11 +184,11 @@ class SeekingAlpha():
     def all_news(self) -> List[Dict]:
         """Used to query topics from the All News RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -209,11 +212,11 @@ class SeekingAlpha():
     def wall_street_breakfast(self) -> List[Dict]:
         """Used to query topics from the Wall Street Breakfast RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -237,11 +240,11 @@ class SeekingAlpha():
     def most_popular_articles(self) -> List[Dict]:
         """Used to query topics from the Most Populart Articles RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -265,11 +268,11 @@ class SeekingAlpha():
     def forex(self) -> List[Dict]:
         """Used to query topics from the Forex RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -293,11 +296,11 @@ class SeekingAlpha():
     def editors_picks(self) -> List[Dict]:
         """Used to query topics from the Editor Picks RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -321,11 +324,11 @@ class SeekingAlpha():
     def etfs(self) -> List[Dict]:
         """Used to query topics from the ETFs RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -349,15 +352,15 @@ class SeekingAlpha():
     def global_markets(self, country: str) -> List[Dict]:
         """Used to query topics for a particular Country's Global Market RSS feed.
 
-        Arguments:
+        ### Arguments:
         ----
         country (str): The country you wish to query.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -381,15 +384,15 @@ class SeekingAlpha():
     def sectors(self, sector: str) -> List[Dict]:
         """Used to query topics for a particular Sector's News RSS feed.
 
-        Arguments:
+        ### Arguments:
         ----
         sector (str): The sector you wish to query.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 

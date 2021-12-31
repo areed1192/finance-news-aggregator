@@ -5,12 +5,17 @@ from typing import List
 from typing import Dict
 from typing import Union
 
-import finnews.news_enum as enums_news
 from finnews.parser import NewsParser
 from finnews.fields import cnbc_rss_feeds_id
 
 
 class CNBC():
+
+    """
+    ### Overview:
+    ----
+    Used to access news articles from CNBC.
+    """
 
     def __init__(self):
         """Initializes the `CNBC` client."""
@@ -27,7 +32,7 @@ class CNBC():
     def __repr__(self) -> str:
         """Represents the string representation of the client object.
 
-        Returns:
+        ### Returns:
         ----
         (str): The string representation.
         """
@@ -36,7 +41,7 @@ class CNBC():
     def _check_key(self, topic_id: str) -> str:
         """Checks the topic ID to see if it's valid.
 
-        Arguments:
+        ### Arguments:
         ----
         topic_id (str): The topic ID to query and check.
 
@@ -45,7 +50,7 @@ class CNBC():
         KeyError: If topic doesn't exist will raise a
             `KeyError` asking you to provide a valid topic.
 
-        Returns:
+        ### Returns:
         ----
         str: The full URL to be used in the request.
         """
@@ -62,11 +67,11 @@ class CNBC():
     def all_feeds(self) -> Dict:
         """Used to query all the topics from the CNBC RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -85,7 +90,7 @@ class CNBC():
         # Loop through all the topics.
         for topic_key in self.topic_categories:
 
-            print('PULLING TOPIC: {topic_id}'.format(topic_id=topic_key))
+            print(f'PULLING TOPIC: {topic_key}')
 
             # Grab the data.
             try:
@@ -94,7 +99,7 @@ class CNBC():
                 )
 
                 all_news[topic_key] = data
-            except:
+            except KeyError:
                 continue
 
             time.sleep(1)
@@ -104,16 +109,16 @@ class CNBC():
     def news_feed(self, topic: Union[str, Enum]) -> List[Dict]:
         """Used to query topics from the News Feed RSS feed.
 
-        Arguments:
+        ### Arguments:
         ----
         topic (str): The topic ID you wish to return articles for.
             For example, `top_news` will return the top news articles.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -141,16 +146,16 @@ class CNBC():
     def investing_feeds(self, topic: str) -> List[Dict]:
         """Used to query topics from the Investing News RSS feed.
 
-        Arguments:
+        ### Arguments:
         ----
         topic (str): The topic ID you wish to return articles for.
             For example, `investing_news` will return the top news articles.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -178,16 +183,16 @@ class CNBC():
     def blogs(self, topic: str) -> List[Dict]:
         """Used to query topics from the Blogs RSS feed.
 
-        Arguments:
+        ### Arguments:
         ----
         topic (str): The topic ID you wish to return articles for.
             For example, `charting_asia` will return the top news articles.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -215,16 +220,16 @@ class CNBC():
     def videos_and_tv(self, topic: str) -> List[Dict]:
         """Used to query topics from the Videos & TV RSS feed.
 
-        Arguments:
+        ### Arguments:
         ----
         topic (str): The topic ID you wish to return articles for.
             For example, `top_video` will return the top news articles.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -252,16 +257,16 @@ class CNBC():
     def tv_programs_europe(self, topic: str) -> List[Dict]:
         """Used to query topics from the TV Programs (Europe) RSS feed.
 
-        Arguments:
+        ### Arguments:
         ----
         topic (str): The topic ID you wish to return articles for.
             For example, `capital_connection` will return the top news articles.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -291,16 +296,16 @@ class CNBC():
     def tv_programs_asia(self, topic: str) -> List[Dict]:
         """Used to query topics from the TV Programs (Asia) RSS feed.
 
-        Arguments:
+        ### Arguments:
         ----
         topic (str): The topic ID you wish to return articles for.
             For example, `squawk_box_asia` will return the top news articles.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 

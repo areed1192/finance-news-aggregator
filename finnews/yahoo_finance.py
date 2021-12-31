@@ -1,13 +1,16 @@
-from enum import Enum
 from typing import List
 from typing import Dict
-from typing import Union
 
-import finnews.news_enum as enums_news
 from finnews.parser import NewsParser
 
 
 class YahooFinance():
+
+    """
+    ### Overview:
+    ----
+    Used to access news articles from Yahoo Finance.
+    """
 
     def __init__(self):
         """Initializes the `YahooFinance` client."""
@@ -24,7 +27,7 @@ class YahooFinance():
     def __repr__(self) -> str:
         """Represents the string representation of the client object.
 
-        Returns:
+        ### Returns:
         ----
         (str): The string representation.
         """
@@ -33,11 +36,11 @@ class YahooFinance():
     def news(self) -> List[Dict]:
         """Used to query topics from the News RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -61,15 +64,15 @@ class YahooFinance():
     def headlines(self, symbols: List[str]) -> List[Dict]:
         """Used to query news headlines for a list of Stocks from the RSS feed.
 
-        Arguments:
+        ### Arguments:
         ----
         symbols (List[str]): A list of ticker symbols to query.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 

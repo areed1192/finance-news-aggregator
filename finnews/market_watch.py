@@ -1,13 +1,18 @@
-from enum import Enum
+import time
 from typing import List
 from typing import Dict
-from typing import Union
 
-import finnews.news_enum as enums_news
 from finnews.parser import NewsParser
+from finnews.fields import market_watch_rss_feeds_id
 
 
 class MarketWatch():
+
+    """
+    ### Overview:
+    ----
+    Used to access news articles from MarketWatch.
+    """
 
     def __init__(self):
         """Initializes the `MarketWatch` client."""
@@ -18,10 +23,13 @@ class MarketWatch():
         # Define the parser client.
         self.news_parser = NewsParser(client='market_watch')
 
+        # Define the Topic Categories.
+        self.topic_categories = market_watch_rss_feeds_id
+
     def __repr__(self) -> str:
         """Represents the string representation of the client object.
 
-        Returns:
+        ### Returns:
         ----
         (str): The string representation.
         """
@@ -30,81 +38,80 @@ class MarketWatch():
     def _check_key(self, topic_id: str) -> str:
         """Checks the topic ID to see if it's valid.
 
-        Arguments:
+        ### Arguments:
         ----
         topic_id (str): The topic ID to query and check.
 
-        Raises:
+        ### Raises:
         ----
         KeyError: If topic doesn't exist will raise a
             `KeyError` asking you to provide a valid topic.
 
-        Returns:
+        ### Returns:
         ----
         str: The full URL to be used in the request.
         """
-        pass
 
-        # if topic_id in self.topic_categories:
+        if topic_id in self.topic_categories:
 
-        #     full_url = self.url.format(
-        #         topic_id=self.topic_categories[topic_id]
-        #     )
-        #     return full_url
-        # else:
-        #     raise KeyError("The value you're searching for does not exist.")
+            full_url = self.url.format(
+                topic_id=self.topic_categories[topic_id]
+            )
+            return full_url
+
+        else:
+            raise KeyError("The value you're searching for does not exist.")
 
     def all_feeds(self) -> Dict:
-        """Used to query all the topics from the CNBC RSS feed.
+        """Used to query all the topics from the Market Watch RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
             >>> # Create a new instance of the News Client.
             >>> news_client = News()
 
-            >>> # Grab the CNBC News Client.
-            >>> cnbc_news_client = news_client.cnbc
+            >>> # Grab the Market Watch News Client.
+            >>> market_watch_client = news_client.market_watch
 
             >>> # Grab the top news.
-            >>> cbnc_top_news = cnbc_news_client.all_feeds()
+            >>> all_feeds = market_watch_client.all_feeds()
         """
-        pass
 
-        # all_news = {}
+        all_news = {}
 
-        # # Loop through all the topics.
-        # for topic_key in self.topic_categories:
+        # Loop through all the topics.
+        for topic_key in self.topic_categories:
 
-        #     print('PULLING TOPIC: {topic_id}'.format(topic_id=topic_key))
+            print(f'PULLING TOPIC: {topic_key}')
 
-        #     # Grab the data.
-        #     try:
-        #         data = self.news_parser._make_request(
-        #             url=self._check_key(topic_id=topic_key)
-        #         )
+            # Grab the data.
+            try:
+                data = self.news_parser._make_request(
+                    url=self._check_key(topic_id=topic_key)
+                )
 
-        #         all_news[topic_key] = data
-        #     except:
-        #         continue
+                all_news[topic_key] = data
+            except KeyError:
+                continue
 
-        #     time.sleep(1)
+            time.sleep(1)
 
-        # return all_news
+        return all_news
 
     def top_stories(self) -> List[Dict]:
         """Used to query topics from the Top Stories Feed RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -128,11 +135,11 @@ class MarketWatch():
     def real_time_headlines(self) -> List[Dict]:
         """Used to query topics from the Real Time Headlines Feed RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -156,11 +163,11 @@ class MarketWatch():
     def market_pulse(self) -> List[Dict]:
         """Used to query topics from the Market Pulse Feed RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -184,11 +191,11 @@ class MarketWatch():
     def bulletins(self) -> List[Dict]:
         """Used to query topics from the Bulletins Feed RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -212,11 +219,11 @@ class MarketWatch():
     def personal_finance(self) -> List[Dict]:
         """Used to query topics from the Personal Finance Feed RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -240,11 +247,11 @@ class MarketWatch():
     def stocks_to_watch(self) -> List[Dict]:
         """Used to query topics from the Stocks To Watch Feed RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -268,11 +275,11 @@ class MarketWatch():
     def internet_stories(self) -> List[Dict]:
         """Used to query topics from the Internet Stories Feed RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -296,11 +303,11 @@ class MarketWatch():
     def mutual_funds(self) -> List[Dict]:
         """Used to query topics from the Mutual Funds Feed RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -324,11 +331,11 @@ class MarketWatch():
     def software_stories(self) -> List[Dict]:
         """Used to query topics from the Software Stories Feed RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -352,11 +359,11 @@ class MarketWatch():
     def banking_and_finance(self) -> List[Dict]:
         """Used to query topics from the Banking & Finance Feed RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -380,11 +387,11 @@ class MarketWatch():
     def commentary(self) -> List[Dict]:
         """Used to query topics from the Commentary Feed RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -408,11 +415,11 @@ class MarketWatch():
     def newsletter_and_research(self) -> List[Dict]:
         """Used to query topics from the Newsletter & Research Feed RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -436,11 +443,11 @@ class MarketWatch():
     def auto_reviews(self) -> List[Dict]:
         """Used to query topics from the Auto Reviews Feed RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 

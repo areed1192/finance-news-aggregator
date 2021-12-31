@@ -1,13 +1,15 @@
-from enum import Enum
 from typing import List
 from typing import Dict
-from typing import Union
-
-import finnews.news_enum as enums_news
 from finnews.parser import NewsParser
 
 
 class SPGlobal():
+
+    """
+    ### Overview:
+    ----
+    Used to access news articles from SP Global.
+    """
 
     def __init__(self):
         """Initializes the `SPGlobal` client."""
@@ -21,63 +23,20 @@ class SPGlobal():
     def __repr__(self) -> str:
         """Represents the string representation of the client object.
 
-        Returns:
+        ### Returns:
         ----
         (str): The string representation.
         """
         return "<SPGlobalClient Connected: True'>"
 
-    def all_feeds(self) -> Dict:
-        """Used to query all the topics from the CNBC RSS feed.
-
-        Returns:
-        ----
-        List[Dict]: A list of news articles organzied in dictionaries.
-
-        Usage:
-        ----
-            >>> from finnews.client import News
-
-            >>> # Create a new instance of the News Client.
-            >>> news_client = News()
-
-            >>> # Grab the CNBC News Client.
-            >>> cnbc_news_client = news_client.cnbc
-
-            >>> # Grab the top news.
-            >>> cbnc_top_news = cnbc_news_client.all_feeds()
-        """
-        pass
-
-        # all_news = {}
-
-        # # Loop through all the topics.
-        # for topic_key in self.topic_categories:
-
-        #     print('PULLING TOPIC: {topic_id}'.format(topic_id=topic_key))
-
-        #     # Grab the data.
-        #     try:
-        #         data = self.news_parser._make_request(
-        #             url=self._check_key(topic_id=topic_key)
-        #         )
-
-        #         all_news[topic_key] = data
-        #     except:
-        #         continue
-
-        #     time.sleep(1)
-
-        # return all_news
-
     def methodologies(self) -> List[Dict]:
         """Used to query topics from the Methodologies RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -106,11 +65,11 @@ class SPGlobal():
     def all_indicies(self) -> List[Dict]:
         """Used to query topics from the All Indicies RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -139,11 +98,11 @@ class SPGlobal():
     def research(self) -> List[Dict]:
         """Used to query topics from the Research RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -172,11 +131,11 @@ class SPGlobal():
     def market_commentary(self) -> List[Dict]:
         """Used to query topics from the Market Commentary RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -205,11 +164,11 @@ class SPGlobal():
     def education(self) -> List[Dict]:
         """Used to query topics from the Education RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -238,11 +197,11 @@ class SPGlobal():
     def performance_reports(self) -> List[Dict]:
         """Used to query topics from the Performance Reports RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -271,11 +230,11 @@ class SPGlobal():
     def spiva(self) -> List[Dict]:
         """Used to query topics from the SPIVA RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -304,11 +263,11 @@ class SPGlobal():
     def index_tv(self) -> List[Dict]:
         """Used to query topics from the Index TV RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -337,11 +296,11 @@ class SPGlobal():
     def corporate_news(self) -> List[Dict]:
         """Used to query topics from the Corporate News RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -370,11 +329,11 @@ class SPGlobal():
     def index_launches(self) -> List[Dict]:
         """Used to query topics from the Index Launches RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -403,11 +362,11 @@ class SPGlobal():
     def index_announcments(self) -> List[Dict]:
         """Used to query topics from the Index Announcements RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 
@@ -436,11 +395,11 @@ class SPGlobal():
     def new_counsultations(self) -> List[Dict]:
         """Used to query topics from the New Consultations RSS feed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news articles organzied in dictionaries.
 
-        Usage:
+        ### Usage:
         ----
             >>> from finnews.client import News
 

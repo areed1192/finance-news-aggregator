@@ -1,34 +1,37 @@
-import requests
 import xml.etree.ElementTree as ET
 
 from typing import List
 from typing import Dict
-from typing import Union
 
+import requests
 from fake_useragent import UserAgent
 
 
 class NewsParser():
 
-    """Serves as the parser for each of the
-    news clients."""
+    """
+    ### Overview:
+    ----
+    Serves as the parser for each of the
+    news clients.
+    """
 
     def __init__(self, client: str) -> None:
         """Initializes the new parser client.
 
-        Overview:
+        ### Overview:
         ----
         To help standardize the parser process the
         `NewsParser` client is used to help make the
         request, parse the response, and organize the
         results for each of the news client.
 
-        Arguments:
+        ### Arguments:
         ----
         client (str): The ID of the client you wish to use
             the parser for.
 
-        Usage:
+        ### Usage:
         ----
             >>> self.news_parser = NewsParser(client='cnbc')
         """
@@ -77,14 +80,14 @@ class NewsParser():
         }
 
     def _parse_response(self, response_content: str) -> List[Dict]:
-        """Parses the text content from a request and returns the news item collection.
+        """Parses the text content from a request and ### Returns the news item collection.
 
-        Arguments:
+        ### Arguments:
         ----
         response_content (str): The raw XML content from the RSS feed that
             needs to be parsed.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news items objects.
         """
@@ -130,13 +133,13 @@ class NewsParser():
     def _make_request(self, url: str, params: dict = None) -> List[Dict]:
         """Used to make a request for each of the news clients.
 
-        Arguments:
+        ### Arguments:
         ----
         url (str): The URL to request.
 
         params (dict): The paramters to pass through to the request.
 
-        Returns:
+        ### Returns:
         ----
         List[Dict]: A list of news items objects.
         """
