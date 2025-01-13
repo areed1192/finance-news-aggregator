@@ -9,8 +9,7 @@ from finnews.parser import NewsParser
 from finnews.fields import cnbc_rss_feeds_id
 
 
-class CNBC():
-
+class CNBC:
     """
     ### Overview:
     ----
@@ -21,13 +20,13 @@ class CNBC():
         """Initializes the `CNBC` client."""
 
         # Define the URL used to query feeds.
-        self.url = 'https://www.cnbc.com/id/{topic_id}/device/rss/rss.html'
+        self.url = "https://www.cnbc.com/id/{topic_id}/device/rss/rss.html"
 
         # Define the topic categories.
         self.topic_categories: dict = cnbc_rss_feeds_id
 
         # Define the parser client.
-        self.news_parser = NewsParser(client='cnbc')
+        self.news_parser = NewsParser(client="cnbc")
 
     def __repr__(self) -> str:
         """Represents the string representation of the client object.
@@ -57,9 +56,7 @@ class CNBC():
 
         if topic_id in self.topic_categories:
 
-            full_url = self.url.format(
-                topic_id=self.topic_categories[topic_id]
-            )
+            full_url = self.url.format(topic_id=self.topic_categories[topic_id])
             return full_url
         else:
             raise KeyError("The value you're searching for does not exist.")
@@ -90,7 +87,7 @@ class CNBC():
         # Loop through all the topics.
         for topic_key in self.topic_categories:
 
-            print(f'PULLING TOPIC: {topic_key}')
+            print(f"PULLING TOPIC: {topic_key}")
 
             # Grab the data.
             try:
@@ -137,9 +134,7 @@ class CNBC():
             topic = topic.name.lower()
 
         # Grab the data.
-        data = self.news_parser._make_request(
-            url=self._check_key(topic_id=topic)
-        )
+        data = self.news_parser._make_request(url=self._check_key(topic_id=topic))
 
         return data
 
@@ -174,9 +169,7 @@ class CNBC():
             topic = topic.name.lower()
 
         # Grab the data.
-        data = self.news_parser._make_request(
-            url=self._check_key(topic_id=topic)
-        )
+        data = self.news_parser._make_request(url=self._check_key(topic_id=topic))
 
         return data
 
@@ -211,9 +204,7 @@ class CNBC():
             topic = topic.name.lower()
 
         # Grab the data.
-        data = self.news_parser._make_request(
-            url=self._check_key(topic_id=topic)
-        )
+        data = self.news_parser._make_request(url=self._check_key(topic_id=topic))
 
         return data
 
@@ -248,9 +239,7 @@ class CNBC():
             topic = topic.name.lower()
 
         # Grab the data.
-        data = self.news_parser._make_request(
-            url=self._check_key(topic_id=topic)
-        )
+        data = self.news_parser._make_request(url=self._check_key(topic_id=topic))
 
         return data
 
@@ -287,9 +276,7 @@ class CNBC():
             topic = topic.name.lower()
 
         # Grab the data.
-        data = self.news_parser._make_request(
-            url=self._check_key(topic_id=topic)
-        )
+        data = self.news_parser._make_request(url=self._check_key(topic_id=topic))
 
         return data
 
@@ -326,8 +313,6 @@ class CNBC():
             topic = topic.name.lower()
 
         # Grab the data.
-        data = self.news_parser._make_request(
-            url=self._check_key(topic_id=topic)
-        )
+        data = self.news_parser._make_request(url=self._check_key(topic_id=topic))
 
         return data
