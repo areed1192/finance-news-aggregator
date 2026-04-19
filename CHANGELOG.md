@@ -90,6 +90,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 - **finnews/client.py**: Fixed docstring typo `market_Watch` → `market_watch`.
 - **finnews/sp_global.py**: Fixed RSS feed name typos in URL parameters: `all-indicies` → `all-indices`, `index-announcments` → `index-news-announcements`, `new-counsultations` → `consultations`.
+- **.github/workflows/python-package.yml**: Added `pip install -e .` so the `finnews` package is importable during CI test runs.
 
 ## [0.1.3] - 2026-04-19
 
