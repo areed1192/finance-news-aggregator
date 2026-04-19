@@ -1,109 +1,102 @@
 """Tests for the News facade client and provider instance creation."""
 
-import unittest
-
-from unittest import TestCase
 from finnews.client import News
 from finnews.cnbc import CNBC
-from finnews.nasdaq import NASDAQ
-from finnews.market_watch import MarketWatch
-from finnews.sp_global import SPGlobal
-from finnews.seeking_alpha import SeekingAlpha
 from finnews.cnn_finance import CNNFinance
+from finnews.market_watch import MarketWatch
+from finnews.nasdaq import NASDAQ
+from finnews.seeking_alpha import SeekingAlpha
+from finnews.sp_global import SPGlobal
 from finnews.wsj import WallStreetJournal
 from finnews.yahoo_finance import YahooFinance
 
 
-class TestNewsClient(TestCase):
-    """Will perform a unit test for the `NewsClient` session."""
-
-    def setUp(self) -> None:
-        """Set up the Client."""
-
-        self.news_client = News()
-
-    def test_creates_instance_of_session(self):
-        """Create an instance and make sure it's a `News` client."""
-
-        self.assertIsInstance(self.news_client, News)
-
-    def test_creates_cnbc_instance(self):
-        """Create an instance and make sure it's a `CNBC` client."""
-
-        # Grab the client.
-        cnbc_client = self.news_client.cnbc
-
-        # Make sure it's a CNBC client.
-        self.assertIsInstance(cnbc_client, CNBC)
-
-    def test_creates_nasdaq_instance(self):
-        """Create an instance and make sure it's a `NASDAQ` client."""
-
-        # Grab the client.
-        nasdaq_client = self.news_client.nasdaq
-
-        # Make sure it's a NASDAQ client.
-        self.assertIsInstance(nasdaq_client, NASDAQ)
-
-    def test_creates_market_watch_instance(self):
-        """Create an instance and make sure it's a `MarketWatch` client."""
-
-        # Grab the client.
-        market_watch_client = self.news_client.market_watch
-
-        # Make sure it's a `MarketWatch` client.
-        self.assertIsInstance(market_watch_client, MarketWatch)
-
-    def test_creates_sp_global_instance(self):
-        """Create an instance and make sure it's a `SPGlobal` client."""
-
-        # Grab the client.
-        sp_global_client = self.news_client.sp_global
-
-        # Make sure it's a `SPGlobal` client.
-        self.assertIsInstance(sp_global_client, SPGlobal)
-
-    def test_creates_seeking_alpha_instance(self):
-        """Create an instance and make sure it's a `SeekingAlpha` client."""
-
-        # Grab the client.
-        seeking_alpha_client = self.news_client.seeking_alpha
-
-        # Make sure it's a `SeekingAlpha` client.
-        self.assertIsInstance(seeking_alpha_client, SeekingAlpha)
-
-    def test_creates_cnn_finance_instance(self):
-        """Create an instance and make sure it's a `CNNFinance` client."""
-
-        # Grab the client.
-        cnn_finance_client = self.news_client.cnn_finance
-
-        # Make sure it's a `CNNFinance` client.
-        self.assertIsInstance(cnn_finance_client, CNNFinance)
-
-    def test_creates_wsj_instance(self):
-        """Create an instance and make sure it's a `WallStreetJournal` client."""
-
-        # Grab the client.
-        wsj_client = self.news_client.wsj
-
-        # Make sure it's a `WallStreetJournal` client.
-        self.assertIsInstance(wsj_client, WallStreetJournal)
-
-    def test_creates_yahoo_finance_instance(self):
-        """Create an instance and make sure it's a `YahooFinance` client."""
-
-        # Grab the client.
-        yahoo_finance_client = self.news_client.yahoo_finance
-
-        # Make sure it's a `YahooFinance` client.
-        self.assertIsInstance(yahoo_finance_client, YahooFinance)
-
-    def tearDown(self) -> None:
-        """Teardown the `NewsClient`."""
-
-        del self.news_client
+# ---------------------------------------------------------------------------
+# Provider instance creation tests
+# ---------------------------------------------------------------------------
 
 
-if __name__ == "__main__":
-    unittest.main()
+class TestNewsClient:
+    """Tests for the News facade client."""
+
+    def test_creates_instance_of_session(self, news_client):
+        """Verify News() creates a News instance."""
+        assert isinstance(news_client, News)
+
+    def test_creates_cnbc_instance(self, news_client):
+        """Verify .cnbc returns a CNBC instance."""
+        assert isinstance(news_client.cnbc, CNBC)
+
+    def test_creates_nasdaq_instance(self, news_client):
+        """Verify .nasdaq returns a NASDAQ instance."""
+        assert isinstance(news_client.nasdaq, NASDAQ)
+
+    def test_creates_market_watch_instance(self, news_client):
+        """Verify .market_watch returns a MarketWatch instance."""
+        assert isinstance(news_client.market_watch, MarketWatch)
+
+    def test_creates_sp_global_instance(self, news_client):
+        """Verify .sp_global returns a SPGlobal instance."""
+        assert isinstance(news_client.sp_global, SPGlobal)
+
+    def test_creates_seeking_alpha_instance(self, news_client):
+        """Verify .seeking_alpha returns a SeekingAlpha instance."""
+        assert isinstance(news_client.seeking_alpha, SeekingAlpha)
+
+    def test_creates_cnn_finance_instance(self, news_client):
+        """Verify .cnn_finance returns a CNNFinance instance."""
+        assert isinstance(news_client.cnn_finance, CNNFinance)
+
+    def test_creates_wsj_instance(self, news_client):
+        """Verify .wsj returns a WallStreetJournal instance."""
+        assert isinstance(news_client.wsj, WallStreetJournal)
+
+    def test_creates_yahoo_finance_instance(self, news_client):
+        """Verify .yahoo_finance returns a YahooFinance instance."""
+        assert isinstance(news_client.yahoo_finance, YahooFinance)
+
+
+# ---------------------------------------------------------------------------
+# Property caching tests
+# ---------------------------------------------------------------------------
+
+
+class TestClientPropertyCaching:
+    """Tests that News properties cache and return the same instance."""
+
+    def test_cnbc_cached(self, news_client):
+        """Verify .cnbc returns the same instance on repeated access."""
+        assert news_client.cnbc is news_client.cnbc
+
+    def test_nasdaq_cached(self, news_client):
+        """Verify .nasdaq returns the same instance on repeated access."""
+        assert news_client.nasdaq is news_client.nasdaq
+
+    def test_market_watch_cached(self, news_client):
+        """Verify .market_watch returns the same instance on repeated access."""
+        assert news_client.market_watch is news_client.market_watch
+
+    def test_sp_global_cached(self, news_client):
+        """Verify .sp_global returns the same instance on repeated access."""
+        assert news_client.sp_global is news_client.sp_global
+
+    def test_seeking_alpha_cached(self, news_client):
+        """Verify .seeking_alpha returns the same instance on repeated access."""
+        assert news_client.seeking_alpha is news_client.seeking_alpha
+
+    def test_cnn_finance_cached(self, news_client):
+        """Verify .cnn_finance returns the same instance on repeated access."""
+        assert news_client.cnn_finance is news_client.cnn_finance
+
+    def test_wsj_cached(self, news_client):
+        """Verify .wsj returns the same instance on repeated access."""
+        assert news_client.wsj is news_client.wsj
+
+    def test_yahoo_finance_cached(self, news_client):
+        """Verify .yahoo_finance returns the same instance on repeated access."""
+        assert news_client.yahoo_finance is news_client.yahoo_finance
+
+    def test_cache_ttl_propagates_to_parser(self, news_client_cached):
+        """Verify News(cache_ttl=120) propagates to provider parsers."""
+        cnbc = news_client_cached.cnbc
+        assert cnbc.news_parser.cache_ttl == 120

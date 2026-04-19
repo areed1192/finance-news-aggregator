@@ -29,19 +29,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
   - Requires optional `httpx` dependency: `pip install fin-news[async]`.
   - Shares the same TTL cache as the synchronous client.
 - **pyproject.toml**: Optional dependency extras `[pandas]` and `[async]`.
-- **tests/test_phase4.py**: 30 tests for serialization, filtering, caching, and async client.
+- **tests/test_article.py**: 34 tests for `NewsArticle`/`NewsFeed` construction, serialization, and filtering.
+- **tests/test_async_client.py**: 2 tests for `AsyncNews` import and context-manager enforcement.
 - **samples/use_advanced_features.py**: Sample demonstrating serialization (`to_json`, `to_csv`, `to_dataframe`), filtering (`since`, `until`, `max_results`), TTL caching, and async client.
 - **finnews/cnbc.py**, **finnews/market_watch.py**: `topics` property returning sorted list of available topic keys.
 - **finnews/cnn_finance.py**, **finnews/nasdaq.py**, **finnews/sp_global.py**, **finnews/seeking_alpha.py**, **finnews/wsj.py**, **finnews/yahoo_finance.py**: `feeds` property returning sorted list of available feed method names.
 - **finnews/sp_global.py**: Added `daily_index_insights()` and `case_shiller_home_price_indices()` feed methods (14 feeds total).
 - **finnews/\_\_init\_\_.py**: Exports `NewsArticle` and `NewsFeed` in `__all__`.
 - **CONTRIBUTING.md**: Developer setup, testing, linting, and PR guidelines.
-- **tests/test_phase3.py**: 19 tests for topics/feeds properties, `NewsArticle`, and `NewsFeed`.
+- **tests/test_exceptions.py**: 4 tests for the custom exception hierarchy.
+- **tests/test_deprecations.py**: 5 tests for deprecated method aliases.
+- **tests/conftest.py**: Shared fixtures and sample data for the test suite.
 - **finnews/exceptions.py**: Custom exception hierarchy — `FinnewsError` (base), `InvalidTopicError`, `FeedRequestError`, `FeedParseError`.
   - `InvalidTopicError` also inherits from `KeyError` for backward compatibility.
 - **finnews/py.typed**: PEP 561 marker file for static type checker support.
 - **finnews/news_enum.py**: Renamed all enum classes to PascalCase (`CNBCTopNews`, `CNBCInvesting`, `CNBCBlogs`, `CNBCTVVideoAndTV`, `CNBCTVProgramsEurope`, `CNBCTVProgramsAsia`, `MarketWatch`).
-- **tests/test_enhancements.py**: 26 new tests covering exceptions, deprecation aliases, client caching, duplicate XML tags, enum support, retry adapters, and parse error wrapping.
 
 ### Changed
 
@@ -69,7 +71,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - All modules: Added `from __future__ import annotations` for modern type-hint syntax.
 - All provider modules: Updated calls from `_make_request` to `make_request`.
 - **pyproject.toml**: Added `[tool.pylint."messages control"]` disabling `duplicate-code`.
-- **tests/test_client.py**: Refactored to use local variables instead of instance attributes.
+- **tests/**: Reorganized test suite from 6 files to 8 module-aligned files; migrated from `unittest.TestCase` to pytest-native style.
+  - Deleted `test_enhancements.py`, `test_phase3.py`, `test_phase4.py`.
+  - Merged tests into `test_client.py`, `test_parser.py`, `test_topics.py`, `test_article.py`, `test_exceptions.py`, `test_deprecations.py`, `test_async_client.py`.
+  - Extracted shared sample data and fixtures to `conftest.py`.
 - **finnews/market_watch.py**: Updated RSS feed URLs to current endpoints (`feeds.content.dowjones.io` for top stories, real-time headlines, and market pulse; `feeds.marketwatch.com` for bulletins). Reduced active feeds from 13 to 4.
 - **finnews/fields.py**: Updated `market_watch_rss_feeds_id` to 4 active feed mappings.
 - **finnews/news_enum.py**: `MarketWatch` enum reduced from 13 to 4 members matching active feeds.
