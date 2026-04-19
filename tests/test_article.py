@@ -228,6 +228,10 @@ class TestNewsFeedSerialization:
 
     def test_to_dataframe_returns_dataframe(self):
         """Verify to_dataframe returns a DataFrame when pandas is available."""
+        try:
+            import pandas  # noqa: F401
+        except ImportError:
+            pytest.skip("pandas not installed")
 
         feed = NewsFeed.from_dicts(ARTICLES, source="test")
         df = feed.to_dataframe()
