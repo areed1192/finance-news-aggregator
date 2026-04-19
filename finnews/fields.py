@@ -1,3 +1,4 @@
+"""Topic-to-ID lookup dictionaries for CNBC and MarketWatch RSS feeds."""
 
 # Store the RSS feed IDs for each of the topics in the CNBC client.
 cnbc_rss_feeds_id = {
@@ -57,17 +58,8 @@ cnbc_rss_feeds_id = {
 
 # Store the RSS feed IDs for each of the topics in the Market Watch client.
 market_watch_rss_feeds_id = {
-    'top_stories': 'topstories',
-    'real_time_headlines': 'realtimeheadlines',
-    'market_pulse': 'marketpulse',
+    'top_stories': 'mw_topstories',
+    'real_time_headlines': 'mw_realtimeheadlines',
     'bulletins': 'bulletins',
-    'personal_finance': 'pf',
-    'stocks_to_watch': 'StockstoWatch',
-    'internet_stories': 'Internet',
-    'mutual_funds': 'mutualfunds',
-    'software_stories': 'software',
-    'banking_and_finance': 'financial',
-    'commentary': 'commentary',
-    'newsletter_and_research': 'newslettersandresearch',
-    'auto_reviews': 'autoreviews'
+    'market_pulse': 'mw_marketpulse',
 }

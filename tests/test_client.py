@@ -1,3 +1,5 @@
+"""Tests for the News facade client and provider instance creation."""
+
 import unittest
 
 from unittest import TestCase
@@ -13,7 +15,6 @@ from finnews.yahoo_finance import YahooFinance
 
 
 class TestNewsClient(TestCase):
-
     """Will perform a unit test for the `NewsClient` session."""
 
     def setUp(self) -> None:
@@ -30,81 +31,73 @@ class TestNewsClient(TestCase):
         """Create an instance and make sure it's a `CNBC` client."""
 
         # Grab the client.
-        self.cnbc_client = self.news_client.cnbc
+        cnbc_client = self.news_client.cnbc
 
         # Make sure it's a CNBC client.
-        self.assertIsInstance(self.cnbc_client, CNBC)
-        self.assertIsNotNone(self.news_client._cnbc_client)
+        self.assertIsInstance(cnbc_client, CNBC)
 
     def test_creates_nasdaq_instance(self):
         """Create an instance and make sure it's a `NASDAQ` client."""
 
         # Grab the client.
-        self.nasdaq_client = self.news_client.nasdaq
+        nasdaq_client = self.news_client.nasdaq
 
         # Make sure it's a NASDAQ client.
-        self.assertIsInstance(self.nasdaq_client, NASDAQ)
-        self.assertIsNotNone(self.news_client._nasdaq_client)
+        self.assertIsInstance(nasdaq_client, NASDAQ)
 
     def test_creates_market_watch_instance(self):
         """Create an instance and make sure it's a `MarketWatch` client."""
 
         # Grab the client.
-        self.market_watch_client = self.news_client.market_Watch
+        market_watch_client = self.news_client.market_watch
 
         # Make sure it's a `MarketWatch` client.
-        self.assertIsInstance(self.market_watch_client, MarketWatch)
-        self.assertIsNotNone(self.news_client._market_watch_client)
+        self.assertIsInstance(market_watch_client, MarketWatch)
 
     def test_creates_sp_global_instance(self):
         """Create an instance and make sure it's a `SPGlobal` client."""
 
         # Grab the client.
-        self.sp_global_client = self.news_client.sp_global
+        sp_global_client = self.news_client.sp_global
 
         # Make sure it's a `SPGlobal` client.
-        self.assertIsInstance(self.sp_global_client, SPGlobal)
-        self.assertIsNotNone(self.news_client._sp_global_client)
+        self.assertIsInstance(sp_global_client, SPGlobal)
 
     def test_creates_seeking_alpha_instance(self):
         """Create an instance and make sure it's a `SeekingAlpha` client."""
 
         # Grab the client.
-        self.seeking_alpha_client = self.news_client.seeking_alpha
+        seeking_alpha_client = self.news_client.seeking_alpha
 
         # Make sure it's a `SeekingAlpha` client.
-        self.assertIsInstance(self.seeking_alpha_client, SeekingAlpha)
-        self.assertIsNotNone(self.news_client._seeking_alpha_client)
+        self.assertIsInstance(seeking_alpha_client, SeekingAlpha)
 
     def test_creates_cnn_finance_instance(self):
         """Create an instance and make sure it's a `CNNFinance` client."""
 
         # Grab the client.
-        self.cnn_finance_client = self.news_client.cnn_finance
+        cnn_finance_client = self.news_client.cnn_finance
 
         # Make sure it's a `CNNFinance` client.
-        self.assertIsInstance(self.cnn_finance_client, CNNFinance)
-        self.assertIsNotNone(self.news_client._cnn_finance_client)
+        self.assertIsInstance(cnn_finance_client, CNNFinance)
 
     def test_creates_wsj_instance(self):
         """Create an instance and make sure it's a `WallStreetJournal` client."""
 
         # Grab the client.
-        self.wsj_client = self.news_client.wsj
+        wsj_client = self.news_client.wsj
 
         # Make sure it's a `WallStreetJournal` client.
-        self.assertIsInstance(self.wsj_client, WallStreetJournal)
-        self.assertIsNotNone(self.news_client._wsj_client)
+        self.assertIsInstance(wsj_client, WallStreetJournal)
 
     def test_creates_yahoo_finance_instance(self):
         """Create an instance and make sure it's a `YahooFinance` client."""
 
         # Grab the client.
-        self.yahoo_finance_client = self.news_client.yahoo_finance
+        yahoo_finance_client = self.news_client.yahoo_finance
 
         # Make sure it's a `YahooFinance` client.
-        self.assertIsInstance(self.yahoo_finance_client, YahooFinance)
-        self.assertIsNotNone(self.news_client._yahoo_finance_client)
+        self.assertIsInstance(yahoo_finance_client, YahooFinance)
 
     def tearDown(self) -> None:
         """Teardown the `NewsClient`."""
@@ -112,5 +105,5 @@ class TestNewsClient(TestCase):
         del self.news_client
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

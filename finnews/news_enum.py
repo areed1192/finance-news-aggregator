@@ -1,7 +1,15 @@
+"""Enum definitions for various news categories from different providers."""
+
 from enum import Enum
 
 
-class cnbc_top_news(Enum):
+# ---------------------------------------------------------------------------
+# CNBC enums
+# ---------------------------------------------------------------------------
+
+
+class CNBCTopNews(Enum):
+    """Enum for the top news topics on CNBC."""
 
     TOP_NEWS = 100003114
     WORLD_NEWS = 100727362
@@ -26,14 +34,16 @@ class cnbc_top_news(Enum):
     SMALL_BUSINESS = 44877279
 
 
-class cnbc_investing(Enum):
+class CNBCInvesting(Enum):
+    """Enum for the investing topics on CNBC."""
 
     INVESTING = 15839069
     FINANCIAL_ADVISORS = 100646281
     PERSONAL_FINANCE = 21324812
 
 
-class cnbc_blogs(Enum):
+class CNBCBlogs(Enum):
+    """Enum for the blogs topics on CNBC."""
 
     CHARTING_ASIA = 23103686
     FUNNY_BUSINESS = 17646093
@@ -43,7 +53,8 @@ class cnbc_blogs(Enum):
     BUFFETT_WATCH = 19206666
 
 
-class cnbc_video_and_tv(Enum):
+class CNBCTVVideoAndTV(Enum):
+    """Enum for the videos and TV topics on CNBC."""
 
     TOP_VIDEO = 15839263
     DIGITAL_WORKSHOP = 100616801
@@ -64,20 +75,30 @@ class cnbc_video_and_tv(Enum):
     SUZE_ORMAN = 15838523
 
 
-class cnbc_tv_programs_europe(Enum):
+class CNBCTVProgramsEurope(Enum):
+    """Enum for the TV programs in Europe topics on CNBC."""
 
     CAPITAL_CONNECTION = 17501773
     SQUAWK_BOX_EUROPE = 15838652
     WORLDWIDE_EXCHANGE = 15838355
 
 
-class cnbc_tv_programs_asia(Enum):
+class CNBCTVProgramsAsia(Enum):
+    """Enum for the TV programs in Asia topics on CNBC."""
 
     SQUAWK_BOX_ASIA = 15838831
     THE_CALL = 37447855
 
 
-class market_watch(Enum):
+# ---------------------------------------------------------------------------
+# MarketWatch enums
+# ---------------------------------------------------------------------------
 
-    TOP_STORIES = 'topstories'
-    REAL_TIME_HEADLINES = 'realtimeheadlines'
+
+class MarketWatch(Enum):
+    """Enum for the MarketWatch news topics."""
+
+    TOP_STORIES = "mw_topstories"
+    REAL_TIME_HEADLINES = "mw_realtimeheadlines"
+    BULLETINS = "bulletins"
+    MARKET_PULSE = "mw_marketpulse"

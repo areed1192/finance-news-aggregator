@@ -1,3 +1,7 @@
+"""Yahoo Finance RSS feed client for fetching top stories and market news."""
+
+from __future__ import annotations
+
 from typing import List
 from typing import Dict
 
@@ -12,8 +16,13 @@ class YahooFinance():
     Used to access news articles from Yahoo Finance.
     """
 
-    def __init__(self):
-        """Initializes the `YahooFinance` client."""
+    def __init__(self, cache_ttl: int = 0):
+        """Initializes the `YahooFinance` client.
+
+        ### Arguments:
+        ----
+        cache_ttl (int): TTL in seconds for cached responses (0 = off).
+        """
 
         # Define the URLs used to query feeds.
         self.urls = {
@@ -22,7 +31,7 @@ class YahooFinance():
         }
 
         # Define the parser client.
-        self.news_parser = NewsParser(client='yahoo')
+        self.news_parser = NewsParser(client='yahoo', cache_ttl=cache_ttl)
 
     def __repr__(self) -> str:
         """Represents the string representation of the client object.
@@ -32,6 +41,17 @@ class YahooFinance():
         (str): The string representation.
         """
         return "<YahooFinance Connected: True'>"
+
+    @property
+    def feeds(self) -> list[str]:
+        """Returns a sorted list of available feed method names.
+
+        ### Returns:
+        ----
+        list[str]: Feed method names that can be called on this client.
+        """
+
+        return sorted(['headlines', 'news'])
 
     def news(self) -> List[Dict]:
         """Used to query topics from the News RSS feed.
@@ -55,7 +75,7 @@ class YahooFinance():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.urls['news']
         )
 
@@ -94,7 +114,7 @@ class YahooFinance():
         }
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.urls['headlines'],
             params=params
         )

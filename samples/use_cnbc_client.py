@@ -1,7 +1,11 @@
+"""Sample script demonstrating the CNBC news client."""
+
+from pprint import pprint
 
 from finnews.client import News
-from finnews.news_enum import cnbc_top_news
-from finnews.news_enum import cnbc_tv_programs_asia
+from finnews.article import NewsArticle, NewsFeed
+from finnews.news_enum import CNBCTopNews
+from finnews.news_enum import CNBCTVProgramsAsia
 
 # Create a new instance of the News Client.
 news_client = News()
@@ -9,46 +13,75 @@ news_client = News()
 # Grab the CNBC News Client.
 cnbc_news_client = news_client.cnbc
 
-# Grab the top news.
-cbnc_top_news = cnbc_news_client.news_feed(
-    topic='top_news'
+# ---------------------------------------------------------------------------
+# Section: List available topics.
+# ---------------------------------------------------------------------------
+
+# Print the available topic categories.
+print("Available topics:", cnbc_news_client.topics)
+
+# ---------------------------------------------------------------------------
+# Section: Fetch news by string topic and by enum.
+# ---------------------------------------------------------------------------
+
+# Grab the top news by string key.
+top_news = cnbc_news_client.news_feed(topic='top_news')
+pprint(top_news)
+
+# Grab real estate news using the enum.
+real_estate_news = cnbc_news_client.news_feed(
+    topic=CNBCTopNews.REAL_ESTATE
 )
 
-# Grab the top news, using enums.
-cnbc_real_estate_news = cnbc_news_client.news_feed(
-    topic=cnbc_top_news.REAL_ESTATE
-)
+# Wrap the results in structured NewsArticle models.
+feed = NewsFeed.from_dicts(real_estate_news, source='cnbc')
+print(f"\nReal estate articles: {len(feed)}")
+for article in feed:
+    print(f"  - {article.title} ({article.published})")
+
+# ---------------------------------------------------------------------------
+# Section: Fetch from other feed categories.
+# ---------------------------------------------------------------------------
 
 # Grab the investing news, from the Investment Feed.
-cnbc_investing_news = cnbc_news_client.investing_feeds(
-    topic='investing'
-)
+investing_news = cnbc_news_client.investing_feeds(topic='investing')
 
 # Grab the blog news, from the Blog Feed.
-cnbc_blog_news = cnbc_news_client.blogs(
-    topic='charting_asia'
-)
+blog_news = cnbc_news_client.blogs(topic='charting_asia')
 
 # Grab the video and tv news, from the Video & TV Feed.
-cnbc_tv_and_video_news = cnbc_news_client.videos_and_tv(
-    topic='top_video'
-)
+tv_and_video_news = cnbc_news_client.videos_and_tv(topic='top_video')
 
-# Grab the video and tv news, from the Europe News Feed.
-cnbc_tv_europe_news = cnbc_news_client.tv_programs_europe(
+# Grab the TV news from the Europe News Feed.
+tv_europe_news = cnbc_news_client.tv_programs_europe(
     topic='capital_connection'
 )
 
-# Grab the video and tv news, from the Asia News Feed.
-cnbc_tv_asia_news = cnbc_news_client.tv_programs_asia(
-    topic=cnbc_tv_programs_asia.SQUAWK_BOX_ASIA
+# Grab the TV news from the Asia Feed, using an enum.
+tv_asia_news = cnbc_news_client.tv_programs_asia(
+    topic=CNBCTVProgramsAsia.SQUAWK_BOX_ASIA
 )
 
+# ---------------------------------------------------------------------------
+# Section: Structured article model.
+# ---------------------------------------------------------------------------
+
+# Convert a single raw dictionary into a NewsArticle.
+if top_news:
+    article = NewsArticle.from_dict(top_news[0], source='cnbc')
+    print(f"\nFirst article: {article.title}")
+    print(f"  Link: {article.link}")
+    print(f"  Published: {article.published}")
+
+# ---------------------------------------------------------------------------
+# Section: Save results.
+# ---------------------------------------------------------------------------
+
 # Grab all the news feeds.
-cnbc_all_news_feeds = cnbc_news_client.all_feeds()
+all_feeds = cnbc_news_client.all_feeds()
 
 # Save the data.
 news_client.save_to_file(
-    content=cnbc_all_news_feeds,
+    content=all_feeds,
     file_name='cnbc_all_news_feeds'
 )

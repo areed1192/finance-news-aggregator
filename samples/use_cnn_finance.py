@@ -1,6 +1,9 @@
+"""Sample script demonstrating the CNN Finance news client."""
+
 from pprint import pprint
 
 from finnews.client import News
+from finnews.article import NewsArticle, NewsFeed
 
 # Create a new instance of the News Client.
 news_client = News()
@@ -8,91 +11,112 @@ news_client = News()
 # Grab the CNN Finance News Client.
 cnn_finance_client = news_client.cnn_finance
 
-# Grab the All Stories Feed.
-content = cnn_finance_client.all_stories()
-pprint(content)
+# ---------------------------------------------------------------------------
+# Section: List available feeds.
+# ---------------------------------------------------------------------------
+
+# Print the available feed methods.
+print("Available feeds:", cnn_finance_client.feeds)
+
+# ---------------------------------------------------------------------------
+# Section: Fetch a feed and wrap in structured models.
+# ---------------------------------------------------------------------------
 
 # Grab the Top Stories Feed.
-content = cnn_finance_client.top_stories()
-pprint(content)
+top_stories = cnn_finance_client.top_stories()
+
+# Wrap the results in a NewsFeed.
+feed = NewsFeed.from_dicts(top_stories, source='cnn_finance')
+print(f"\nTop stories: {len(feed)}")
+for article in feed:
+    print(f"  - {article.title} ({article.published})")
+
+# Convert a single result to a NewsArticle.
+if top_stories:
+    article = NewsArticle.from_dict(top_stories[0], source='cnn_finance')
+    print(f"\nFirst article: {article.title}")
+    print(f"  Link: {article.link}")
+
+# ---------------------------------------------------------------------------
+# Section: Fetch additional feeds.
+# ---------------------------------------------------------------------------
+
+# Grab the All Stories Feed.
+all_stories = cnn_finance_client.all_stories()
+pprint(all_stories)
 
 # Grab the Most Popular Feed.
-content = cnn_finance_client.most_popular()
-pprint(content)
+most_popular = cnn_finance_client.most_popular()
+pprint(most_popular)
 
 # Grab the Companies Feed.
-content = cnn_finance_client.companies()
-pprint(content)
+companies = cnn_finance_client.companies()
+pprint(companies)
 
 # Grab the International Feed.
-content = cnn_finance_client.international()
-pprint(content)
+international = cnn_finance_client.international()
+pprint(international)
 
 # Grab the Economy Feed.
-content = cnn_finance_client.economy()
-pprint(content)
+economy = cnn_finance_client.economy()
+pprint(economy)
 
 # Grab the Video News Feed.
-content = cnn_finance_client.video_news()
-pprint(content)
+video_news = cnn_finance_client.video_news()
+pprint(video_news)
 
 # Grab the Media Feed.
-content = cnn_finance_client.media()
-pprint(content)
+media = cnn_finance_client.media()
+pprint(media)
 
 # Grab the Markets Feed.
-content = cnn_finance_client.markets()
-pprint(content)
-
-# # Grab the Morning Buzz Feed - DOES NOT WORK.
-# content = cnn_finance_client.morning_buzz()
-# news_client.save_to_file(content=content, file_name='cnn_finance_morning_buzz')
-# pprint(content)
+markets = cnn_finance_client.markets()
+pprint(markets)
 
 # Grab the Technology Feed.
-content = cnn_finance_client.techonology()
-pprint(content)
+technology = cnn_finance_client.technology()
+pprint(technology)
 
 # Grab the Personal Finance Feed.
-content = cnn_finance_client.personal_finance()
-pprint(content)
+personal_finance = cnn_finance_client.personal_finance()
+pprint(personal_finance)
 
 # Grab the Autos Feed.
-content = cnn_finance_client.autos()
-pprint(content)
+autos = cnn_finance_client.autos()
+pprint(autos)
 
 # Grab the Colleges Feed.
-content = cnn_finance_client.colleges()
-pprint(content)
+colleges = cnn_finance_client.colleges()
+pprint(colleges)
 
 # Grab the Taxes Feed.
-content = cnn_finance_client.taxes()
-pprint(content)
+taxes = cnn_finance_client.taxes()
+pprint(taxes)
 
 # Grab the Funds Feed.
-content = cnn_finance_client.funds()
-pprint(content)
+funds = cnn_finance_client.funds()
+pprint(funds)
 
 # Grab the Insurance Feed.
-content = cnn_finance_client.insurance()
-pprint(content)
+insurance = cnn_finance_client.insurance()
+pprint(insurance)
 
 # Grab the Retirement Feed.
-content = cnn_finance_client.retirement()
-pprint(content)
+retirement = cnn_finance_client.retirement()
+pprint(retirement)
 
 # Grab the Luxury Feed.
-content = cnn_finance_client.luxury()
-pprint(content)
+luxury = cnn_finance_client.luxury()
+pprint(luxury)
 
 # Grab the Lifestyle Feed.
-content = cnn_finance_client.lifestyle()
-pprint(content)
+lifestyle = cnn_finance_client.lifestyle()
+pprint(lifestyle)
 
 # Grab the Real Estate Feed.
-content = cnn_finance_client.real_estate()
-pprint(content)
+real_estate = cnn_finance_client.real_estate()
+pprint(real_estate)
 
 # Grab the Small Business Feed.
-content = cnn_finance_client.small_business()
-pprint(content)
+small_business = cnn_finance_client.small_business()
+pprint(small_business)

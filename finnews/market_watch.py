@@ -1,9 +1,19 @@
+"""MarketWatch RSS feed client for fetching financial news and commentary."""
+
+from __future__ import annotations
+
+import logging
 import time
+import warnings
+from enum import Enum
 from typing import List
 from typing import Dict
 
 from finnews.parser import NewsParser
 from finnews.fields import market_watch_rss_feeds_id
+from finnews.exceptions import InvalidTopicError
+
+logger = logging.getLogger(__name__)
 
 
 class MarketWatch():
@@ -14,14 +24,29 @@ class MarketWatch():
     Used to access news articles from MarketWatch.
     """
 
-    def __init__(self):
-        """Initializes the `MarketWatch` client."""
+    def __init__(self, cache_ttl: int = 0):
+        """Initializes the `MarketWatch` client.
 
-        # Define the URL used to query feeds.
-        self.url = 'http://feeds.marketwatch.com/marketwatch/{topic}/'
+        ### Arguments:
+        ----
+        cache_ttl (int): TTL in seconds for cached responses (0 = off).
+        """
+
+        # Define the URLs for available feeds.
+        self.feed_urls = {
+            'top_stories': 'https://feeds.content.dowjones.io/public/rss/mw_topstories',
+            'real_time_headlines': (
+                'https://feeds.content.dowjones.io/public/rss/mw_realtimeheadlines'
+            ),
+            'bulletins': 'http://feeds.marketwatch.com/marketwatch/bulletins',
+            'market_pulse': 'https://feeds.content.dowjones.io/public/rss/mw_marketpulse',
+        }
+
+        # Legacy template URL kept for backward compatibility with _check_key.
+        self.url = 'https://feeds.marketwatch.com/marketwatch/{topic}/'
 
         # Define the parser client.
-        self.news_parser = NewsParser(client='market_watch')
+        self.news_parser = NewsParser(client='market_watch', cache_ttl=cache_ttl)
 
         # Define the Topic Categories.
         self.topic_categories = market_watch_rss_feeds_id
@@ -35,7 +60,18 @@ class MarketWatch():
         """
         return "<MarketWatchClient Connected: True'>"
 
-    def _check_key(self, topic_id: str) -> str:
+    @property
+    def topics(self) -> list[str]:
+        """Returns a sorted list of available feed names.
+
+        ### Returns:
+        ----
+        list[str]: Sorted feed names that can be called as methods.
+        """
+
+        return sorted(self.feed_urls)
+
+    def _check_key(self, topic_id: str | Enum) -> str:
         """Checks the topic ID to see if it's valid.
 
         ### Arguments:
@@ -52,15 +88,19 @@ class MarketWatch():
         str: The full URL to be used in the request.
         """
 
-        if topic_id in self.topic_categories:
+        if isinstance(topic_id, Enum):
+            topic_id = topic_id.name.lower()
 
+        if topic_id in self.topic_categories:
             full_url = self.url.format(
-                topic_id=self.topic_categories[topic_id]
+                topic=self.topic_categories[topic_id]
             )
             return full_url
 
-        else:
-            raise KeyError("The value you're searching for does not exist.")
+        valid = ', '.join(sorted(self.topic_categories))
+        raise InvalidTopicError(
+            f"Unknown topic {topic_id!r}. Valid topics: {valid}"
+        )
 
     def all_feeds(self) -> Dict:
         """Used to query all the topics from the Market Watch RSS feed.
@@ -85,19 +125,16 @@ class MarketWatch():
 
         all_news = {}
 
-        # Loop through all the topics.
-        for topic_key in self.topic_categories:
+        # Loop through all the feeds.
+        for feed_key, feed_url in self.feed_urls.items():
 
-            print(f'PULLING TOPIC: {topic_key}')
+            logger.debug('PULLING TOPIC: %s', feed_key)
 
             # Grab the data.
             try:
-                data = self.news_parser._make_request(
-                    url=self._check_key(topic_id=topic_key)
-                )
-
-                all_news[topic_key] = data
-            except KeyError:
+                data = self.news_parser.make_request(url=feed_url)
+                all_news[feed_key] = data
+            except Exception:  # noqa: BLE001  # pylint: disable=broad-exception-caught
                 continue
 
             time.sleep(1)
@@ -126,8 +163,8 @@ class MarketWatch():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.url.format(topic='topstories')
+        data = self.news_parser.make_request(
+            url=self.feed_urls['top_stories']
         )
 
         return data
@@ -154,8 +191,8 @@ class MarketWatch():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.url.format(topic='realtimeheadlines')
+        data = self.news_parser.make_request(
+            url=self.feed_urls['real_time_headlines']
         )
 
         return data
@@ -182,8 +219,8 @@ class MarketWatch():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.url.format(topic='marketpulse')
+        data = self.news_parser.make_request(
+            url=self.feed_urls['market_pulse']
         )
 
         return data
@@ -210,260 +247,93 @@ class MarketWatch():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.url.format(topic='bulletins')
+        data = self.news_parser.make_request(
+            url=self.feed_urls['bulletins']
         )
 
         return data
+
+    # -------------------------------------------------------------------
+    # Deprecated feeds — these RSS endpoints no longer exist.
+    # -------------------------------------------------------------------
 
     def personal_finance(self) -> List[Dict]:
-        """Used to query topics from the Personal Finance Feed RSS feed.
-
-        ### Returns:
-        ----
-        List[Dict]: A list of news articles organzied in dictionaries.
-
-        ### Usage:
-        ----
-            >>> from finnews.client import News
-
-            >>> # Create a new instance of the News Client.
-            >>> news_client = News()
-
-            >>> # Grab the MarketWatch News Client.
-            >>> market_watch_client = news_client.market_watch
-
-            >>> # Grab the Personal Finance news.
-            >>> market_watch_personal_finance = market_watch_client.personal_finance()
-        """
-
-        # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.url.format(topic='pf')
+        """Deprecated: this RSS feed is no longer available."""
+        warnings.warn(
+            "personal_finance() is deprecated — the MarketWatch RSS feed no longer exists",
+            DeprecationWarning,
+            stacklevel=2,
         )
-
-        return data
+        return []
 
     def stocks_to_watch(self) -> List[Dict]:
-        """Used to query topics from the Stocks To Watch Feed RSS feed.
-
-        ### Returns:
-        ----
-        List[Dict]: A list of news articles organzied in dictionaries.
-
-        ### Usage:
-        ----
-            >>> from finnews.client import News
-
-            >>> # Create a new instance of the News Client.
-            >>> news_client = News()
-
-            >>> # Grab the MarketWatch News Client.
-            >>> market_watch_client = news_client.market_watch
-
-            >>> # Grab the Stocks to Watch Feed.
-            >>> market_watch_stocks_to_watch = market_watch_client.stocks_to_watch()
-        """
-
-        # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.url.format(topic='StockstoWatch')
+        """Deprecated: this RSS feed is no longer available."""
+        warnings.warn(
+            "stocks_to_watch() is deprecated — the MarketWatch RSS feed no longer exists",
+            DeprecationWarning,
+            stacklevel=2,
         )
-
-        return data
+        return []
 
     def internet_stories(self) -> List[Dict]:
-        """Used to query topics from the Internet Stories Feed RSS feed.
-
-        ### Returns:
-        ----
-        List[Dict]: A list of news articles organzied in dictionaries.
-
-        ### Usage:
-        ----
-            >>> from finnews.client import News
-
-            >>> # Create a new instance of the News Client.
-            >>> news_client = News()
-
-            >>> # Grab the MarketWatch News Client.
-            >>> market_watch_client = news_client.market_watch
-
-            >>> # Grab the Internet Stories Feed.
-            >>> market_watch_internet_stories = market_watch_client.internet_stories()
-        """
-
-        # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.url.format(topic='Internet')
+        """Deprecated: this RSS feed is no longer available."""
+        warnings.warn(
+            "internet_stories() is deprecated — the MarketWatch RSS feed no longer exists",
+            DeprecationWarning,
+            stacklevel=2,
         )
-
-        return data
+        return []
 
     def mutual_funds(self) -> List[Dict]:
-        """Used to query topics from the Mutual Funds Feed RSS feed.
-
-        ### Returns:
-        ----
-        List[Dict]: A list of news articles organzied in dictionaries.
-
-        ### Usage:
-        ----
-            >>> from finnews.client import News
-
-            >>> # Create a new instance of the News Client.
-            >>> news_client = News()
-
-            >>> # Grab the MarketWatch News Client.
-            >>> market_watch_client = news_client.market_watch
-
-            >>> # Grab the Mutual Funds Feed.
-            >>> market_watch_mutual_funds = market_watch_client.mutual_funds()
-        """
-
-        # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.url.format(topic='mutualfunds')
+        """Deprecated: this RSS feed is no longer available."""
+        warnings.warn(
+            "mutual_funds() is deprecated — the MarketWatch RSS feed no longer exists",
+            DeprecationWarning,
+            stacklevel=2,
         )
-
-        return data
+        return []
 
     def software_stories(self) -> List[Dict]:
-        """Used to query topics from the Software Stories Feed RSS feed.
-
-        ### Returns:
-        ----
-        List[Dict]: A list of news articles organzied in dictionaries.
-
-        ### Usage:
-        ----
-            >>> from finnews.client import News
-
-            >>> # Create a new instance of the News Client.
-            >>> news_client = News()
-
-            >>> # Grab the MarketWatch News Client.
-            >>> market_watch_client = news_client.market_watch
-
-            >>> # Grab the Software Stories Feed.
-            >>> market_watch_software_stories = market_watch_client.software_stories()
-        """
-
-        # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.url.format(topic='software')
+        """Deprecated: this RSS feed is no longer available."""
+        warnings.warn(
+            "software_stories() is deprecated — the MarketWatch RSS feed no longer exists",
+            DeprecationWarning,
+            stacklevel=2,
         )
-
-        return data
+        return []
 
     def banking_and_finance(self) -> List[Dict]:
-        """Used to query topics from the Banking & Finance Feed RSS feed.
-
-        ### Returns:
-        ----
-        List[Dict]: A list of news articles organzied in dictionaries.
-
-        ### Usage:
-        ----
-            >>> from finnews.client import News
-
-            >>> # Create a new instance of the News Client.
-            >>> news_client = News()
-
-            >>> # Grab the MarketWatch News Client.
-            >>> market_watch_client = news_client.market_watch
-
-            >>> # Grab the Banking & Finance Feed.
-            >>> market_watch_banking = market_watch_client.banking_and_finance()
-        """
-
-        # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.url.format(topic='financial')
+        """Deprecated: this RSS feed is no longer available."""
+        warnings.warn(
+            "banking_and_finance() is deprecated — the MarketWatch RSS feed no longer exists",
+            DeprecationWarning,
+            stacklevel=2,
         )
-
-        return data
+        return []
 
     def commentary(self) -> List[Dict]:
-        """Used to query topics from the Commentary Feed RSS feed.
-
-        ### Returns:
-        ----
-        List[Dict]: A list of news articles organzied in dictionaries.
-
-        ### Usage:
-        ----
-            >>> from finnews.client import News
-
-            >>> # Create a new instance of the News Client.
-            >>> news_client = News()
-
-            >>> # Grab the MarketWatch News Client.
-            >>> market_watch_client = news_client.market_watch
-
-            >>> # Grab the Commentary Feed.
-            >>> market_watch_commentary = market_watch_client.commentary()
-        """
-
-        # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.url.format(topic='commentary')
+        """Deprecated: this RSS feed is no longer available."""
+        warnings.warn(
+            "commentary() is deprecated — the MarketWatch RSS feed no longer exists",
+            DeprecationWarning,
+            stacklevel=2,
         )
-
-        return data
+        return []
 
     def newsletter_and_research(self) -> List[Dict]:
-        """Used to query topics from the Newsletter & Research Feed RSS feed.
-
-        ### Returns:
-        ----
-        List[Dict]: A list of news articles organzied in dictionaries.
-
-        ### Usage:
-        ----
-            >>> from finnews.client import News
-
-            >>> # Create a new instance of the News Client.
-            >>> news_client = News()
-
-            >>> # Grab the MarketWatch News Client.
-            >>> market_watch_client = news_client.market_watch
-
-            >>> # Grab the Newsletter & Research Feed.
-            >>> market_watch_newsletter_and_research = market_watch_client.newsletter_and_research()
-        """
-
-        # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.url.format(topic='newslettersandresearch')
+        """Deprecated: this RSS feed is no longer available."""
+        warnings.warn(
+            "newsletter_and_research() is deprecated — the MarketWatch RSS feed no longer exists",
+            DeprecationWarning,
+            stacklevel=2,
         )
-
-        return data
+        return []
 
     def auto_reviews(self) -> List[Dict]:
-        """Used to query topics from the Auto Reviews Feed RSS feed.
-
-        ### Returns:
-        ----
-        List[Dict]: A list of news articles organzied in dictionaries.
-
-        ### Usage:
-        ----
-            >>> from finnews.client import News
-
-            >>> # Create a new instance of the News Client.
-            >>> news_client = News()
-
-            >>> # Grab the MarketWatch News Client.
-            >>> market_watch_client = news_client.market_watch
-
-            >>> # Grab the Auto Reviews Feed.
-            >>> market_watch_auto_reviews = market_watch_client.auto_reviews()
-        """
-
-        # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.url.format(topic='autoreviews')
+        """Deprecated: this RSS feed is no longer available."""
+        warnings.warn(
+            "auto_reviews() is deprecated — the MarketWatch RSS feed no longer exists",
+            DeprecationWarning,
+            stacklevel=2,
         )
-
-        return data
+        return []

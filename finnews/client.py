@@ -1,4 +1,9 @@
+"""Facade client providing unified access to all news provider clients."""
+
+from __future__ import annotations
+
 import json
+import pathlib
 
 from typing import List
 from typing import Dict
@@ -13,8 +18,7 @@ from finnews.wsj import WallStreetJournal
 from finnews.yahoo_finance import YahooFinance
 
 
-class News():
-
+class News:  # pylint: disable=too-many-instance-attributes
     """
     ### Overview:
     ----
@@ -22,8 +26,13 @@ class News():
     the different news providers.
     """
 
-    def __init__(self) -> None:
+    def __init__(self, cache_ttl: int = 0) -> None:
         """Initalizes the main `News` client.
+
+        ### Arguments:
+        ----
+        cache_ttl (int): Time-to-live in seconds for cached feed
+            responses.  Set to 0 (default) to disable caching.
 
         ### Usage:
         ----
@@ -31,8 +40,12 @@ class News():
 
             >>> # Create a new instance of the News Client.
             >>> news_client = News()
+
+            >>> # Or enable 5-minute caching.
+            >>> news_client = News(cache_ttl=300)
         """
 
+        self._cache_ttl = cache_ttl
         self._cnbc_client = None
         self._nasdaq_client = None
         self._market_watch_client = None
@@ -71,7 +84,8 @@ class News():
             >>> cnbc_news_client = news_client.cnbc
         """
 
-        self._cnbc_client = CNBC()
+        if self._cnbc_client is None:
+            self._cnbc_client = CNBC(cache_ttl=self._cache_ttl)
 
         return self._cnbc_client
 
@@ -95,7 +109,8 @@ class News():
             >>> nasdaq_news_client = news_client.nasdaq
         """
 
-        self._nasdaq_client = NASDAQ()
+        if self._nasdaq_client is None:
+            self._nasdaq_client = NASDAQ(cache_ttl=self._cache_ttl)
 
         return self._nasdaq_client
 
@@ -116,10 +131,11 @@ class News():
             >>> news_client = News()
 
             >>> # Grab the MarketWatch News Client.
-            >>> market_Watch_client = news_client.market_Watch
+            >>> market_watch_client = news_client.market_watch
         """
 
-        self._market_watch_client = MarketWatch()
+        if self._market_watch_client is None:
+            self._market_watch_client = MarketWatch(cache_ttl=self._cache_ttl)
 
         return self._market_watch_client
 
@@ -143,7 +159,8 @@ class News():
             >>> sp_global_client = news_client.sp_global
         """
 
-        self._sp_global_client = SPGlobal()
+        if self._sp_global_client is None:
+            self._sp_global_client = SPGlobal(cache_ttl=self._cache_ttl)
 
         return self._sp_global_client
 
@@ -167,7 +184,8 @@ class News():
             >>> seeking_alpha_client = news_client.seeking_alpha
         """
 
-        self._seeking_alpha_client = SeekingAlpha()
+        if self._seeking_alpha_client is None:
+            self._seeking_alpha_client = SeekingAlpha(cache_ttl=self._cache_ttl)
 
         return self._seeking_alpha_client
 
@@ -191,7 +209,8 @@ class News():
             >>> cnn_finance_client = news_client.cnn_finance
         """
 
-        self._cnn_finance_client = CNNFinance()
+        if self._cnn_finance_client is None:
+            self._cnn_finance_client = CNNFinance(cache_ttl=self._cache_ttl)
 
         return self._cnn_finance_client
 
@@ -215,7 +234,8 @@ class News():
             >>> wsj_client = news_client.wsj
         """
 
-        self._wsj_client = WallStreetJournal()
+        if self._wsj_client is None:
+            self._wsj_client = WallStreetJournal(cache_ttl=self._cache_ttl)
 
         return self._wsj_client
 
@@ -239,7 +259,8 @@ class News():
             >>> yahoo_finance_client = news_client.yahoo_finance
         """
 
-        self._yahoo_finance_client = YahooFinance()
+        if self._yahoo_finance_client is None:
+            self._yahoo_finance_client = YahooFinance(cache_ttl=self._cache_ttl)
 
         return self._yahoo_finance_client
 
@@ -273,9 +294,17 @@ class News():
             )
         """
 
-        # Define the file name.
-        file_name = f'samples/responses/{file_name}.jsonc'
+        # Sanitize the file name to prevent path traversal.
+        base_dir = pathlib.Path("samples/responses").resolve()
+        target = (base_dir / f"{file_name}.jsonc").resolve()
+        if not str(target).startswith(str(base_dir)):
+            raise ValueError(
+                f"Invalid file_name: '{file_name}' would write outside the responses directory."
+            )
+
+        # Ensure the directory exists.
+        target.parent.mkdir(parents=True, exist_ok=True)
 
         # Dump the content.
-        with open(file=file_name, mode='w+', encoding="utf-8") as news_data:
+        with open(file=str(target), mode="w+", encoding="utf-8") as news_data:
             json.dump(obj=content, fp=news_data, indent=2)

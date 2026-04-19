@@ -1,32 +1,40 @@
+"""Seeking Alpha RSS feed client for fetching analysis and market news."""
+
+from __future__ import annotations
+
 from typing import List
 from typing import Dict
 
 from finnews.parser import NewsParser
 
 
-class SeekingAlpha():
-
+class SeekingAlpha:
     """
     ### Overview:
     ----
     Used to access news articles from SeekingAlpha.
     """
 
-    def __init__(self):
-        """Initializes the `SeekingAlpha` client."""
+    def __init__(self, cache_ttl: int = 0):
+        """Initializes the `SeekingAlpha` client.
+
+        ### Arguments:
+        ----
+        cache_ttl (int): TTL in seconds for cached responses (0 = off).
+        """
 
         # Define the URL used to query feeds.
         self.urls = {
-            'feed': 'https://seekingalpha.com/feed.xml',
-            'sector': 'https://seekingalpha.com/sector/{topic}.xml',
-            'tag': 'https://seekingalpha.com/tag/{topic}.xml',
-            'listing': 'https://seekingalpha.com/listing/{topic}.xml',
-            'api': 'https://seekingalpha.com/api/sa/combined/{topic}.xml',
-            'markets': 'https://seekingalpha.com/market_currents.xml'
+            "feed": "https://seekingalpha.com/feed.xml",
+            "sector": "https://seekingalpha.com/sector/{topic}.xml",
+            "tag": "https://seekingalpha.com/tag/{topic}.xml",
+            "listing": "https://seekingalpha.com/listing/{topic}.xml",
+            "api": "https://seekingalpha.com/api/sa/combined/{topic}.xml",
+            "markets": "https://seekingalpha.com/market_currents.xml",
         }
 
         # Define the parser client.
-        self.news_parser = NewsParser(client='seeking_alpha')
+        self.news_parser = NewsParser(client="seeking_alpha", cache_ttl=cache_ttl)
 
     def __repr__(self) -> str:
         """Represents the string representation of the client object.
@@ -36,6 +44,22 @@ class SeekingAlpha():
         (str): The string representation.
         """
         return "<SeekingAlpha Connected: True'>"
+
+    @property
+    def feeds(self) -> list[str]:
+        """Returns a sorted list of available feed method names.
+
+        ### Returns:
+        ----
+        list[str]: Feed method names that can be called on this client.
+        """
+
+        return sorted([
+            'all_news', 'editors_picks', 'etfs', 'forex',
+            'global_markets', 'ipo_analysis', 'latest_articles',
+            'long_ideas', 'most_popular_articles', 'sectors',
+            'stocks', 'transcripts', 'wall_street_breakfast',
+        ])
 
     def stocks(self, ticker: str) -> List[Dict]:
         """Used to query topics for a particular Stock's RSS feed.
@@ -63,9 +87,7 @@ class SeekingAlpha():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.urls['api'].format(topic=ticker)
-        )
+        data = self.news_parser.make_request(url=self.urls["api"].format(topic=ticker))
 
         return data
 
@@ -91,9 +113,7 @@ class SeekingAlpha():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.urls['feed']
-        )
+        data = self.news_parser.make_request(url=self.urls["feed"])
 
         return data
 
@@ -119,8 +139,8 @@ class SeekingAlpha():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.urls['tag'].format(topic='ipo-analysis')
+        data = self.news_parser.make_request(
+            url=self.urls["tag"].format(topic="ipo-analysis")
         )
 
         return data
@@ -147,8 +167,8 @@ class SeekingAlpha():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.urls['tag'].format(topic='long-ideas')
+        data = self.news_parser.make_request(
+            url=self.urls["tag"].format(topic="long-ideas")
         )
 
         return data
@@ -175,8 +195,8 @@ class SeekingAlpha():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.urls['sector'].format(topic='transcripts')
+        data = self.news_parser.make_request(
+            url=self.urls["sector"].format(topic="transcripts")
         )
 
         return data
@@ -203,9 +223,7 @@ class SeekingAlpha():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.urls['markets']
-        )
+        data = self.news_parser.make_request(url=self.urls["markets"])
 
         return data
 
@@ -231,8 +249,8 @@ class SeekingAlpha():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.urls['tag'].format(topic='wall-st-breakfast')
+        data = self.news_parser.make_request(
+            url=self.urls["tag"].format(topic="wall-st-breakfast")
         )
 
         return data
@@ -259,8 +277,8 @@ class SeekingAlpha():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.urls['listing'].format(topic='most-popular-articles')
+        data = self.news_parser.make_request(
+            url=self.urls["listing"].format(topic="most-popular-articles")
         )
 
         return data
@@ -287,8 +305,8 @@ class SeekingAlpha():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.urls['tag'].format(topic='forex')
+        data = self.news_parser.make_request(
+            url=self.urls["tag"].format(topic="forex")
         )
 
         return data
@@ -315,8 +333,8 @@ class SeekingAlpha():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.urls['tag'].format(topic='editors-picks')
+        data = self.news_parser.make_request(
+            url=self.urls["tag"].format(topic="editors-picks")
         )
 
         return data
@@ -343,8 +361,8 @@ class SeekingAlpha():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.urls['tag'].format(topic='etf-portfolio-strategy')
+        data = self.news_parser.make_request(
+            url=self.urls["tag"].format(topic="etf-portfolio-strategy")
         )
 
         return data
@@ -375,8 +393,8 @@ class SeekingAlpha():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.urls['tag'].format(topic=country)
+        data = self.news_parser.make_request(
+            url=self.urls["tag"].format(topic=country)
         )
 
         return data
@@ -407,8 +425,6 @@ class SeekingAlpha():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
-            url=self.urls['tag'].format(topic=sector)
-        )
+        data = self.news_parser.make_request(url=self.urls["tag"].format(topic=sector))
 
         return data

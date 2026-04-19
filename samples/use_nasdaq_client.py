@@ -1,6 +1,9 @@
+"""Sample script demonstrating the NASDAQ news client."""
+
 from pprint import pprint
 
 from finnews.client import News
+from finnews.article import NewsArticle, NewsFeed
 
 # Create a new instance of the News Client.
 news_client = News()
@@ -8,73 +11,95 @@ news_client = News()
 # Grab the NASDAQ News Client.
 nasdaq_news_client = news_client.nasdaq
 
-# Grab the original content news.
-content = nasdaq_news_client.original_content()
-pprint(content)
+# ---------------------------------------------------------------------------
+# Section: List available feeds.
+# ---------------------------------------------------------------------------
+
+# Print the available feed methods.
+print("Available feeds:", nasdaq_news_client.feeds)
+
+# ---------------------------------------------------------------------------
+# Section: Fetch a feed and wrap in structured models.
+# ---------------------------------------------------------------------------
+
+# Grab the Original Content news.
+original_content = nasdaq_news_client.original_content()
+
+# Wrap the results in a NewsFeed.
+feed = NewsFeed.from_dicts(original_content, source='nasdaq')
+print(f"\nOriginal content articles: {len(feed)}")
+for article in feed:
+    print(f"  - {article.title} ({article.published})")
+
+# Convert a single result to a NewsArticle.
+if original_content:
+    article = NewsArticle.from_dict(original_content[0], source='nasdaq')
+    print(f"\nFirst article: {article.title}")
+    print(f"  Link: {article.link}")
+
+# ---------------------------------------------------------------------------
+# Section: Fetch additional feeds.
+# ---------------------------------------------------------------------------
 
 # Grab the Commodity news.
-content = nasdaq_news_client.commodities_feed()
-pprint(content)
+commodities = nasdaq_news_client.commodities_feed()
+pprint(commodities)
 
 # Grab the IPO news.
-content = nasdaq_news_client.ipos_feed()
-pprint(content)
+ipos = nasdaq_news_client.ipos_feed()
+pprint(ipos)
 
 # Grab the Cryptocurrency news.
-content = nasdaq_news_client.cryptocurrency_feed()
-pprint(content)
+crypto = nasdaq_news_client.cryptocurrency_feed()
+pprint(crypto)
 
 # Grab the Dividends news.
-content = nasdaq_news_client.dividends_feed()
-pprint(content)
+dividends = nasdaq_news_client.dividends_feed()
+pprint(dividends)
 
 # Grab the Earnings news.
-content = nasdaq_news_client.earnings_feed()
-pprint(content)
+earnings = nasdaq_news_client.earnings_feed()
+pprint(earnings)
 
 # Grab the ETFs news.
-content = nasdaq_news_client.etfs_feed()
-pprint(content)
+etfs = nasdaq_news_client.etfs_feed()
+pprint(etfs)
 
 # Grab the Markets news.
-content = nasdaq_news_client.markets_feed()
-pprint(content)
+markets = nasdaq_news_client.markets_feed()
+pprint(markets)
 
 # Grab the Options news.
-content = nasdaq_news_client.options_feed()
-pprint(content)
+options = nasdaq_news_client.options_feed()
+pprint(options)
 
 # Grab the Stocks news.
-content = nasdaq_news_client.stocks_feed()
-pprint(content)
+stocks = nasdaq_news_client.stocks_feed()
+pprint(stocks)
 
-# Grab the Artifical Intelligence news.
-content = nasdaq_news_client.artifical_intelligence_feed()
-pprint(content)
+# Grab the Artificial Intelligence news.
+ai_news = nasdaq_news_client.artificial_intelligence_feed()
+pprint(ai_news)
 
 # Grab the Blockchain news.
-content = nasdaq_news_client.blockchain_feed()
-pprint(content)
+blockchain = nasdaq_news_client.blockchain_feed()
+pprint(blockchain)
 
 # Grab the Corporate Governance news.
-content = nasdaq_news_client.corporate_governance_feed()
-pprint(content)
+corp_gov = nasdaq_news_client.corporate_governance_feed()
+pprint(corp_gov)
 
 # Grab the Financial Advisors news.
-content = nasdaq_news_client.financial_advisors_feed()
-pprint(content)
+fin_advisors = nasdaq_news_client.financial_advisors_feed()
+pprint(fin_advisors)
 
 # Grab the Fin Tech news.
-content = nasdaq_news_client.fin_tech_feed()
-pprint(content)
+fin_tech = nasdaq_news_client.fin_tech_feed()
+pprint(fin_tech)
 
 # Grab the Innovation news.
-content = nasdaq_news_client.innovation_feed()
-pprint(content)
-
-# Grab the Nasdaq News Inc. news. -- NOT WORKING!!!!
-content = nasdaq_news_client.nasdaq_news_feed()
-pprint(content)
+innovation = nasdaq_news_client.innovation_feed()
+pprint(innovation)
 
 # Grab the Technology news.
 content = nasdaq_news_client.technology_feed()

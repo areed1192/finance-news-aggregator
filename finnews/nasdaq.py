@@ -1,9 +1,15 @@
+"""NASDAQ RSS feed client for fetching market and commodity news."""
+
+from __future__ import annotations
+
+import warnings
+
 from typing import List
 from typing import Dict
 from finnews.parser import NewsParser
 
 
-class NASDAQ():
+class NASDAQ():  # pylint: disable=too-many-public-methods
 
     """
     ### Overview:
@@ -11,15 +17,20 @@ class NASDAQ():
     Used to access news articles from NASDAQ.
     """
 
-    def __init__(self):
-        """Initializes the `NASDAQ` client."""
+    def __init__(self, cache_ttl: int = 0):
+        """Initializes the `NASDAQ` client.
+
+        ### Arguments:
+        ----
+        cache_ttl (int): TTL in seconds for cached responses (0 = off).
+        """
 
         # Define the URL used to query feeds.
         self.url = 'https://www.nasdaq.com/feed/rssoutbound'
         self.url_original_content = 'https://www.nasdaq.com/feed/nasdaq-original/rss.xml'
 
         # Define the parser client.
-        self.news_parser = NewsParser(client='nasdaq')
+        self.news_parser = NewsParser(client='nasdaq', cache_ttl=cache_ttl)
 
     def __repr__(self) -> str:
         """Represents the string representation of the client object.
@@ -29,6 +40,26 @@ class NASDAQ():
         (str): The string representation.
         """
         return "<NasdaqClient Connected: True'>"
+
+    @property
+    def feeds(self) -> list[str]:
+        """Returns a sorted list of available feed method names.
+
+        ### Returns:
+        ----
+        list[str]: Feed method names that can be called on this client.
+        """
+
+        return sorted([
+            'artificial_intelligence_feed', 'blockchain_feed',
+            'commodities_feed', 'corporate_governance_feed',
+            'cryptocurrency_feed', 'dividends_feed', 'earnings_feed',
+            'etfs_feed', 'fin_tech_feed', 'financial_advisors_feed',
+            'innovation_feed', 'investing_feed', 'ipos_feed',
+            'markets_feed', 'nasdaq_news_feed', 'options_feed',
+            'original_content', 'retirement_feed', 'saving_money_feed',
+            'stocks_feed', 'technology_feed', 'ticker_feed',
+        ])
 
     def original_content(self) -> Dict:
         """Used to query all the topics from the NASDAQ Original Content RSS feed.
@@ -52,7 +83,7 @@ class NASDAQ():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url_original_content
         )
 
@@ -85,7 +116,7 @@ class NASDAQ():
         }
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url,
             params=params
         )
@@ -119,7 +150,7 @@ class NASDAQ():
         }
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url,
             params=params
         )
@@ -153,7 +184,7 @@ class NASDAQ():
         }
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url,
             params=params
         )
@@ -187,7 +218,7 @@ class NASDAQ():
         }
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url,
             params=params
         )
@@ -221,7 +252,7 @@ class NASDAQ():
         }
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url,
             params=params
         )
@@ -255,7 +286,7 @@ class NASDAQ():
         }
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url,
             params=params
         )
@@ -289,7 +320,7 @@ class NASDAQ():
         }
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url,
             params=params
         )
@@ -323,7 +354,7 @@ class NASDAQ():
         }
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url,
             params=params
         )
@@ -357,15 +388,15 @@ class NASDAQ():
         }
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url,
             params=params
         )
 
         return data
 
-    def artifical_intelligence_feed(self) -> List[Dict]:
-        """Used to query topics from the Artifical Intelligence News RSS feed.
+    def artificial_intelligence_feed(self) -> List[Dict]:
+        """Used to query topics from the Artificial Intelligence News RSS feed.
 
         ### Returns:
         ----
@@ -381,8 +412,8 @@ class NASDAQ():
             >>> # Grab the NASDAQ News Client.
             >>> nasdaq_news_client = news_client.nasdaq
 
-            >>> # Grab the Artifical Intelligence news.
-            >>> nasdaq_artificial_intelligence = nasdaq_news_client.artifical_intelligence_feed()
+            >>> # Grab the Artificial Intelligence news.
+            >>> nasdaq_artificial_intelligence = nasdaq_news_client.artificial_intelligence_feed()
         """
 
         # Define the paramters.
@@ -391,12 +422,22 @@ class NASDAQ():
         }
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url,
             params=params
         )
 
         return data
+
+    def artifical_intelligence_feed(self) -> List[Dict]:
+        """Deprecated: use ``artificial_intelligence_feed()`` instead."""
+        warnings.warn(
+            "artifical_intelligence_feed() is deprecated, "
+            "use artificial_intelligence_feed() instead",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+        return self.artificial_intelligence_feed()
 
     def blockchain_feed(self) -> List[Dict]:
         """Used to query topics from the Blockchain News RSS feed.
@@ -425,7 +466,7 @@ class NASDAQ():
         }
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url,
             params=params
         )
@@ -459,7 +500,7 @@ class NASDAQ():
         }
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url,
             params=params
         )
@@ -493,7 +534,7 @@ class NASDAQ():
         }
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url,
             params=params
         )
@@ -527,7 +568,7 @@ class NASDAQ():
         }
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url,
             params=params
         )
@@ -561,7 +602,7 @@ class NASDAQ():
         }
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url,
             params=params
         )
@@ -595,7 +636,7 @@ class NASDAQ():
         }
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url,
             params=params
         )
@@ -629,7 +670,7 @@ class NASDAQ():
         }
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url,
             params=params
         )
@@ -663,7 +704,7 @@ class NASDAQ():
         }
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url,
             params=params
         )
@@ -697,7 +738,7 @@ class NASDAQ():
         }
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url,
             params=params
         )
@@ -731,7 +772,7 @@ class NASDAQ():
         }
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url,
             params=params
         )
@@ -770,7 +811,7 @@ class NASDAQ():
         }
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url,
             params=params
         )

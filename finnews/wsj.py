@@ -1,3 +1,7 @@
+"""Wall Street Journal RSS feed client for fetching news and opinion articles."""
+
+from __future__ import annotations
+
 from typing import List
 from typing import Dict
 
@@ -12,14 +16,19 @@ class WallStreetJournal():
     Used to access news articles from WallStreetJournal.
     """
 
-    def __init__(self):
-        """Initializes the `WallStreetJournal` client."""
+    def __init__(self, cache_ttl: int = 0):
+        """Initializes the `WallStreetJournal` client.
+
+        ### Arguments:
+        ----
+        cache_ttl (int): TTL in seconds for cached responses (0 = off).
+        """
 
         # Define the URL used to query feeds.
         self.url = 'https://feeds.a.dj.com/rss/{topic}.xml'
 
         # Define the parser client.
-        self.news_parser = NewsParser(client='wsj')
+        self.news_parser = NewsParser(client='wsj', cache_ttl=cache_ttl)
 
     def __repr__(self) -> str:
         """Represents the string representation of the client object.
@@ -29,6 +38,20 @@ class WallStreetJournal():
         (str): The string representation.
         """
         return "<WallStreetJournal Connected: True'>"
+
+    @property
+    def feeds(self) -> list[str]:
+        """Returns a sorted list of available feed method names.
+
+        ### Returns:
+        ----
+        list[str]: Feed method names that can be called on this client.
+        """
+
+        return sorted([
+            'lifestyle', 'market_news', 'opinions',
+            'technology_news', 'us_business_news', 'world_news',
+        ])
 
     def opinions(self) -> List[Dict]:
         """Used to query topics from the Opinions RSS feed.
@@ -52,7 +75,7 @@ class WallStreetJournal():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='RSSOpinion')
         )
 
@@ -80,7 +103,7 @@ class WallStreetJournal():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='RSSWorldNews')
         )
 
@@ -108,7 +131,7 @@ class WallStreetJournal():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='WSJcomUSBusiness')
         )
 
@@ -136,7 +159,7 @@ class WallStreetJournal():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='RSSMarketsMain')
         )
 
@@ -164,7 +187,7 @@ class WallStreetJournal():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='RSSWSJD')
         )
 
@@ -192,7 +215,7 @@ class WallStreetJournal():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='RSSLifestyle')
         )
 

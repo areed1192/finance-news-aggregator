@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=82.0.1", "wheel>=0.46.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fin-news"
+version = "0.1.3"
+description = "A finance news aggregator used to collect articles on different market topics."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "Alex Reed", email = "coding.sigma@gmail.com" }]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "requests>=2.33.1",
+    "fake_useragent>=2.2.0",
+    "defusedxml>=0.7.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/areed1192/finance-news-aggregator"
+Repository = "https://github.com/areed1192/finance-news-aggregator"
+Issues = "https://github.com/areed1192/finance-news-aggregator/issues"
+
+[project.optional-dependencies]
+dev = ["pytest>=9.0.3", "pytest-cov>=7.1.0", "responses>=0.26.0", "flake8>=7.3.0"]
+pandas = ["pandas>=3.0.2"]
+async = ["httpx>=0.28.1"]
+
+[tool.setuptools.packages.find]
+include = ["finnews*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["finnews"]
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.pylint."messages control"]
+disable = ["duplicate-code"]

@@ -1,9 +1,15 @@
+"""CNN Finance RSS feed client for fetching business and market news."""
+
+from __future__ import annotations
+
+import warnings
+
 from typing import List
 from typing import Dict
 from finnews.parser import NewsParser
 
 
-class CNNFinance():
+class CNNFinance():  # pylint: disable=too-many-public-methods
 
     """
     ### Overview:
@@ -11,15 +17,20 @@ class CNNFinance():
     Used to access news articles from CNN Finance.
     """
 
-    def __init__(self):
-        """Initializes the `CNNFinance` client."""
+    def __init__(self, cache_ttl: int = 0):
+        """Initializes the `CNNFinance` client.
+
+        ### Arguments:
+        ----
+        cache_ttl (int): TTL in seconds for cached responses (0 = off).
+        """
 
         # Define the URL used to query feeds.
-        self.url = 'http://rss.cnn.com/rss/{topic}.rss'
-        self.url_buzz = 'http://rss.cnn.com/cnnmoneymorningbuzz'
+        self.url = 'https://rss.cnn.com/rss/{topic}.rss'
+        self.url_buzz = 'https://rss.cnn.com/cnnmoneymorningbuzz'
 
         # Define the parser client.
-        self.news_parser = NewsParser(client='cnn_finance')
+        self.news_parser = NewsParser(client='cnn_finance', cache_ttl=cache_ttl)
 
     def __repr__(self) -> str:
         """Represents the string representation of the client object.
@@ -29,6 +40,24 @@ class CNNFinance():
         (str): The string representation.
         """
         return "<CNNFinance Connected: True'>"
+
+    @property
+    def feeds(self) -> list[str]:
+        """Returns a sorted list of available feed method names.
+
+        ### Returns:
+        ----
+        list[str]: Feed method names that can be called on this client.
+        """
+
+        return sorted([
+            'all_stories', 'autos', 'colleges', 'companies', 'economy',
+            'funds', 'insurance', 'international', 'lifestyle', 'luxury',
+            'markets', 'media', 'morning_buzz', 'most_popular',
+            'personal_finance', 'real_estate', 'retirement',
+            'small_business', 'taxes', 'technology', 'top_stories',
+            'video_news',
+        ])
 
     def all_stories(self) -> List[Dict]:
         """Used to query topics from the All Stories RSS feed.
@@ -52,7 +81,7 @@ class CNNFinance():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='money_latest')
         )
 
@@ -80,7 +109,7 @@ class CNNFinance():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='money_topstories')
         )
 
@@ -108,7 +137,7 @@ class CNNFinance():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='money_mostpopular')
         )
 
@@ -136,7 +165,7 @@ class CNNFinance():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='money_news_companies')
         )
 
@@ -164,7 +193,7 @@ class CNNFinance():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='money_news_international')
         )
 
@@ -192,7 +221,7 @@ class CNNFinance():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='money_news_economy')
         )
 
@@ -220,7 +249,7 @@ class CNNFinance():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='money_video_business')
         )
 
@@ -248,7 +277,7 @@ class CNNFinance():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='money_media')
         )
 
@@ -276,7 +305,7 @@ class CNNFinance():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='money_markets')
         )
 
@@ -304,13 +333,13 @@ class CNNFinance():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url_buzz
         )
 
         return data
 
-    def techonology(self) -> List[Dict]:
+    def technology(self) -> List[Dict]:
         """Used to query topics from the Technology RSS feed.
 
         ### Returns:
@@ -332,11 +361,20 @@ class CNNFinance():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='money_technology')
         )
 
         return data
+
+    def techonology(self) -> List[Dict]:
+        """Deprecated: use ``technology()`` instead."""
+        warnings.warn(
+            "techonology() is deprecated, use technology() instead",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+        return self.technology()
 
     def personal_finance(self) -> List[Dict]:
         """Used to query topics from the Personal Finance RSS feed.
@@ -360,7 +398,7 @@ class CNNFinance():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='money_pf')
         )
 
@@ -388,7 +426,7 @@ class CNNFinance():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='money_autos')
         )
 
@@ -416,7 +454,7 @@ class CNNFinance():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='money_funds')
         )
 
@@ -444,7 +482,7 @@ class CNNFinance():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='money_pf_college')
         )
 
@@ -472,7 +510,7 @@ class CNNFinance():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='money_pf_insurance')
         )
 
@@ -500,7 +538,7 @@ class CNNFinance():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='money_pf_taxes')
         )
 
@@ -528,7 +566,7 @@ class CNNFinance():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='money_retirement')
         )
 
@@ -556,7 +594,7 @@ class CNNFinance():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='money_lifestyle')
         )
 
@@ -584,7 +622,7 @@ class CNNFinance():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='money_realestate')
         )
 
@@ -612,7 +650,7 @@ class CNNFinance():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='money_luxury')
         )
 
@@ -640,7 +678,7 @@ class CNNFinance():
         """
 
         # Grab the data.
-        data = self.news_parser._make_request(
+        data = self.news_parser.make_request(
             url=self.url.format(topic='money_smbusiness')
         )
 
