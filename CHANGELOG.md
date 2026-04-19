@@ -40,7 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - **finnews/exceptions.py**: Custom exception hierarchy — `FinnewsError` (base), `InvalidTopicError`, `FeedRequestError`, `FeedParseError`.
   - `InvalidTopicError` also inherits from `KeyError` for backward compatibility.
 - **finnews/py.typed**: PEP 561 marker file for static type checker support.
-- **finnews/news_enum.py**: Expanded `MarketWatch` enum to 13 members; renamed all enum classes to PascalCase (`CNBCTopNews`, `CNBCInvesting`, `CNBCBlogs`, `CNBCTVVideoAndTV`, `CNBCTVProgramsEurope`, `CNBCTVProgramsAsia`, `MarketWatch`).
+- **finnews/news_enum.py**: Renamed all enum classes to PascalCase (`CNBCTopNews`, `CNBCInvesting`, `CNBCBlogs`, `CNBCTVVideoAndTV`, `CNBCTVProgramsEurope`, `CNBCTVProgramsAsia`, `MarketWatch`).
 - **tests/test_enhancements.py**: 26 new tests covering exceptions, deprecation aliases, client caching, duplicate XML tags, enum support, retry adapters, and parse error wrapping.
 
 ### Changed
@@ -50,7 +50,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - **samples/use_nasdaq_client.py**: Updated to use `artificial_intelligence_feed()` instead of deprecated typo.
 - **samples/use_cnn_finance.py**: Updated to use `technology()` instead of deprecated typo.
 - **samples/**: All 9 sample scripts updated to demonstrate `topics`/`feeds` properties, `NewsArticle`/`NewsFeed` structured models, enum usage, and section dividers.
-
 - All modules: Added module-level docstrings.
 - All 8 provider classes: Added `cache_ttl` parameter to `__init__()`, passed through to `NewsParser`.
 - **finnews/parser.py**: Renamed `_make_request` → `make_request` and `_parse_response` → `parse_response` (public API).
@@ -70,8 +69,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - All modules: Added `from __future__ import annotations` for modern type-hint syntax.
 - All provider modules: Updated calls from `_make_request` to `make_request`.
 - **pyproject.toml**: Added `[tool.pylint."messages control"]` disabling `duplicate-code`.
-- **tests/test_user_agent.py**: Added `timeout=10` to `requests.get()` call.
 - **tests/test_client.py**: Refactored to use local variables instead of instance attributes.
+- **finnews/market_watch.py**: Updated RSS feed URLs to current endpoints (`feeds.content.dowjones.io` for top stories, real-time headlines, and market pulse; `feeds.marketwatch.com` for bulletins). Reduced active feeds from 13 to 4.
+- **finnews/fields.py**: Updated `market_watch_rss_feeds_id` to 4 active feed mappings.
+- **finnews/news_enum.py**: `MarketWatch` enum reduced from 13 to 4 members matching active feeds.
 
 ### Deprecated
 
@@ -79,12 +80,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - **finnews/nasdaq.py**: `artifical_intelligence_feed()` → use `artificial_intelligence_feed()`. Old name emits `DeprecationWarning`.
 - **finnews/sp_global.py**: `all_indicies()` → `all_indices()`, `index_announcments()` → `index_announcements()`, `new_counsultations()` → `new_consultations()`. Old names emit `DeprecationWarning`.
 - **finnews/market_watch.py**: 9 defunct feed methods now emit `DeprecationWarning` and return `[]`: `personal_finance()`, `stocks_to_watch()`, `internet_stories()`, `mutual_funds()`, `software_stories()`, `banking_and_finance()`, `commentary()`, `newsletter_and_research()`, `auto_reviews()`.
-
-### Changed (MarketWatch)
-
-- **finnews/market_watch.py**: Updated RSS feed URLs to current endpoints (`feeds.content.dowjones.io` for top stories, real-time headlines, and market pulse; `feeds.marketwatch.com` for bulletins). Reduced active feeds from 13 to 4.
-- **finnews/fields.py**: Updated `market_watch_rss_feeds_id` to 4 active feed mappings.
-- **finnews/news_enum.py**: `MarketWatch` enum reduced from 13 to 4 members matching active feeds.
 
 ### Fixed
 

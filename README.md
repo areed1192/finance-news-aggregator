@@ -109,9 +109,7 @@ print(market_watch.topics)
 # Fetch by topic string.
 top = market_watch.top_stories()
 headlines = market_watch.real_time_headlines()
-commentary = market_watch.commentary()
-
-# Or use a specific topic method.
+bulletins = market_watch.bulletins()
 pulse = market_watch.market_pulse()
 ```
 
@@ -259,60 +257,60 @@ Available CNBC enums: `CNBCTopNews`, `CNBCInvesting`, `CNBCBlogs`, `CNBCTVVideoA
 
 ### Entry Point
 
-| Class | Description |
-|-------|-------------|
+| Class    | Description                                       |
+| -------- | ------------------------------------------------- |
 | `News()` | Main facade — access all providers via properties |
 
 ### Provider Properties
 
-| Property | Class | Topics/Feeds |
-|----------|-------|-------------|
-| `news.cnbc` | `CNBC` | `.topics` — 54 topic keys |
-| `news.market_watch` | `MarketWatch` | `.topics` — 13 topic keys |
-| `news.nasdaq` | `NASDAQ` | `.feeds` — 22 feed methods |
-| `news.sp_global` | `SPGlobal` | `.feeds` — 12 feed methods |
-| `news.cnn_finance` | `CNNFinance` | `.feeds` — 22 feed methods |
-| `news.seeking_alpha` | `SeekingAlpha` | `.feeds` — 13 feed methods |
-| `news.wsj` | `WallStreetJournal` | `.feeds` — 6 feed methods |
-| `news.yahoo_finance` | `YahooFinance` | `.feeds` — 2 feed methods |
+| Property             | Class               | Topics/Feeds               |
+| -------------------- | ------------------- | -------------------------- |
+| `news.cnbc`          | `CNBC`              | `.topics` — 55 topic keys  |
+| `news.market_watch`  | `MarketWatch`       | `.topics` — 4 topic keys   |
+| `news.nasdaq`        | `NASDAQ`            | `.feeds` — 22 feed methods |
+| `news.sp_global`     | `SPGlobal`          | `.feeds` — 14 feed methods |
+| `news.cnn_finance`   | `CNNFinance`        | `.feeds` — 22 feed methods |
+| `news.seeking_alpha` | `SeekingAlpha`      | `.feeds` — 13 feed methods |
+| `news.wsj`           | `WallStreetJournal` | `.feeds` — 6 feed methods  |
+| `news.yahoo_finance` | `YahooFinance`      | `.feeds` — 2 feed methods  |
 
 ### Data Models
 
-| Class | Description |
-|-------|-------------|
+| Class         | Description                                                               |
+| ------------- | ------------------------------------------------------------------------- |
 | `NewsArticle` | Dataclass: `title`, `link`, `description`, `published`, `source`, `extra` |
-| `NewsFeed` | Collection of `NewsArticle` — iterable, indexable, `len()` support |
+| `NewsFeed`    | Collection of `NewsArticle` — iterable, indexable, `len()` support        |
 
 ### Exceptions
 
-| Exception | Description |
-|-----------|-------------|
-| `FinnewsError` | Base exception for all finnews errors |
+| Exception           | Description                                       |
+| ------------------- | ------------------------------------------------- |
+| `FinnewsError`      | Base exception for all finnews errors             |
 | `InvalidTopicError` | Raised for unknown topic keys (also a `KeyError`) |
-| `FeedRequestError` | HTTP request failures |
-| `FeedParseError` | XML parsing failures |
+| `FeedRequestError`  | HTTP request failures                             |
+| `FeedParseError`    | XML parsing failures                              |
 
 ### Utility
 
-| Method | Description |
-|--------|-------------|
+| Method                                  | Description                                           |
+| --------------------------------------- | ----------------------------------------------------- |
 | `news.save_to_file(content, file_name)` | Save results to `samples/responses/<file_name>.jsonc` |
 
 ---
 
 ## Comparison with Alternatives
 
-| Feature | `fin-news` | `feedparser` | `gnews` | `newscatcher` |
-|---------|-----------|-------------|---------|--------------|
-| Finance-focused providers | **8 providers** | Any RSS | Google News | News API |
-| Topic-based feeds | Yes | N/A | Yes | Yes |
-| Keyword search | No | N/A | Yes | Yes |
-| Structured models | **Yes** (`NewsArticle`) | Yes | Yes | Yes |
-| Enum topic selection | **Yes** | No | No | No |
-| Retry with backoff | **Yes** | N/A | Yes | No |
-| Jupyter rendering | **Yes** | No | No | No |
-| Async support | No | No | No | No |
-| No API key required | **Yes** | Yes | Yes | No |
+| Feature                   | `fin-news`              | `feedparser` | `gnews`     | `newscatcher` |
+| ------------------------- | ----------------------- | ------------ | ----------- | ------------- |
+| Finance-focused providers | **8 providers**         | Any RSS      | Google News | News API      |
+| Topic-based feeds         | Yes                     | N/A          | Yes         | Yes           |
+| Keyword search            | No                      | N/A          | Yes         | Yes           |
+| Structured models         | **Yes** (`NewsArticle`) | Yes          | Yes         | Yes           |
+| Enum topic selection      | **Yes**                 | No           | No          | No            |
+| Retry with backoff        | **Yes**                 | N/A          | Yes         | No            |
+| Jupyter rendering         | **Yes**                 | No           | No          | No            |
+| Async support             | **Yes**                 | No           | No          | No            |
+| No API key required       | **Yes**                 | Yes          | Yes         | No            |
 
 ---
 
